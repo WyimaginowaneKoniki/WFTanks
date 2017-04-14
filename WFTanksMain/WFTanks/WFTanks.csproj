@@ -61,7 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllieTanks.cs" />
+    <Compile Include="AllyTanks.cs" />
     <Compile Include="Board.cs" />
     <Compile Include="EnemyTanks.cs" />
     <Compile Include="Form1.cs">
