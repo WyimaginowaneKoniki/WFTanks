@@ -58,12 +58,12 @@ namespace WFTanks
         // TODO Skin!!!!!
         public virtual void Shot()
         {
-
+            // TODO Tanks : Shot()
         }
 
         public virtual void Movement()
         {
-
+            // TODO Tanks : Movement()
         }
     }
 }
