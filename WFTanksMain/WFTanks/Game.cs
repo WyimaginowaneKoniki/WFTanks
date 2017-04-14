@@ -27,6 +27,7 @@ namespace WFTanks
 
         public bool Collisions()
         {
+            // TODO Game : Collisions()
             return true;
         }
 
