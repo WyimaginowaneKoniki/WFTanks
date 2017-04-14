@@ -11,12 +11,13 @@ namespace WFTanks
 
         public override void Shot()
         {
-
+            // TODO  EnemyTanks : Shot()
         }
 
         public override void Movement()
         {
-
+            //  needed?
+            // TODO  EnemyTanks : Movement()
         }
     }
 }
