@@ -21,7 +21,7 @@ namespace WFTanks
         }
         protected Sides Side;
 
-        private uint _currentPositionX;
+        public uint _currentPositionX;
 
         public uint CurrentPositionX
         {
@@ -29,7 +29,7 @@ namespace WFTanks
             set { _currentPositionX = value; }
         }
 
-        private uint _currentPositionY;
+        public uint _currentPositionY;
 
         public uint CurrentPositionY
         {
@@ -37,7 +37,7 @@ namespace WFTanks
             set { _currentPositionY = value; }
         }
 
-        private int _healthPoints;
+        public int _healthPoints;
 
         public int HealthPoints
         {
@@ -45,7 +45,7 @@ namespace WFTanks
             set { _healthPoints = value; }
         }
 
-        private string _playerName;
+        public string _playerName;
 
         public string PlayerName
         {

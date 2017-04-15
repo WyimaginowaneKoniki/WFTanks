@@ -22,3 +22,18 @@ E:\Creation\Programowanie\Github\WFTanks\WFTanksMain\WFTanks\obj\Debug\WFTanks.p
 C:\Users\Pieter\Documents\GitHub\WFTanks-1\WFTanksMain\WFTanks\bin\Debug\WFTanks.exe.config
 C:\Users\Pieter\Documents\GitHub\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.exe
 C:\Users\Pieter\Documents\GitHub\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.pdb
+C:\Users\Pieter\Documents\GitHub\WFTanks-1\WFTanksMain\WFTanks\bin\Debug\WFTanks.exe
+C:\Users\Pieter\Documents\GitHub\WFTanks-1\WFTanksMain\WFTanks\bin\Debug\WFTanks.pdb
+C:\Users\Pieter\Documents\GitHub\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.csprojResolveAssemblyReference.cache
+C:\Users\Pieter\Documents\GitHub\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.Form1.resources
+C:\Users\Pieter\Documents\GitHub\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.Properties.Resources.resources
+C:\Users\Pieter\Documents\GitHub\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.csproj.GenerateResource.Cache
+C:\Users\Pieter\Documents\Visual Studio 2015\Projects\WFTanks-1\WFTanksMain\WFTanks\bin\Debug\WFTanks.exe.config
+C:\Users\Pieter\Documents\Visual Studio 2015\Projects\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.exe
+C:\Users\Pieter\Documents\Visual Studio 2015\Projects\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.pdb
+C:\Users\Pieter\Documents\Visual Studio 2015\Projects\WFTanks-1\WFTanksMain\WFTanks\bin\Debug\WFTanks.exe
+C:\Users\Pieter\Documents\Visual Studio 2015\Projects\WFTanks-1\WFTanksMain\WFTanks\bin\Debug\WFTanks.pdb
+C:\Users\Pieter\Documents\Visual Studio 2015\Projects\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.csprojResolveAssemblyReference.cache
+C:\Users\Pieter\Documents\Visual Studio 2015\Projects\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.Form1.resources
+C:\Users\Pieter\Documents\Visual Studio 2015\Projects\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.Properties.Resources.resources
+C:\Users\Pieter\Documents\Visual Studio 2015\Projects\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.csproj.GenerateResource.Cache
