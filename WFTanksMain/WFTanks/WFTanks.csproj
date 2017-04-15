@@ -113,9 +113,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="AllieTanksDesign\brickimage.jpg" />
     <Content Include="AllieTanksDesign\down1.png" />
     <Content Include="AllieTanksDesign\down2.png" />
     <Content Include="AllieTanksDesign\down3.png" />
+    <Content Include="Map\bitmap.png" />
     <None Include="AllieTanksDesign\up4.png" />
     <None Include="AllieTanksDesign\down4.png" />
     <Content Include="AllieTanksDesign\eagle.png" />
