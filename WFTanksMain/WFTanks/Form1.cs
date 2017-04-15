@@ -133,8 +133,10 @@ namespace WFTanks
                 if (t1.IsCanceled)
                     t1.Dispose();
             }
+            if(e.KeyCode == Keys.Right)
+            {
+
+            }
         }
-
-
     }
 }
