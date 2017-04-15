@@ -13,7 +13,7 @@ namespace WFTanks
 {
     public partial class Form1 : Form
     {
-        
+
 
         public Form1()
         {
@@ -41,14 +41,20 @@ namespace WFTanks
                         AllieTanksDesign.Image = Properties.Resources.down2;
                         System.Threading.Thread.Sleep(100);
                     }
-                },token);
-              
-               
-                AllieTanksDesign.Top += 5;
+                }, token);
+
+                if (AllieTanksDesign.Top >= 650)
+                { AllieTanksDesign.Top += 0; }
+                else
+                { AllieTanksDesign.Top += 5; }
                 tokenSource.Cancel();
+                if (t1.IsCanceled)
+                    t1.Dispose();
             }
             if (e.KeyCode == Keys.Up)
             {
+
+
                 Task t1 = Task.Factory.StartNew(() =>
                 {
                     while (!token.IsCancellationRequested)
@@ -65,13 +71,18 @@ namespace WFTanks
                 }, token);
 
 
-                AllieTanksDesign.Top -= 5;
+                if (AllieTanksDesign.Top <= 5)
+                { AllieTanksDesign.Top += 0; }
+                else
+                { AllieTanksDesign.Top -= 5; }
                 tokenSource.Cancel();
-               
+                if (t1.IsCanceled)
+                    t1.Dispose();
 
             }
             if (e.KeyCode == Keys.Left)
             {
+
                 Task t1 = Task.Factory.StartNew(() =>
                 {
                     while (!token.IsCancellationRequested)
@@ -87,13 +98,18 @@ namespace WFTanks
                     }
                 }, token);
 
-
-                AllieTanksDesign.Left-= 5;
+                if (AllieTanksDesign.Left <= 5)
+                { AllieTanksDesign.Left += 0; }
+                else
+                { AllieTanksDesign.Left -= 5; }
+                
                 tokenSource.Cancel();
-
+                if (t1.IsCanceled)
+                    t1.Dispose();
             }
             if (e.KeyCode == Keys.Right)
             {
+
                 Task t1 = Task.Factory.StartNew(() =>
                 {
                     while (!token.IsCancellationRequested)
@@ -109,11 +125,16 @@ namespace WFTanks
                     }
                 }, token);
 
-
-                AllieTanksDesign.Left += 5;
+                if (AllieTanksDesign.Left >= 704)
+                { AllieTanksDesign.Left += 0; }
+                else
+                { AllieTanksDesign.Left += 5; }
                 tokenSource.Cancel();
-
+                if (t1.IsCanceled)
+                    t1.Dispose();
             }
         }
+
+
     }
 }
