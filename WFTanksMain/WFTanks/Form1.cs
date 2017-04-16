@@ -21,11 +21,13 @@ namespace WFTanks
             InitializeComponent();
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        public void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            var game = new Game(this);
+
             CancellationTokenSource tokenSource = new CancellationTokenSource();
             CancellationToken token = tokenSource.Token;
-            if (e.KeyCode == Keys.Down)
+            if (e.KeyCode == Keys.Down && !game.Collisions())
             {
 
                 Task t1 = Task.Factory.StartNew(() =>
@@ -51,7 +53,7 @@ namespace WFTanks
                 if (t1.IsCanceled)
                     t1.Dispose();
             }
-            if (e.KeyCode == Keys.Up)
+            if (e.KeyCode == Keys.Up && !game.Collisions())
             {
 
 
@@ -80,7 +82,7 @@ namespace WFTanks
                     t1.Dispose();
 
             }
-            if (e.KeyCode == Keys.Left)
+            if (e.KeyCode == Keys.Left && !game.Collisions())
             {
 
                 Task t1 = Task.Factory.StartNew(() =>
@@ -102,12 +104,12 @@ namespace WFTanks
                 { AllieTanksDesign.Left += 0; }
                 else
                 { AllieTanksDesign.Left -= 5; }
-                
+
                 tokenSource.Cancel();
                 if (t1.IsCanceled)
                     t1.Dispose();
             }
-            if (e.KeyCode == Keys.Right)
+            if (e.KeyCode == Keys.Right && !game.Collisions())
             {
 
                 Task t1 = Task.Factory.StartNew(() =>
@@ -132,10 +134,6 @@ namespace WFTanks
                 tokenSource.Cancel();
                 if (t1.IsCanceled)
                     t1.Dispose();
-            }
-            if(e.KeyCode == Keys.Right)
-            {
-
             }
         }
     }
