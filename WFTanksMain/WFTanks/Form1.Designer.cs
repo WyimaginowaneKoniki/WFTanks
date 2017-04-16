@@ -5,7 +5,7 @@
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        public System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.AllieTanksDesign = new System.Windows.Forms.PictureBox();
@@ -860,64 +860,64 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox AllieTanksDesign;
-        private System.Windows.Forms.PictureBox EagleImage;
-        private System.Windows.Forms.PictureBox BrickWall1;
-        private System.Windows.Forms.PictureBox BrickWall2;
-        private System.Windows.Forms.PictureBox BrickWall3;
-        private System.Windows.Forms.PictureBox BrickWall4;
-        private System.Windows.Forms.PictureBox BrickWall5;
-        private System.Windows.Forms.PictureBox BrickWall6;
-        private System.Windows.Forms.PictureBox BrickWall7;
-        private System.Windows.Forms.PictureBox BrickWall8;
-        private System.Windows.Forms.PictureBox BrickWall9;
-        private System.Windows.Forms.PictureBox BrickWall10;
-        private System.Windows.Forms.PictureBox BrickWall11;
-        private System.Windows.Forms.PictureBox BrickWall12;
-        private System.Windows.Forms.PictureBox BrickWall13;
-        private System.Windows.Forms.PictureBox BrickWall14;
-        private System.Windows.Forms.PictureBox BrickWall15;
-        private System.Windows.Forms.PictureBox BrickWall16;
-        private System.Windows.Forms.PictureBox BrickWall17;
-        private System.Windows.Forms.PictureBox BrickWall18;
-        private System.Windows.Forms.PictureBox BrickWall19;
-        private System.Windows.Forms.PictureBox BrickWall20;
-        private System.Windows.Forms.PictureBox BrickWall21;
-        private System.Windows.Forms.PictureBox BrickWall22;
-        private System.Windows.Forms.PictureBox BrickWall23;
-        private System.Windows.Forms.PictureBox BrickWall24;
-        private System.Windows.Forms.PictureBox BrickWall25;
-        private System.Windows.Forms.PictureBox BrickWall26;
-        private System.Windows.Forms.PictureBox BrickWall27;
-        private System.Windows.Forms.PictureBox BrickWall28;
-        private System.Windows.Forms.PictureBox BrickWall29;
-        private System.Windows.Forms.PictureBox BrickWall30;
-        private System.Windows.Forms.PictureBox BrickWall31;
-        private System.Windows.Forms.PictureBox BrickWall32;
-        private System.Windows.Forms.PictureBox BrickWall33;
-        private System.Windows.Forms.PictureBox BrickWall34;
-        private System.Windows.Forms.PictureBox BrickWall35;
-        private System.Windows.Forms.PictureBox BrickWall36;
-        private System.Windows.Forms.PictureBox BrickWall37;
-        private System.Windows.Forms.PictureBox BrickWall38;
-        private System.Windows.Forms.PictureBox BrickWall39;
-        private System.Windows.Forms.PictureBox BrickWall40;
-        private System.Windows.Forms.PictureBox BrickWall41;
-        private System.Windows.Forms.PictureBox BrickWall42;
-        private System.Windows.Forms.PictureBox BrickWall43;
-        private System.Windows.Forms.PictureBox BrickWall44;
-        private System.Windows.Forms.PictureBox BrickWall45;
-        private System.Windows.Forms.PictureBox BrickWall46;
-        private System.Windows.Forms.PictureBox BrickWall47;
-        private System.Windows.Forms.PictureBox BrickWall48;
-        private System.Windows.Forms.PictureBox BrickWall49;
-        private System.Windows.Forms.PictureBox BrickWall50;
-        private System.Windows.Forms.PictureBox BrickWall51;
-        private System.Windows.Forms.PictureBox BrickWall52;
-        private System.Windows.Forms.PictureBox BrickWall53;
-        private System.Windows.Forms.PictureBox BrickWall54;
-        private System.Windows.Forms.PictureBox BrickWall55;
-        private System.Windows.Forms.PictureBox BrickWall56;
+        public System.Windows.Forms.PictureBox AllieTanksDesign;
+        public System.Windows.Forms.PictureBox EagleImage;
+        public System.Windows.Forms.PictureBox BrickWall1;
+        public System.Windows.Forms.PictureBox BrickWall2;
+        public System.Windows.Forms.PictureBox BrickWall3;
+        public System.Windows.Forms.PictureBox BrickWall4;
+        public System.Windows.Forms.PictureBox BrickWall5;
+        public System.Windows.Forms.PictureBox BrickWall6;
+        public System.Windows.Forms.PictureBox BrickWall7;
+        public System.Windows.Forms.PictureBox BrickWall8;
+        public System.Windows.Forms.PictureBox BrickWall9;
+        public System.Windows.Forms.PictureBox BrickWall10;
+        public System.Windows.Forms.PictureBox BrickWall11;
+        public System.Windows.Forms.PictureBox BrickWall12;
+        public System.Windows.Forms.PictureBox BrickWall13;
+        public System.Windows.Forms.PictureBox BrickWall14;
+        public System.Windows.Forms.PictureBox BrickWall15;
+        public System.Windows.Forms.PictureBox BrickWall16;
+        public System.Windows.Forms.PictureBox BrickWall17;
+        public System.Windows.Forms.PictureBox BrickWall18;
+        public System.Windows.Forms.PictureBox BrickWall19;
+        public System.Windows.Forms.PictureBox BrickWall20;
+        public System.Windows.Forms.PictureBox BrickWall21;
+        public System.Windows.Forms.PictureBox BrickWall22;
+        public System.Windows.Forms.PictureBox BrickWall23;
+        public System.Windows.Forms.PictureBox BrickWall24;
+        public System.Windows.Forms.PictureBox BrickWall25;
+        public System.Windows.Forms.PictureBox BrickWall26;
+        public System.Windows.Forms.PictureBox BrickWall27;
+        public System.Windows.Forms.PictureBox BrickWall28;
+        public System.Windows.Forms.PictureBox BrickWall29;
+        public System.Windows.Forms.PictureBox BrickWall30;
+        public System.Windows.Forms.PictureBox BrickWall31;
+        public System.Windows.Forms.PictureBox BrickWall32;
+        public System.Windows.Forms.PictureBox BrickWall33;
+        public System.Windows.Forms.PictureBox BrickWall34;
+        public System.Windows.Forms.PictureBox BrickWall35;
+        public System.Windows.Forms.PictureBox BrickWall36;
+        public System.Windows.Forms.PictureBox BrickWall37;
+        public System.Windows.Forms.PictureBox BrickWall38;
+        public System.Windows.Forms.PictureBox BrickWall39;
+        public System.Windows.Forms.PictureBox BrickWall40;
+        public System.Windows.Forms.PictureBox BrickWall41;
+        public System.Windows.Forms.PictureBox BrickWall42;
+        public System.Windows.Forms.PictureBox BrickWall43;
+        public System.Windows.Forms.PictureBox BrickWall44;
+        public System.Windows.Forms.PictureBox BrickWall45;
+        public System.Windows.Forms.PictureBox BrickWall46;
+        public System.Windows.Forms.PictureBox BrickWall47;
+        public System.Windows.Forms.PictureBox BrickWall48;
+        public System.Windows.Forms.PictureBox BrickWall49;
+        public System.Windows.Forms.PictureBox BrickWall50;
+        public System.Windows.Forms.PictureBox BrickWall51;
+        public System.Windows.Forms.PictureBox BrickWall52;
+        public System.Windows.Forms.PictureBox BrickWall53;
+        public System.Windows.Forms.PictureBox BrickWall54;
+        public System.Windows.Forms.PictureBox BrickWall55;
+        public System.Windows.Forms.PictureBox BrickWall56;
     }
 }
 
