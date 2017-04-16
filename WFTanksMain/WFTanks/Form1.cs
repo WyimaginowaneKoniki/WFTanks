@@ -24,120 +24,134 @@ namespace WFTanks
         public void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             var game = new Game(this);
-
-            CancellationTokenSource tokenSource = new CancellationTokenSource();
-            CancellationToken token = tokenSource.Token;
+            var MoveDown = new Action(() => { AllieTanksDesign.Top+=1; });
+            var MoveUp = new Action(() => { AllieTanksDesign.Top -= 1; });
+            var MoveLeft = new Action(() => { AllieTanksDesign.Left -= 1; });
+            var MoveRight = new Action(() => { AllieTanksDesign.Left += 1; });
+            
             if (e.KeyCode == Keys.Down && !game.Collisions())
             {
-
                 Task t1 = Task.Factory.StartNew(() =>
                 {
-                    while (!token.IsCancellationRequested)
+                    for (int i = 0; i < 30; i++)
                     {
-                        AllieTanksDesign.Image = Properties.Resources.down1;
-                        if (!((AllieTanksDesign.Top + 30) > 650))
-                            { AllieTanksDesign.Top += 7; }
-                        Thread.Sleep(100);
-                        AllieTanksDesign.Image = Properties.Resources.down3;
-                        if (!((AllieTanksDesign.Top + 23) > 650))
-                            { AllieTanksDesign.Top += 8; }
-                        Thread.Sleep(100);
-                        AllieTanksDesign.Image = Properties.Resources.down4;
-                        if (!((AllieTanksDesign.Top + 15) > 650))
-                            { AllieTanksDesign.Top += 7; }
-                        Thread.Sleep(100);
-                        AllieTanksDesign.Image = Properties.Resources.down2;
-                        if (!((AllieTanksDesign.Top + 8) > 650))
-                            { AllieTanksDesign.Top += 8; }
-                        Thread.Sleep(100);
+                        AllieTanksDesign.Invoke(MoveDown);
+                        Thread.Sleep(20);
+                        if (i == 0)
+                        {
+                            AllieTanksDesign.Image = Properties.Resources.down1;
+                        }
+                        if (i == 7)
+                        {
+                            AllieTanksDesign.Image = Properties.Resources.down2;
+                        }
+                        if (i == 15)
+                        {
+                            AllieTanksDesign.Image = Properties.Resources.down3;
+                        }
+                        if (i == 22)
+                        {
+                            AllieTanksDesign.Image = Properties.Resources.down3;
+                        }
                     }
-                }, token);
+                });
+               
+            }
+
+               
 
                 /*
                 if (!(AllieTanksDesign.Top > 650))
                 { AllieTanksDesign.Top += 30; }
                 */
-                tokenSource.Cancel();
-                if (t1.IsCanceled)
-                    t1.Dispose();
-            }
+               
+            
             if (e.KeyCode == Keys.Up && !game.Collisions())
             {
 
 
                 Task t1 = Task.Factory.StartNew(() =>
                 {
-                    while (!token.IsCancellationRequested)
+                    for (int i = 0; i < 30; i++)
                     {
-                        AllieTanksDesign.Image = Properties.Resources.up1;
-                        System.Threading.Thread.Sleep(100);
-                        AllieTanksDesign.Image = Properties.Resources.up3;
-                        System.Threading.Thread.Sleep(100);
-                        AllieTanksDesign.Image = Properties.Resources.up4;
-                        System.Threading.Thread.Sleep(100);
-                        AllieTanksDesign.Image = Properties.Resources.up2;
-                        System.Threading.Thread.Sleep(100);
+                        AllieTanksDesign.Invoke(MoveUp);
+                        Thread.Sleep(20);
+                        if (i == 0)
+                        {
+                            AllieTanksDesign.Image = Properties.Resources.up1;
+                        }
+                        if (i == 7)
+                        {
+                            AllieTanksDesign.Image = Properties.Resources.up2;
+                        }
+                        if (i == 15)
+                        {
+                            AllieTanksDesign.Image = Properties.Resources.up3;
+                        }
+                        if (i == 22)
+                        {
+                            AllieTanksDesign.Image = Properties.Resources.up3;
+                        }
                     }
-                }, token);
-
-
-                if (!(AllieTanksDesign.Top < 30))
-                { AllieTanksDesign.Top -= 30; }
-
-                tokenSource.Cancel();
-                if (t1.IsCanceled)
-                    t1.Dispose();
+                });
 
             }
             if (e.KeyCode == Keys.Left && !game.Collisions())
             {
 
-                Task t1 = Task.Factory.StartNew(() =>
-                {
-                    while (!token.IsCancellationRequested)
+                
+                    Task t1 = Task.Factory.StartNew(() =>
                     {
-                        AllieTanksDesign.Image = Properties.Resources.left1;
-                        System.Threading.Thread.Sleep(100);
-                        AllieTanksDesign.Image = Properties.Resources.left3;
-                        System.Threading.Thread.Sleep(100);
-                        AllieTanksDesign.Image = Properties.Resources.left4;
-                        System.Threading.Thread.Sleep(100);
-                        AllieTanksDesign.Image = Properties.Resources.left2;
-                        System.Threading.Thread.Sleep(100);
-                    }
-                }, token);
-
-                if (!(AllieTanksDesign.Left < 30))
-                { AllieTanksDesign.Left -= 30; }
-
-                tokenSource.Cancel();
-                if (t1.IsCanceled)
-                    t1.Dispose();
-            }
+                        for (int i = 0; i < 30; i++)
+                        {
+                            AllieTanksDesign.Invoke(MoveLeft);
+                            Thread.Sleep(20);
+                            if (i == 0)
+                            {
+                                AllieTanksDesign.Image = Properties.Resources.left1;
+                            }
+                            if (i == 7)
+                            {
+                                AllieTanksDesign.Image = Properties.Resources.left2;
+                            }
+                            if (i == 15)
+                            {
+                                AllieTanksDesign.Image = Properties.Resources.left3;
+                            }
+                            if (i == 22)
+                            {
+                                AllieTanksDesign.Image = Properties.Resources.left3;
+                            }
+                        }
+                    });
+                }
             if (e.KeyCode == Keys.Right && !game.Collisions())
             {
 
                 Task t1 = Task.Factory.StartNew(() =>
                 {
-                    while (!token.IsCancellationRequested)
+                    for (int i = 0; i < 30; i++)
                     {
-                        AllieTanksDesign.Image = Properties.Resources.right1;
-                        System.Threading.Thread.Sleep(100);
-                        AllieTanksDesign.Image = Properties.Resources.Right3;
-                        System.Threading.Thread.Sleep(100);
-                        AllieTanksDesign.Image = Properties.Resources.Right4;
-                        System.Threading.Thread.Sleep(100);
-                        AllieTanksDesign.Image = Properties.Resources.right2;
-                        System.Threading.Thread.Sleep(100);
+                        AllieTanksDesign.Invoke(MoveRight);
+                        Thread.Sleep(20);
+                        if (i == 0)
+                        {
+                            AllieTanksDesign.Image = Properties.Resources.right1;
+                        }
+                        if (i == 7)
+                        {
+                            AllieTanksDesign.Image = Properties.Resources.right2;
+                        }
+                        if (i == 15)
+                        {
+                            AllieTanksDesign.Image = Properties.Resources.Right3;
+                        }
+                        if (i == 22)
+                        {
+                            AllieTanksDesign.Image = Properties.Resources.Right3;
+                        }
                     }
-                }, token);
-
-                if (!(AllieTanksDesign.Left > 700))
-                { AllieTanksDesign.Left += 30; }
-
-                tokenSource.Cancel();
-                if (t1.IsCanceled)
-                    t1.Dispose();
+                });
             }
         }
     }
