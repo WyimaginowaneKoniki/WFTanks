@@ -28,3 +28,9 @@ C:\Users\Pieter\Documents\GitHub\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks
 C:\Users\Pieter\Documents\GitHub\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.Form1.resources
 C:\Users\Pieter\Documents\GitHub\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.Properties.Resources.resources
 C:\Users\Pieter\Documents\GitHub\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.csproj.GenerateResource.Cache
+E:\Creation\Programowanie\Github\WFTanks\WFTanksMain\WFTanks\obj\Debug\WFTanks.csprojResolveAssemblyReference.cache
+E:\Creation\Programowanie\Github\WFTanks\WFTanksMain\WFTanks\obj\Debug\WFTanks.Form1.resources
+E:\Creation\Programowanie\Github\WFTanks\WFTanksMain\WFTanks\obj\Debug\WFTanks.Properties.Resources.resources
+E:\Creation\Programowanie\Github\WFTanks\WFTanksMain\WFTanks\obj\Debug\WFTanks.csproj.GenerateResource.Cache
+E:\Creation\Programowanie\Github\WFTanks\WFTanksMain\WFTanks\bin\Debug\WFTanks.exe
+E:\Creation\Programowanie\Github\WFTanks\WFTanksMain\WFTanks\bin\Debug\WFTanks.pdb
