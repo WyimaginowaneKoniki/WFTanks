@@ -35,20 +35,28 @@ namespace WFTanks
                     while (!token.IsCancellationRequested)
                     {
                         AllieTanksDesign.Image = Properties.Resources.down1;
-                        System.Threading.Thread.Sleep(100);
+                        if (!((AllieTanksDesign.Top + 30) > 650))
+                            { AllieTanksDesign.Top += 7; }
+                        Thread.Sleep(100);
                         AllieTanksDesign.Image = Properties.Resources.down3;
-                        System.Threading.Thread.Sleep(100);
+                        if (!((AllieTanksDesign.Top + 23) > 650))
+                            { AllieTanksDesign.Top += 8; }
+                        Thread.Sleep(100);
                         AllieTanksDesign.Image = Properties.Resources.down4;
-                        System.Threading.Thread.Sleep(100);
+                        if (!((AllieTanksDesign.Top + 15) > 650))
+                            { AllieTanksDesign.Top += 7; }
+                        Thread.Sleep(100);
                         AllieTanksDesign.Image = Properties.Resources.down2;
-                        System.Threading.Thread.Sleep(100);
+                        if (!((AllieTanksDesign.Top + 8) > 650))
+                            { AllieTanksDesign.Top += 8; }
+                        Thread.Sleep(100);
                     }
                 }, token);
 
-                if (AllieTanksDesign.Top >= 650)
-                { AllieTanksDesign.Top += 0; }
-                else
-                { AllieTanksDesign.Top += 5; }
+                /*
+                if (!(AllieTanksDesign.Top > 650))
+                { AllieTanksDesign.Top += 30; }
+                */
                 tokenSource.Cancel();
                 if (t1.IsCanceled)
                     t1.Dispose();
@@ -73,10 +81,9 @@ namespace WFTanks
                 }, token);
 
 
-                if (AllieTanksDesign.Top <= 5)
-                { AllieTanksDesign.Top += 0; }
-                else
-                { AllieTanksDesign.Top -= 5; }
+                if (!(AllieTanksDesign.Top < 30))
+                { AllieTanksDesign.Top -= 30; }
+
                 tokenSource.Cancel();
                 if (t1.IsCanceled)
                     t1.Dispose();
@@ -100,10 +107,8 @@ namespace WFTanks
                     }
                 }, token);
 
-                if (AllieTanksDesign.Left <= 5)
-                { AllieTanksDesign.Left += 0; }
-                else
-                { AllieTanksDesign.Left -= 5; }
+                if (!(AllieTanksDesign.Left < 30))
+                { AllieTanksDesign.Left -= 30; }
 
                 tokenSource.Cancel();
                 if (t1.IsCanceled)
@@ -127,10 +132,9 @@ namespace WFTanks
                     }
                 }, token);
 
-                if (AllieTanksDesign.Left >= 704)
-                { AllieTanksDesign.Left += 0; }
-                else
-                { AllieTanksDesign.Left += 5; }
+                if (!(AllieTanksDesign.Left > 700))
+                { AllieTanksDesign.Left += 30; }
+
                 tokenSource.Cancel();
                 if (t1.IsCanceled)
                     t1.Dispose();
