@@ -151,7 +151,7 @@
             // 
             this.AllieTanksDesign.BackColor = System.Drawing.Color.Transparent;
             this.AllieTanksDesign.Image = ((System.Drawing.Image)(resources.GetObject("AllieTanksDesign.Image")));
-            this.AllieTanksDesign.Location = new System.Drawing.Point(704, 650);
+            this.AllieTanksDesign.Location = new System.Drawing.Point(720, 660);
             this.AllieTanksDesign.Name = "AllieTanksDesign";
             this.AllieTanksDesign.Size = new System.Drawing.Size(30, 30);
             this.AllieTanksDesign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -162,7 +162,7 @@
             // 
             this.EagleImage.BackColor = System.Drawing.Color.Transparent;
             this.EagleImage.Image = ((System.Drawing.Image)(resources.GetObject("EagleImage.Image")));
-            this.EagleImage.Location = new System.Drawing.Point(330, 650);
+            this.EagleImage.Location = new System.Drawing.Point(330, 660);
             this.EagleImage.Name = "EagleImage";
             this.EagleImage.Size = new System.Drawing.Size(30, 30);
             this.EagleImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -172,7 +172,7 @@
             // BrickWall1
             // 
             this.BrickWall1.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall1.Location = new System.Drawing.Point(360, 650);
+            this.BrickWall1.Location = new System.Drawing.Point(360, 660);
             this.BrickWall1.Name = "BrickWall1";
             this.BrickWall1.Size = new System.Drawing.Size(30, 30);
             this.BrickWall1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -182,7 +182,7 @@
             // BrickWall2
             // 
             this.BrickWall2.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall2.Location = new System.Drawing.Point(360, 620);
+            this.BrickWall2.Location = new System.Drawing.Point(360, 630);
             this.BrickWall2.Name = "BrickWall2";
             this.BrickWall2.Size = new System.Drawing.Size(30, 30);
             this.BrickWall2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -192,7 +192,7 @@
             // BrickWall3
             // 
             this.BrickWall3.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall3.Location = new System.Drawing.Point(330, 620);
+            this.BrickWall3.Location = new System.Drawing.Point(330, 630);
             this.BrickWall3.Name = "BrickWall3";
             this.BrickWall3.Size = new System.Drawing.Size(30, 30);
             this.BrickWall3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -202,7 +202,7 @@
             // BrickWall4
             // 
             this.BrickWall4.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall4.Location = new System.Drawing.Point(300, 620);
+            this.BrickWall4.Location = new System.Drawing.Point(300, 630);
             this.BrickWall4.Name = "BrickWall4";
             this.BrickWall4.Size = new System.Drawing.Size(30, 30);
             this.BrickWall4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -212,7 +212,7 @@
             // BrickWall5
             // 
             this.BrickWall5.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall5.Location = new System.Drawing.Point(300, 650);
+            this.BrickWall5.Location = new System.Drawing.Point(300, 660);
             this.BrickWall5.Name = "BrickWall5";
             this.BrickWall5.Size = new System.Drawing.Size(30, 30);
             this.BrickWall5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -322,7 +322,7 @@
             // BrickWall16
             // 
             this.BrickWall16.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall16.Location = new System.Drawing.Point(300, 418);
+            this.BrickWall16.Location = new System.Drawing.Point(300, 420);
             this.BrickWall16.Name = "BrickWall16";
             this.BrickWall16.Size = new System.Drawing.Size(30, 30);
             this.BrickWall16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -332,7 +332,7 @@
             // BrickWall17
             // 
             this.BrickWall17.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall17.Location = new System.Drawing.Point(300, 448);
+            this.BrickWall17.Location = new System.Drawing.Point(300, 450);
             this.BrickWall17.Name = "BrickWall17";
             this.BrickWall17.Size = new System.Drawing.Size(30, 30);
             this.BrickWall17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -342,7 +342,7 @@
             // BrickWall18
             // 
             this.BrickWall18.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall18.Location = new System.Drawing.Point(300, 478);
+            this.BrickWall18.Location = new System.Drawing.Point(300, 480);
             this.BrickWall18.Name = "BrickWall18";
             this.BrickWall18.Size = new System.Drawing.Size(30, 30);
             this.BrickWall18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -352,7 +352,7 @@
             // BrickWall19
             // 
             this.BrickWall19.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall19.Location = new System.Drawing.Point(300, 508);
+            this.BrickWall19.Location = new System.Drawing.Point(300, 510);
             this.BrickWall19.Name = "BrickWall19";
             this.BrickWall19.Size = new System.Drawing.Size(30, 30);
             this.BrickWall19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -362,7 +362,7 @@
             // BrickWall20
             // 
             this.BrickWall20.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall20.Location = new System.Drawing.Point(360, 418);
+            this.BrickWall20.Location = new System.Drawing.Point(360, 420);
             this.BrickWall20.Name = "BrickWall20";
             this.BrickWall20.Size = new System.Drawing.Size(30, 30);
             this.BrickWall20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -372,7 +372,7 @@
             // BrickWall21
             // 
             this.BrickWall21.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall21.Location = new System.Drawing.Point(360, 448);
+            this.BrickWall21.Location = new System.Drawing.Point(360, 450);
             this.BrickWall21.Name = "BrickWall21";
             this.BrickWall21.Size = new System.Drawing.Size(30, 30);
             this.BrickWall21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -382,7 +382,7 @@
             // BrickWall22
             // 
             this.BrickWall22.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall22.Location = new System.Drawing.Point(360, 478);
+            this.BrickWall22.Location = new System.Drawing.Point(360, 480);
             this.BrickWall22.Name = "BrickWall22";
             this.BrickWall22.Size = new System.Drawing.Size(30, 30);
             this.BrickWall22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -392,7 +392,7 @@
             // BrickWall23
             // 
             this.BrickWall23.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall23.Location = new System.Drawing.Point(360, 508);
+            this.BrickWall23.Location = new System.Drawing.Point(360, 510);
             this.BrickWall23.Name = "BrickWall23";
             this.BrickWall23.Size = new System.Drawing.Size(30, 30);
             this.BrickWall23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -402,7 +402,7 @@
             // BrickWall24
             // 
             this.BrickWall24.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall24.Location = new System.Drawing.Point(330, 448);
+            this.BrickWall24.Location = new System.Drawing.Point(330, 450);
             this.BrickWall24.Name = "BrickWall24";
             this.BrickWall24.Size = new System.Drawing.Size(30, 30);
             this.BrickWall24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -502,7 +502,7 @@
             // BrickWall34
             // 
             this.BrickWall34.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall34.Location = new System.Drawing.Point(506, 420);
+            this.BrickWall34.Location = new System.Drawing.Point(510, 420);
             this.BrickWall34.Name = "BrickWall34";
             this.BrickWall34.Size = new System.Drawing.Size(30, 30);
             this.BrickWall34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -532,7 +532,7 @@
             // BrickWall37
             // 
             this.BrickWall37.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall37.Location = new System.Drawing.Point(150, 140);
+            this.BrickWall37.Location = new System.Drawing.Point(150, 150);
             this.BrickWall37.Name = "BrickWall37";
             this.BrickWall37.Size = new System.Drawing.Size(30, 30);
             this.BrickWall37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -542,7 +542,7 @@
             // BrickWall38
             // 
             this.BrickWall38.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall38.Location = new System.Drawing.Point(150, 170);
+            this.BrickWall38.Location = new System.Drawing.Point(150, 180);
             this.BrickWall38.Name = "BrickWall38";
             this.BrickWall38.Size = new System.Drawing.Size(30, 30);
             this.BrickWall38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -552,7 +552,7 @@
             // BrickWall39
             // 
             this.BrickWall39.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall39.Location = new System.Drawing.Point(150, 200);
+            this.BrickWall39.Location = new System.Drawing.Point(150, 210);
             this.BrickWall39.Name = "BrickWall39";
             this.BrickWall39.Size = new System.Drawing.Size(30, 30);
             this.BrickWall39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -562,7 +562,7 @@
             // BrickWall40
             // 
             this.BrickWall40.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall40.Location = new System.Drawing.Point(150, 230);
+            this.BrickWall40.Location = new System.Drawing.Point(150, 240);
             this.BrickWall40.Name = "BrickWall40";
             this.BrickWall40.Size = new System.Drawing.Size(30, 30);
             this.BrickWall40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -572,7 +572,7 @@
             // BrickWall41
             // 
             this.BrickWall41.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall41.Location = new System.Drawing.Point(240, 140);
+            this.BrickWall41.Location = new System.Drawing.Point(240, 150);
             this.BrickWall41.Name = "BrickWall41";
             this.BrickWall41.Size = new System.Drawing.Size(30, 30);
             this.BrickWall41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -582,7 +582,7 @@
             // BrickWall42
             // 
             this.BrickWall42.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall42.Location = new System.Drawing.Point(240, 170);
+            this.BrickWall42.Location = new System.Drawing.Point(240, 180);
             this.BrickWall42.Name = "BrickWall42";
             this.BrickWall42.Size = new System.Drawing.Size(30, 30);
             this.BrickWall42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -592,7 +592,7 @@
             // BrickWall43
             // 
             this.BrickWall43.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall43.Location = new System.Drawing.Point(240, 200);
+            this.BrickWall43.Location = new System.Drawing.Point(240, 210);
             this.BrickWall43.Name = "BrickWall43";
             this.BrickWall43.Size = new System.Drawing.Size(30, 30);
             this.BrickWall43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -602,7 +602,7 @@
             // BrickWall44
             // 
             this.BrickWall44.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall44.Location = new System.Drawing.Point(240, 230);
+            this.BrickWall44.Location = new System.Drawing.Point(240, 240);
             this.BrickWall44.Name = "BrickWall44";
             this.BrickWall44.Size = new System.Drawing.Size(30, 30);
             this.BrickWall44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -612,7 +612,7 @@
             // BrickWall45
             // 
             this.BrickWall45.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall45.Location = new System.Drawing.Point(0, 299);
+            this.BrickWall45.Location = new System.Drawing.Point(0, 300);
             this.BrickWall45.Name = "BrickWall45";
             this.BrickWall45.Size = new System.Drawing.Size(30, 30);
             this.BrickWall45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -622,7 +622,7 @@
             // BrickWall46
             // 
             this.BrickWall46.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall46.Location = new System.Drawing.Point(704, 299);
+            this.BrickWall46.Location = new System.Drawing.Point(720, 300);
             this.BrickWall46.Name = "BrickWall46";
             this.BrickWall46.Size = new System.Drawing.Size(30, 30);
             this.BrickWall46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -632,7 +632,7 @@
             // BrickWall47
             // 
             this.BrickWall47.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall47.Location = new System.Drawing.Point(510, 160);
+            this.BrickWall47.Location = new System.Drawing.Point(510, 180);
             this.BrickWall47.Name = "BrickWall47";
             this.BrickWall47.Size = new System.Drawing.Size(30, 30);
             this.BrickWall47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -642,7 +642,7 @@
             // BrickWall48
             // 
             this.BrickWall48.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall48.Location = new System.Drawing.Point(450, 130);
+            this.BrickWall48.Location = new System.Drawing.Point(450, 120);
             this.BrickWall48.Name = "BrickWall48";
             this.BrickWall48.Size = new System.Drawing.Size(30, 30);
             this.BrickWall48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -652,7 +652,7 @@
             // BrickWall49
             // 
             this.BrickWall49.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall49.Location = new System.Drawing.Point(450, 160);
+            this.BrickWall49.Location = new System.Drawing.Point(450, 150);
             this.BrickWall49.Name = "BrickWall49";
             this.BrickWall49.Size = new System.Drawing.Size(30, 30);
             this.BrickWall49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -662,7 +662,7 @@
             // BrickWall50
             // 
             this.BrickWall50.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall50.Location = new System.Drawing.Point(450, 190);
+            this.BrickWall50.Location = new System.Drawing.Point(450, 180);
             this.BrickWall50.Name = "BrickWall50";
             this.BrickWall50.Size = new System.Drawing.Size(30, 30);
             this.BrickWall50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -672,7 +672,7 @@
             // BrickWall51
             // 
             this.BrickWall51.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall51.Location = new System.Drawing.Point(450, 220);
+            this.BrickWall51.Location = new System.Drawing.Point(450, 210);
             this.BrickWall51.Name = "BrickWall51";
             this.BrickWall51.Size = new System.Drawing.Size(30, 30);
             this.BrickWall51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -682,7 +682,7 @@
             // BrickWall52
             // 
             this.BrickWall52.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall52.Location = new System.Drawing.Point(540, 130);
+            this.BrickWall52.Location = new System.Drawing.Point(540, 120);
             this.BrickWall52.Name = "BrickWall52";
             this.BrickWall52.Size = new System.Drawing.Size(30, 30);
             this.BrickWall52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -692,7 +692,7 @@
             // BrickWall53
             // 
             this.BrickWall53.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall53.Location = new System.Drawing.Point(540, 160);
+            this.BrickWall53.Location = new System.Drawing.Point(540, 150);
             this.BrickWall53.Name = "BrickWall53";
             this.BrickWall53.Size = new System.Drawing.Size(30, 30);
             this.BrickWall53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -702,7 +702,7 @@
             // BrickWall54
             // 
             this.BrickWall54.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall54.Location = new System.Drawing.Point(540, 190);
+            this.BrickWall54.Location = new System.Drawing.Point(540, 180);
             this.BrickWall54.Name = "BrickWall54";
             this.BrickWall54.Size = new System.Drawing.Size(30, 30);
             this.BrickWall54.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -712,7 +712,7 @@
             // BrickWall55
             // 
             this.BrickWall55.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall55.Location = new System.Drawing.Point(540, 220);
+            this.BrickWall55.Location = new System.Drawing.Point(540, 210);
             this.BrickWall55.Name = "BrickWall55";
             this.BrickWall55.Size = new System.Drawing.Size(30, 30);
             this.BrickWall55.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -722,7 +722,7 @@
             // BrickWall56
             // 
             this.BrickWall56.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall56.Location = new System.Drawing.Point(480, 160);
+            this.BrickWall56.Location = new System.Drawing.Point(480, 150);
             this.BrickWall56.Name = "BrickWall56";
             this.BrickWall56.Size = new System.Drawing.Size(30, 30);
             this.BrickWall56.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -734,7 +734,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WFTanks.Properties.Resources.bitmap;
-            this.ClientSize = new System.Drawing.Size(734, 681);
+            this.ClientSize = new System.Drawing.Size(750, 690);
             this.Controls.Add(this.BrickWall56);
             this.Controls.Add(this.BrickWall47);
             this.Controls.Add(this.BrickWall48);
