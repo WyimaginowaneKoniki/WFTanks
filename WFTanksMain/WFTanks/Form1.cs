@@ -29,7 +29,7 @@ namespace WFTanks
             var MoveLeft = new Action(() => { AllieTanksDesign.Left -= 1; });
             var MoveRight = new Action(() => { AllieTanksDesign.Left += 1; });
             
-            if (e.KeyCode == Keys.Down && !game.Collisions())
+            if (e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down))
             {
                 Task t1 = Task.Factory.StartNew(() =>
                 {
@@ -66,7 +66,7 @@ namespace WFTanks
                 */
                
             
-            if (e.KeyCode == Keys.Up && !game.Collisions())
+            if (e.KeyCode == Keys.Up && !game.Collisions(Game.Move.Up))
             {
 
 
@@ -96,7 +96,7 @@ namespace WFTanks
                 });
 
             }
-            if (e.KeyCode == Keys.Left && !game.Collisions())
+            if (e.KeyCode == Keys.Left && !game.Collisions(Game.Move.Left))
             {
 
                 
@@ -125,7 +125,7 @@ namespace WFTanks
                         }
                     });
                 }
-            if (e.KeyCode == Keys.Right && !game.Collisions())
+            if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right))
             {
 
                 Task t1 = Task.Factory.StartNew(() =>
