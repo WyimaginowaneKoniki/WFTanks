@@ -151,7 +151,7 @@
             // 
             this.AllieTanksDesign.BackColor = System.Drawing.Color.Transparent;
             this.AllieTanksDesign.Image = ((System.Drawing.Image)(resources.GetObject("AllieTanksDesign.Image")));
-            this.AllieTanksDesign.Location = new System.Drawing.Point(720, 431);
+            this.AllieTanksDesign.Location = new System.Drawing.Point(720, 660);
             this.AllieTanksDesign.Name = "AllieTanksDesign";
             this.AllieTanksDesign.Size = new System.Drawing.Size(30, 30);
             this.AllieTanksDesign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

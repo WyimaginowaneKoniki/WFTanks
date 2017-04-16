@@ -9,6 +9,13 @@ namespace WFTanks
 {
     class Game
     {
+        public enum Move
+        {
+            Down,
+            Left,
+            Right,
+            Up
+        }
         public List<PictureBox> Walls = new List<PictureBox>();
 
         public Form1 FormAccess;
@@ -36,22 +43,42 @@ namespace WFTanks
                 Walls.Add((PictureBox)FormAccess.Controls.Find("BrickWall" + i, true)[0]);
             }
         }
-        public bool Collisions()
-        {   //TODO 
-            if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(Walls[0].Bounds))
+        public bool Collisions(Move Tank)
+        {
+
+            System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
+            for (int i = 0; i < 56; i++)
             {
+                thing = Walls[i].Bounds;
 
-                FormAccess.AllieTanksDesign.Left += 1;
-                return true;
-
+                if (Tank == Move.Left)
+                {
+                    thing.X += 30;
+                    if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
+                    { return true; }
+                }
+                else if (Tank == Move.Up)
+                {
+                    thing.Y += 30;
+                    if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
+                    { return true; }
+                }
+                else if (Tank == Move.Down)
+                {
+                    thing.Y -= 30;
+                    if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
+                    { return true; }
+                }
+                else if (Tank == Move.Right)
+                {
+                    thing.X -= 30;
+                    if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
+                    { return true; }
+                }
             }
-            else
-            {
+            return false;
 
-                return false;
-            }
+
         }
-
-
     }
 }
