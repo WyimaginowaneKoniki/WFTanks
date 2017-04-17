@@ -18,10 +18,10 @@ namespace WFTanks
 
         public override void Movement(Form1 FormAccess, Game.Move Move)
         {
-            var MoveDown = new Action(() => { FormAccess.AllieTanksDesign.Top += 1; });
-            var MoveUp = new Action(() => { FormAccess.AllieTanksDesign.Top -= 1; });
-            var MoveLeft = new Action(() => { FormAccess.AllieTanksDesign.Left -= 1; });
-            var MoveRight = new Action(() => { FormAccess.AllieTanksDesign.Left += 1; });
+            var MoveDown = new Action(() => { if (!(FormAccess.AllieTanksDesign.Top > 620)) { FormAccess.AllieTanksDesign.Top += 1; } });
+            var MoveUp = new Action(() => { if (!(FormAccess.AllieTanksDesign.Top < 1)) { FormAccess.AllieTanksDesign.Top -= 1; } });
+            var MoveLeft = new Action(() => { if (!(FormAccess.AllieTanksDesign.Left < 1)) FormAccess.AllieTanksDesign.Left -= 1; });
+            var MoveRight = new Action(() => { if (!(FormAccess.AllieTanksDesign.Left > 700)) FormAccess.AllieTanksDesign.Left += 1; });
             if (Game.Move.Down == Move)
             {
                 
