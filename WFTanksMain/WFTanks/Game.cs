@@ -80,5 +80,42 @@ namespace WFTanks
 
 
         }
+        public bool CollisionsForEnemies(Move Tank)
+        {
+            int a = 20;
+            System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
+            for (int i = 0; i < Walls.LongCount(); i++)
+            {
+                thing = Walls[i].Bounds;
+
+                if (Tank == Move.Left)
+                {
+                    thing.X += a;
+                    if (FormAccess.EnemyTanksDesign.Bounds.IntersectsWith(thing))
+                    { return true; }
+                }
+                else if (Tank == Move.Up)
+                {
+                    thing.Y += a;
+                    if (FormAccess.EnemyTanksDesign.Bounds.IntersectsWith(thing))
+                    { return true; }
+                }
+                else if (Tank == Move.Down)
+                {
+                    thing.Y -= a;
+                    if (FormAccess.EnemyTanksDesign.Bounds.IntersectsWith(thing))
+                    { return true; }
+                }
+                else if (Tank == Move.Right)
+                {
+                    thing.X -= a;
+                    if (FormAccess.EnemyTanksDesign.Bounds.IntersectsWith(thing))
+                    { return true; }
+                }
+            }
+            return false;
+
+
+        }
     }
 }
