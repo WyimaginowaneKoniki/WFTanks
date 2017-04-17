@@ -45,33 +45,33 @@ namespace WFTanks
         }
         public bool Collisions(Move Tank)
         {
-
+            int a = 1;
             System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
-            for (int i = 0; i < 56; i++)
+            for (int i = 0; i < Walls.LongCount(); i++)
             {
                 thing = Walls[i].Bounds;
 
                 if (Tank == Move.Left)
                 {
-                    thing.X += 1;
+                    thing.X += a;
                     if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
                     { return true; }
                 }
                 else if (Tank == Move.Up)
                 {
-                    thing.Y += 1;
+                    thing.Y += a;
                     if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
                     { return true; }
                 }
                 else if (Tank == Move.Down)
                 {
-                    thing.Y -= 1;
+                    thing.Y -= a;
                     if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
                     { return true; }
                 }
                 else if (Tank == Move.Right)
                 {
-                    thing.X -= 1;
+                    thing.X -= a;
                     if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
                     { return true; }
                 }
