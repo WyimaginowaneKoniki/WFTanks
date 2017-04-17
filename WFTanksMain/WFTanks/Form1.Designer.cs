@@ -151,7 +151,7 @@
             // 
             this.AllieTanksDesign.BackColor = System.Drawing.Color.Transparent;
             this.AllieTanksDesign.Image = ((System.Drawing.Image)(resources.GetObject("AllieTanksDesign.Image")));
-            this.AllieTanksDesign.Location = new System.Drawing.Point(720, 660);
+            this.AllieTanksDesign.Location = new System.Drawing.Point(658, 391);
             this.AllieTanksDesign.Name = "AllieTanksDesign";
             this.AllieTanksDesign.Size = new System.Drawing.Size(30, 30);
             this.AllieTanksDesign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -622,7 +622,7 @@
             // BrickWall46
             // 
             this.BrickWall46.Image = global::WFTanks.Properties.Resources.brickimage;
-            this.BrickWall46.Location = new System.Drawing.Point(720, 300);
+            this.BrickWall46.Location = new System.Drawing.Point(704, 300);
             this.BrickWall46.Name = "BrickWall46";
             this.BrickWall46.Size = new System.Drawing.Size(30, 30);
             this.BrickWall46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -734,7 +734,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WFTanks.Properties.Resources.bitmap;
-            this.ClientSize = new System.Drawing.Size(750, 690);
+            this.ClientSize = new System.Drawing.Size(734, 651);
             this.Controls.Add(this.BrickWall56);
             this.Controls.Add(this.BrickWall47);
             this.Controls.Add(this.BrickWall48);
@@ -796,6 +796,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.AllieTanksDesign)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EagleImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall1)).EndInit();
