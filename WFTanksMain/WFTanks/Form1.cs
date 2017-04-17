@@ -25,8 +25,10 @@ namespace WFTanks
 
         public void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            
-            
+            if (isKeyDown)
+                return;
+            isKeyDown = true;
+
             var game = new Game(this);
             var AllyTanks = new AllyTanks(this);
            
@@ -50,7 +52,7 @@ namespace WFTanks
 
         public void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-           
+            isKeyDown = false;
         }
     }
 }
