@@ -61,7 +61,7 @@ namespace WFTanks
             // TODO Tanks : Shot()
         }
 
-        public virtual void Movement()
+        public virtual void Movement(Form1 FormAccess, Game.Move Move)
         {
             // TODO Tanks : Movement()
         }
