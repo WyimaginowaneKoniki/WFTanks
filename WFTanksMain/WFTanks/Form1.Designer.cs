@@ -734,7 +734,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WFTanks.Properties.Resources.bitmap;
-            this.ClientSize = new System.Drawing.Size(734, 651);
+            //                                        750  690
+            this.ClientSize = new System.Drawing.Size(750, 690);
+
             this.Controls.Add(this.BrickWall56);
             this.Controls.Add(this.BrickWall47);
             this.Controls.Add(this.BrickWall48);
