@@ -47,7 +47,7 @@ namespace WFTanks
                     }
                     else if (i == 15)
                     {
-                        FormAccess.AllieTanksDesign.Image = Properties.Resources.down3;
+                        FormAccess.AllieTanksDesign.Image = Properties.Resources.down4;
                     }
                     else if (i == 22)
                     {
@@ -75,7 +75,7 @@ namespace WFTanks
                     }
                     if (i == 15)
                     {
-                        FormAccess.AllieTanksDesign.Image = Properties.Resources.up3;
+                        FormAccess.AllieTanksDesign.Image = Properties.Resources.up4;
                     }
                     if (i == 22)
                     {
@@ -103,7 +103,7 @@ namespace WFTanks
                     }
                     if (i == 15)
                     {
-                        FormAccess.AllieTanksDesign.Image = Properties.Resources.left3;
+                        FormAccess.AllieTanksDesign.Image = Properties.Resources.left4;
                     }
                     if (i == 22)
                     {
@@ -131,7 +131,7 @@ namespace WFTanks
                     }
                     if (i == 15)
                     {
-                        FormAccess.AllieTanksDesign.Image = Properties.Resources.Right3;
+                        FormAccess.AllieTanksDesign.Image = Properties.Resources.Right4;
                     }
                     if (i == 22)
                     {
