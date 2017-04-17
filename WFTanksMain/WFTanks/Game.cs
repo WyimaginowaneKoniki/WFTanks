@@ -53,25 +53,25 @@ namespace WFTanks
 
                 if (Tank == Move.Left)
                 {
-                    thing.X += 30;
+                    thing.X += 1;
                     if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
                     { return true; }
                 }
                 else if (Tank == Move.Up)
                 {
-                    thing.Y += 30;
+                    thing.Y += 1;
                     if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
                     { return true; }
                 }
                 else if (Tank == Move.Down)
                 {
-                    thing.Y -= 30;
+                    thing.Y -= 1;
                     if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
                     { return true; }
                 }
                 else if (Tank == Move.Right)
                 {
-                    thing.X -= 30;
+                    thing.X -= 1;
                     if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
                     { return true; }
                 }
