@@ -14,7 +14,7 @@ namespace WFTanks
             // TODO  EnemyTanks : Shot()
         }
 
-        public override void Movement()
+        public override void Movement(Form1 FormAccess, Game.Move Move)
         {
             //  needed?
             // TODO  EnemyTanks : Movement()
