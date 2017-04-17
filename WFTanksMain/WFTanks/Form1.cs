@@ -29,23 +29,23 @@ namespace WFTanks
                 return;
             isKeyDown = true;
             var game = new Game(this);
-            var AllyTanks = new AllyTanks();
+            var AllyTanks = new AllyTanks(this);
            
             if (e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down))
             {
-                AllyTanks.Movement(this, Game.Move.Down);
+                AllyTanks.Movement(Game.Move.Down, game);
             }
             else if (e.KeyCode == Keys.Up && !game.Collisions(Game.Move.Up))
             {
-                AllyTanks.Movement(this, Game.Move.Up);
+                AllyTanks.Movement(Game.Move.Up, game);
             }
             else if (e.KeyCode == Keys.Left && !game.Collisions(Game.Move.Left))
             {
-                AllyTanks.Movement(this, Game.Move.Left);
+                AllyTanks.Movement(Game.Move.Left, game);
             }
             else if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right))
             {
-                AllyTanks.Movement(this, Game.Move.Right);
+                AllyTanks.Movement(Game.Move.Right, game);
             }
         }
 
