@@ -13,19 +13,24 @@ namespace WFTanks
 {
     public partial class Form1 : Form
     {
-
+        bool isKeyDown = false;
 
         public Form1()
         {
+           
+           
             DoubleBuffered = true;
             InitializeComponent();
         }
 
         public void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            if (isKeyDown)
+                return;
+            isKeyDown = true;
             var game = new Game(this);
             var AllyTanks = new AllyTanks();
-
+           
             if (e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down))
             {
                 AllyTanks.Movement(this, Game.Move.Down);
@@ -42,6 +47,11 @@ namespace WFTanks
             {
                 AllyTanks.Movement(this, Game.Move.Right);
             }
+        }
+
+        public void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            isKeyDown = false;
         }
     }
 }
