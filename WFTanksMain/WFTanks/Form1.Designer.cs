@@ -2,10 +2,6 @@
 {
     partial class Form1
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        public System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -28,6 +24,7 @@
         /// </summary>
         public void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.AllieTanksDesign = new System.Windows.Forms.PictureBox();
             this.EagleImage = new System.Windows.Forms.PictureBox();
@@ -87,6 +84,8 @@
             this.BrickWall54 = new System.Windows.Forms.PictureBox();
             this.BrickWall55 = new System.Windows.Forms.PictureBox();
             this.BrickWall56 = new System.Windows.Forms.PictureBox();
+            this.EnemyTanksDesign = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.AllieTanksDesign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EagleImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall1)).BeginInit();
@@ -145,6 +144,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall54)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall55)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall56)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EnemyTanksDesign)).BeginInit();
             this.SuspendLayout();
             // 
             // AllieTanksDesign
@@ -729,14 +729,23 @@
             this.BrickWall56.TabIndex = 57;
             this.BrickWall56.TabStop = false;
             // 
+            // EnemyTanksDesign
+            // 
+            this.EnemyTanksDesign.BackColor = System.Drawing.Color.Transparent;
+            this.EnemyTanksDesign.Image = global::WFTanks.Properties.Resources.EnemyDown1;
+            this.EnemyTanksDesign.Location = new System.Drawing.Point(371, 275);
+            this.EnemyTanksDesign.Name = "EnemyTanksDesign";
+            this.EnemyTanksDesign.Size = new System.Drawing.Size(30, 30);
+            this.EnemyTanksDesign.TabIndex = 58;
+            this.EnemyTanksDesign.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WFTanks.Properties.Resources.bitmap;
-            //                                        750  690
             this.ClientSize = new System.Drawing.Size(750, 690);
-
+            this.Controls.Add(this.EnemyTanksDesign);
             this.Controls.Add(this.BrickWall56);
             this.Controls.Add(this.BrickWall47);
             this.Controls.Add(this.BrickWall48);
@@ -857,6 +866,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall54)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall55)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall56)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EnemyTanksDesign)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -921,6 +931,9 @@
         public System.Windows.Forms.PictureBox BrickWall54;
         public System.Windows.Forms.PictureBox BrickWall55;
         public System.Windows.Forms.PictureBox BrickWall56;
+        public System.Windows.Forms.PictureBox EnemyTanksDesign;
+        private System.Windows.Forms.Timer timer1;
+        private System.ComponentModel.IContainer components;
     }
 }
 
