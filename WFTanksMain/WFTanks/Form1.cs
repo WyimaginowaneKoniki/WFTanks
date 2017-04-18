@@ -38,13 +38,13 @@ namespace WFTanks
             Random Rnd = new Random();
             var a = Rnd.Next(0, 3);
            
-                if (a == 0 && !game.CollisionsForEnemies(Game.Move.Down))
+                if (e.KeyCode==Keys.Down && !game.CollisionsForEnemies(Game.Move.Down))
                     EnemyTanks.Movement(Game.Move.Down, game);
-                if (a == 1 && !game.CollisionsForEnemies(Game.Move.Up))
+                if (e.KeyCode == Keys.Up && !game.CollisionsForEnemies(Game.Move.Up))
                 EnemyTanks.Movement(Game.Move.Up, game);
-                if (a == 2 && !game.CollisionsForEnemies(Game.Move.Left))
+                if (e.KeyCode == Keys.Left && !game.CollisionsForEnemies(Game.Move.Left))
                 EnemyTanks.Movement(Game.Move.Left, game);
-                if (a == 3 && !game.CollisionsForEnemies(Game.Move.Right))
+                if (e.KeyCode == Keys.Right &&   !game.CollisionsForEnemies(Game.Move.Right))
                 EnemyTanks.Movement(Game.Move.Right, game);
             
           
