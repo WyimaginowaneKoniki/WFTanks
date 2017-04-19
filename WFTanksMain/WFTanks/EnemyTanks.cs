@@ -34,11 +34,10 @@ namespace WFTanks
                 for (int i = 0; i < 30; i++)
                 {
                     
-                    if (!game.CollisionsForEnemies(Game.Move.Down))
-                    {
+                    
                         FormAccess.EnemyTanksDesign.Invoke(MoveDown);
                         Thread.Sleep(20);
-                    }
+                    
                     if (i == 0)
                     {
                         FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyDown1;
@@ -62,11 +61,10 @@ namespace WFTanks
             {
                 for (int i = 0; i < 30; i++)
                 {
-                    if (!game.CollisionsForEnemies(Game.Move.Up))
-                    {
+                    
                         FormAccess.EnemyTanksDesign.Invoke(MoveUp);
                         Thread.Sleep(20);
-                    }
+                    
                     if (i == 0)
                     {
                         FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyUp1;
@@ -90,11 +88,10 @@ namespace WFTanks
             {
                 for (int i = 0; i < 30; i++)
                 {
-                    if (!game.CollisionsForEnemies(Game.Move.Left))
-                    {
+                   
                         FormAccess.EnemyTanksDesign.Invoke(MoveLeft);
                         Thread.Sleep(20);
-                    }
+                    
                     if (i == 0)
                     {
                         FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyLeft1;
@@ -118,11 +115,9 @@ namespace WFTanks
             {
                 for (int i = 0; i < 30; i++)
                 {
-                    if (!game.CollisionsForEnemies(Game.Move.Right))
-                    {
                         FormAccess.EnemyTanksDesign.Invoke(MoveRight);
                         Thread.Sleep(20);
-                    }
+                    
                     if (i == 0)
                     {
                         FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyRight1;

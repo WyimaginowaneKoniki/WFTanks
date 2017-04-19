@@ -13,13 +13,17 @@ namespace WFTanks
 {
     public partial class Form1 : Form
     {
-        bool isKeyDown = false;
-
+       public int x;
+        public int y;
+        public bool isKeyDown = false;
         public Form1()
         {
+            InitializeComponent();
+            x = AllieTanksDesign.Left;
+            y = AllieTanksDesign.Top;
             var EnemyTanks = new EnemyTanks(this);
             var game = new Game();
-            InitializeComponent();
+         
            
             DoubleBuffered = true;
            
@@ -34,19 +38,18 @@ namespace WFTanks
 
         public void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-
+            
             if (isKeyDown)
-                return;
-        
             isKeyDown = true;
-
+            if ((Math.Abs(y - AllieTanksDesign.Top)) > 41|| (Math.Abs(x - AllieTanksDesign.Left)) > 41)
+            {
+                x = AllieTanksDesign.Left;
+                y = AllieTanksDesign.Top;
+            }
             var game = new Game(this);
 
             var AllyTanks = new AllyTanks(this);
-           
-            
           
-           
             if (e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down))
             {
                 AllyTanks.Movement(Game.Move.Down, game);
@@ -68,8 +71,28 @@ namespace WFTanks
 
         public void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            isKeyDown = false;
+            x = AllieTanksDesign.Left;
+            y = AllieTanksDesign.Top;
+            //isKeyDown = false;
+            var game = new Game(this);
+
+            var AllyTanks = new AllyTanks(this);
+            if(e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down))
+            AllyTanks.Movement(Game.Move.Down, game);
+            if (e.KeyCode == Keys.Up && !game.Collisions(Game.Move.Up))
+            {
+                AllyTanks.Movement(Game.Move.Up, game);
+            }
+            else if (e.KeyCode == Keys.Left && !game.Collisions(Game.Move.Left))
+            {
+                AllyTanks.Movement(Game.Move.Left, game);
+            }
+            else if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right))
+            {
+                AllyTanks.Movement(Game.Move.Right, game);
+            }
         }
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
