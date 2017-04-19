@@ -34,7 +34,10 @@ namespace WFTanks
             get { return _score; }
             set { _score = value; }
         }
+        public Game()
+        {
 
+        }
         public Game(Form1 FormConstructor)
         {
             FormAccess = FormConstructor;
@@ -82,7 +85,7 @@ namespace WFTanks
         }
         public bool CollisionsForEnemies(Move Tank)
         {
-            int a = 20;
+            int a = 1;
             System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
             for (int i = 0; i < Walls.LongCount(); i++)
             {
