@@ -21,9 +21,7 @@ namespace WFTanks
             InitializeComponent();
             x = AllieTanksDesign.Left;
             y = AllieTanksDesign.Top;
-            var EnemyTanks = new EnemyTanks(this);
-            var game = new Game();
-         
+        
            
             DoubleBuffered = true;
            
