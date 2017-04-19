@@ -33,26 +33,28 @@ namespace WFTanks
             {
                 for (int i = 0; i < 30; i++)
                 {
-                    
-                    
+
+                    if (!game.CollisionsForEnemies(Game.Move.Down))
+                    {
                         FormAccess.EnemyTanksDesign.Invoke(MoveDown);
                         Thread.Sleep(20);
-                    
-                    if (i == 0)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyDown1;
-                    }
-                    else if (i == 7)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyDown2;
-                    }
-                    else if (i == 15)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyDown3;
-                    }
-                    else if (i == 22)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyDown4;
+
+                        if (i == 0)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyDown1;
+                        }
+                        else if (i == 7)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyDown2;
+                        }
+                        else if (i == 15)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyDown3;
+                        }
+                        else if (i == 22)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyDown4;
+                        }
                     }
                 }
             });
@@ -61,25 +63,27 @@ namespace WFTanks
             {
                 for (int i = 0; i < 30; i++)
                 {
-                    
+                    if (!game.CollisionsForEnemies(Game.Move.Up))
+                    {
                         FormAccess.EnemyTanksDesign.Invoke(MoveUp);
                         Thread.Sleep(20);
-                    
-                    if (i == 0)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyUp1;
-                    }
-                    if (i == 7)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyUp2;
-                    }
-                    if (i == 15)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyUp3;
-                    }
-                    if (i == 22)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyUp4;
+
+                        if (i == 0)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyUp1;
+                        }
+                        if (i == 7)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyUp2;
+                        }
+                        if (i == 15)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyUp3;
+                        }
+                        if (i == 22)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyUp4;
+                        }
                     }
                 }
             });
@@ -88,25 +92,27 @@ namespace WFTanks
             {
                 for (int i = 0; i < 30; i++)
                 {
-                   
+                    if (!game.CollisionsForEnemies(Game.Move.Left))
+                    {
                         FormAccess.EnemyTanksDesign.Invoke(MoveLeft);
                         Thread.Sleep(20);
-                    
-                    if (i == 0)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyLeft1;
-                    }
-                    if (i == 7)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyLeft2;
-                    }
-                    if (i == 15)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyLeft3;
-                    }
-                    if (i == 22)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyLeft4;
+
+                        if (i == 0)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyLeft1;
+                        }
+                        if (i == 7)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyLeft2;
+                        }
+                        if (i == 15)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyLeft3;
+                        }
+                        if (i == 22)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyLeft4;
+                        }
                     }
                 }
             });
@@ -115,24 +121,27 @@ namespace WFTanks
             {
                 for (int i = 0; i < 30; i++)
                 {
+                    if (!game.CollisionsForEnemies(Game.Move.Right))
+                    {
                         FormAccess.EnemyTanksDesign.Invoke(MoveRight);
                         Thread.Sleep(20);
-                    
-                    if (i == 0)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyRight1;
-                    }
-                    if (i == 7)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyRight2;
-                    }
-                    if (i == 15)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyRight3;
-                    }
-                    if (i == 22)
-                    {
-                        FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyRight4;
+
+                        if (i == 0)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyRight1;
+                        }
+                        if (i == 7)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyRight2;
+                        }
+                        if (i == 15)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyRight3;
+                        }
+                        if (i == 22)
+                        {
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyRight4;
+                        }
                     }
                 }
             });
