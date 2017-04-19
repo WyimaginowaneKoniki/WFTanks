@@ -14,15 +14,23 @@ namespace WFTanks
     public partial class Form1 : Form
     {
         bool isKeyDown = false;
-  
+
         public Form1()
         {
+            var EnemyTanks = new EnemyTanks(this);
+            var game = new Game();
             InitializeComponent();
            
-            
             DoubleBuffered = true;
-          
+           
+
+            timer1.Tick += timer1_Tick;
+            timer1.Interval = 1000;
+            timer1.Start();
+
         }
+
+    
 
         public void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -31,21 +39,11 @@ namespace WFTanks
                 return;
         
             isKeyDown = true;
-            
-            var EnemyTanks = new EnemyTanks(this);
+
             var game = new Game(this);
+
             var AllyTanks = new AllyTanks(this);
-            Random Rnd = new Random();
-            var a = Rnd.Next(0, 3);
            
-                if (a == 0 && !game.CollisionsForEnemies(Game.Move.Down))
-                    EnemyTanks.Movement(Game.Move.Down, game);
-                if (a == 1 && !game.CollisionsForEnemies(Game.Move.Up))
-                EnemyTanks.Movement(Game.Move.Up, game);
-                if (a == 2 && !game.CollisionsForEnemies(Game.Move.Left))
-                EnemyTanks.Movement(Game.Move.Left, game);
-                if (a == 3 && !game.CollisionsForEnemies(Game.Move.Right))
-                EnemyTanks.Movement(Game.Move.Right, game);
             
           
            
@@ -71,6 +69,27 @@ namespace WFTanks
         public void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             isKeyDown = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            var game = new Game(this);
+            var EnemyTanks = new EnemyTanks(this);
+           
+                Random Rnd = new Random();
+                var a = Rnd.Next(0, 3);
+
+                if (a == 0 && !game.CollisionsForEnemies(Game.Move.Down))
+                    EnemyTanks.Movement(Game.Move.Down, game);
+                if (a == 1 && !game.CollisionsForEnemies(Game.Move.Up))
+                    EnemyTanks.Movement(Game.Move.Up, game);
+                if (a == 2 && !game.CollisionsForEnemies(Game.Move.Left))
+                    EnemyTanks.Movement(Game.Move.Left, game);
+                if (a == 3 && !game.CollisionsForEnemies(Game.Move.Right))
+                    EnemyTanks.Movement(Game.Move.Right, game);
+
+               
+           
         }
     }
 }
