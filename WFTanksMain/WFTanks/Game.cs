@@ -44,11 +44,13 @@ namespace WFTanks
             FormAccess = FormConstructor;
 
             for (int i = 1; i <= 56; i++)
-                Walls.Add((PictureBox)FormAccess.Controls.Find("BrickWall" + i, true)[0]);            
+                Walls.Add((PictureBox)FormAccess.Controls.Find("BrickWall" + i, true)[0]);
         }
 
         public bool Collisions(Move Tank)
         {
+            Walls.Add((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]);
+
             int a = 1;
             System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
 
@@ -89,6 +91,8 @@ namespace WFTanks
 
         public bool CollisionsForEnemies(Move Tank)
         {
+            Walls.Add((PictureBox)FormAccess.Controls.Find("AllieTanksDesign", true)[0]);
+
             int a = 1;
             System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
 
