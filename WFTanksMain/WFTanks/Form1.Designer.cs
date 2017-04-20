@@ -86,6 +86,7 @@
             this.BrickWall56 = new System.Windows.Forms.PictureBox();
             this.EnemyTanksDesign = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.AllieTanksDesign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EagleImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall1)).BeginInit();
@@ -938,6 +939,7 @@
         public System.Windows.Forms.PictureBox EnemyTanksDesign;
         private System.Windows.Forms.Timer timer1;
         private System.ComponentModel.IContainer components;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
