@@ -34,7 +34,10 @@ namespace WFTanks
             get { return _score; }
             set { _score = value; }
         }
+        public Game()
+        {
 
+        }
         public Game(Form1 FormConstructor)
         {
             FormAccess = FormConstructor;
