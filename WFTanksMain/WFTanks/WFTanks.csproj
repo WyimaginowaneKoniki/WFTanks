@@ -113,10 +113,26 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Up2.png" />
+    <None Include="Resources\Up1.png" />
+    <None Include="Resources\Left2.png" />
     <None Include="AllieTanksDesign\brickimage.jpg" />
     <Content Include="AllieTanksDesign\down1.png" />
-    <Content Include="AllieTanksDesign\down2.png" />
-    <Content Include="AllieTanksDesign\down3.png" />
+    <Content Include="AllieTanksDesign\Down2.png" />
+    <Content Include="AllieTanksDesign\Down3.png" />
+    <Content Include="AllieTanksDesign\Down4.png" />
+    <Content Include="AllieTanksDesign\Left1.png" />
+    <Content Include="AllieTanksDesign\Left2.png" />
+    <Content Include="AllieTanksDesign\Left3.png" />
+    <Content Include="AllieTanksDesign\Left4.png" />
+    <Content Include="AllieTanksDesign\Right1.png" />
+    <Content Include="AllieTanksDesign\Right2.png" />
+    <Content Include="AllieTanksDesign\Right3.png" />
+    <Content Include="AllieTanksDesign\Right4.png" />
+    <Content Include="AllieTanksDesign\Up1.png" />
+    <Content Include="AllieTanksDesign\Up2.png" />
+    <Content Include="AllieTanksDesign\Up3.png" />
+    <Content Include="AllieTanksDesign\Up4.png" />
     <Content Include="EnemyTanksDesign\EnemyDown1.png" />
     <Content Include="EnemyTanksDesign\EnemyDown2.png" />
     <Content Include="EnemyTanksDesign\EnemyDown3.png" />
@@ -134,20 +150,7 @@
     <Content Include="EnemyTanksDesign\EnemyUp3.png" />
     <Content Include="EnemyTanksDesign\EnemyUp4.png" />
     <Content Include="Map\bitmap.png" />
-    <None Include="AllieTanksDesign\up4.png" />
-    <None Include="AllieTanksDesign\down4.png" />
     <Content Include="AllieTanksDesign\eagle.png" />
-    <Content Include="AllieTanksDesign\left1.png" />
-    <Content Include="AllieTanksDesign\left2.png" />
-    <Content Include="AllieTanksDesign\left3.png" />
-    <None Include="AllieTanksDesign\left4.png" />
-    <Content Include="AllieTanksDesign\right1.png" />
-    <Content Include="AllieTanksDesign\right2.png" />
-    <Content Include="AllieTanksDesign\Right3.png" />
-    <None Include="AllieTanksDesign\Right4.png" />
-    <Content Include="AllieTanksDesign\up1.png" />
-    <Content Include="AllieTanksDesign\up2.png" />
-    <Content Include="AllieTanksDesign\up3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

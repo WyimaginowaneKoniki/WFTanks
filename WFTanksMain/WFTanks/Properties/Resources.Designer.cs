@@ -93,9 +93,9 @@ namespace WFTanks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap down2 {
+        internal static System.Drawing.Bitmap Down2 {
             get {
-                object obj = ResourceManager.GetObject("down2", resourceCulture);
+                object obj = ResourceManager.GetObject("Down2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace WFTanks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap down3 {
+        internal static System.Drawing.Bitmap Down3 {
             get {
-                object obj = ResourceManager.GetObject("down3", resourceCulture);
+                object obj = ResourceManager.GetObject("Down3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace WFTanks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap down4 {
+        internal static System.Drawing.Bitmap Down4 {
             get {
-                object obj = ResourceManager.GetObject("down4", resourceCulture);
+                object obj = ResourceManager.GetObject("Down4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,9 +293,9 @@ namespace WFTanks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap left1 {
+        internal static System.Drawing.Bitmap Left1 {
             get {
-                object obj = ResourceManager.GetObject("left1", resourceCulture);
+                object obj = ResourceManager.GetObject("Left1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,9 +303,9 @@ namespace WFTanks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap left2 {
+        internal static System.Drawing.Bitmap Left2 {
             get {
-                object obj = ResourceManager.GetObject("left2", resourceCulture);
+                object obj = ResourceManager.GetObject("Left2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,9 +313,9 @@ namespace WFTanks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap left3 {
+        internal static System.Drawing.Bitmap Left3 {
             get {
-                object obj = ResourceManager.GetObject("left3", resourceCulture);
+                object obj = ResourceManager.GetObject("Left3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,9 +323,9 @@ namespace WFTanks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap left4 {
+        internal static System.Drawing.Bitmap Left4 {
             get {
-                object obj = ResourceManager.GetObject("left4", resourceCulture);
+                object obj = ResourceManager.GetObject("Left4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,9 +333,9 @@ namespace WFTanks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap right1 {
+        internal static System.Drawing.Bitmap Right1 {
             get {
-                object obj = ResourceManager.GetObject("right1", resourceCulture);
+                object obj = ResourceManager.GetObject("Right1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,9 +343,9 @@ namespace WFTanks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap right2 {
+        internal static System.Drawing.Bitmap Right2 {
             get {
-                object obj = ResourceManager.GetObject("right2", resourceCulture);
+                object obj = ResourceManager.GetObject("Right2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,9 +373,9 @@ namespace WFTanks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap up1 {
+        internal static System.Drawing.Bitmap Up1 {
             get {
-                object obj = ResourceManager.GetObject("up1", resourceCulture);
+                object obj = ResourceManager.GetObject("Up1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,9 +383,9 @@ namespace WFTanks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap up2 {
+        internal static System.Drawing.Bitmap Up2 {
             get {
-                object obj = ResourceManager.GetObject("up2", resourceCulture);
+                object obj = ResourceManager.GetObject("Up2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,9 +393,9 @@ namespace WFTanks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap up3 {
+        internal static System.Drawing.Bitmap Up3 {
             get {
-                object obj = ResourceManager.GetObject("up3", resourceCulture);
+                object obj = ResourceManager.GetObject("Up3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -403,9 +403,9 @@ namespace WFTanks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap up4 {
+        internal static System.Drawing.Bitmap Up4 {
             get {
-                object obj = ResourceManager.GetObject("up4", resourceCulture);
+                object obj = ResourceManager.GetObject("Up4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -124,56 +124,8 @@
   <data name="brickimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\AllieTanksDesign\brickimage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="down1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\down1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="down2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\down2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="down3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\down3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="down4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\down4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="eagle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\AllieTanksDesign\eagle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="left1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\left1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="left2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\left2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="left3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\left3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="left4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\left4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="right1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\right1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="right2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\right2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Right3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\Right3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Right4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\Right4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="up1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\up1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="up2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\up2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="up3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\up3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="up4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\AllieTanksDesign\up4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EnemyDown1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\EnemyTanksDesign\EnemyDown1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,10 +169,58 @@
   <data name="EnemyUp2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\EnemyTanksDesign\EnemyUp2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="down1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\allietanksdesign\down1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Down2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\allietanksdesign\down2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Down3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\allietanksdesign\down3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Down4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\allietanksdesign\down4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="EnemyUp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\EnemyTanksDesign\EnemyUp3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EnemyUp4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\EnemyTanksDesign\EnemyUp4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Left1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\allietanksdesign\left1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Left3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\allietanksdesign\left3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Left4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\allietanksdesign\left4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Right1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\allietanksdesign\right1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Right2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\allietanksdesign\right2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Right3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\allietanksdesign\right3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Right4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\allietanksdesign\right4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Up3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\allietanksdesign\up3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Up4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\allietanksdesign\up4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Left2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Left2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Up1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Up1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Up2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Up2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
