@@ -14,11 +14,13 @@ namespace WFTanks
             Medium,
             Big
         }
+
         protected enum Sides
         {
             AI,
             Buddy
         }
+
         protected Sides Side;
 
         private uint _currentPositionX;
