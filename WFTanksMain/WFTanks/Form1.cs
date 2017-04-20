@@ -29,12 +29,17 @@ namespace WFTanks
             timer1.Tick += timer1_Tick;
             timer1.Interval = 1000;
             timer1.Start();
+            timer2.Tick += timer2_Tick;
+            timer2.Interval = 3000;
+            timer2.Start();
         }
 
-
+       
 
         public void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            isKeyDown = true;
+            timer2.Stop();
             if ((Math.Abs(y - AllieTanksDesign.Top)) > 41 || (Math.Abs(x - AllieTanksDesign.Left)) > 41)
             {
                 x = AllieTanksDesign.Left;
@@ -60,9 +65,8 @@ namespace WFTanks
 
         public void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            x = AllieTanksDesign.Left;
-            y = AllieTanksDesign.Top;
-
+            isKeyDown = false;
+            timer2.Start();
             var game = new Game(this);
 
             var AllyTanks = new AllyTanks(this);
@@ -88,10 +92,8 @@ namespace WFTanks
 
             Random Rnd = new Random();
             var a = Rnd.Next(0, 3);
-
             if (a == 0)
                 EnemyTanks.Movement(Game.Move.Down, game);
-
             else if (a == 1)
                 EnemyTanks.Movement(Game.Move.Up, game);
 
@@ -100,6 +102,14 @@ namespace WFTanks
 
             else if (a == 3)
                 EnemyTanks.Movement(Game.Move.Right, game);
+        }
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (!isKeyDown && timer2.Interval >= 500)
+            {
+                x = AllieTanksDesign.Left;
+                y = AllieTanksDesign.Top;
+            }
         }
     }
 }

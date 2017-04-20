@@ -40,13 +40,13 @@ namespace WFTanks
                             FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyDown1;
 
                         else if (i == 7)
-                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyDown2;
-
-                        else if (i == 15)
                             FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyDown3;
 
-                        else if (i == 22)
+                        else if (i == 15)
                             FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyDown4;
+
+                        else if (i == 22)
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyDown2;
                     }
                 }
             });
@@ -64,13 +64,13 @@ namespace WFTanks
                             FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyUp1;
 
                         else if (i == 7)
-                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyUp2;
-
-                        else if (i == 15)
                             FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyUp3;
 
-                        else if (i == 22)
+                        else if (i == 15)
                             FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyUp4;
+
+                        else if (i == 22)
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyUp2;
                     }
                 }
             });
@@ -88,13 +88,13 @@ namespace WFTanks
                             FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyLeft1;
 
                         else if (i == 7)
-                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyLeft2;
-
-                        else if (i == 15)
                             FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyLeft3;
 
-                        else if (i == 22)
+                        else if (i == 15)
                             FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyLeft4;
+
+                        else if (i == 22)
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyLeft2;
                     }
                 }
             });
@@ -112,13 +112,13 @@ namespace WFTanks
                             FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyRight1;
 
                         else if (i == 7)
-                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyRight2;
-
-                        else if (i == 15)
                             FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyRight3;
 
-                        else if (i == 22)
+                        else if (i == 15)
                             FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyRight4;
+
+                        else if (i == 22)
+                            FormAccess.EnemyTanksDesign.Image = Properties.Resources.EnemyRight2;
                     }
                 }
             });
