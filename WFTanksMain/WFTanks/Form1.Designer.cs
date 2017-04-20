@@ -155,7 +155,7 @@
             this.AllieTanksDesign.Location = new System.Drawing.Point(720, 660);
             this.AllieTanksDesign.Name = "AllieTanksDesign";
             this.AllieTanksDesign.Size = new System.Drawing.Size(30, 30);
-            this.AllieTanksDesign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AllieTanksDesign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AllieTanksDesign.TabIndex = 0;
             this.AllieTanksDesign.TabStop = false;
             // 
