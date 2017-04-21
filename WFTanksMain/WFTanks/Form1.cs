@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,10 @@ namespace WFTanks
 {
     public partial class Form1 : Form
     {
+        Stopwatch BulletTime = new Stopwatch();
         public int x;
         public int y;
-        public bool isKeyDown = false;
+        public bool isKeyDown = true;
         private Game.Move TankDirection = Game.Move.Down;
         public Form1()
         {
@@ -33,13 +35,15 @@ namespace WFTanks
             timer2.Tick += timer2_Tick;
             timer2.Interval = 3000;
             timer2.Start();
+            BulletTime.Start();
         }
 
 
 
         public void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            isKeyDown = true;
+           
+
             timer2.Stop();
             if ((Math.Abs(y - AllieTanksDesign.Top)) > 41 || (Math.Abs(x - AllieTanksDesign.Left)) > 41)
             {
@@ -51,8 +55,7 @@ namespace WFTanks
 
             var AllyTanks = new AllyTanks(this);
 
-
-
+           
             if (e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down))
             {
                 TankDirection = Game.Move.Down;
@@ -77,15 +80,16 @@ namespace WFTanks
                 AllyTanks.Movement(TankDirection, game);
             }
 
-            if (e.KeyCode == Keys.Space)
+            if (e.KeyCode == Keys.Space && BulletTime.ElapsedMilliseconds>=2000)
             {
-                AllyTanks.Shot(TankDirection);
+                    AllyTanks.Shot(TankDirection);
+                BulletTime.Restart();
             }
         }
 
         public void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            isKeyDown = false;
+           
             timer2.Start();
             var game = new Game(this);
 
