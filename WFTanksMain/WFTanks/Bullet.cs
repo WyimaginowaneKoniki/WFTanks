@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -21,18 +22,22 @@ namespace WFTanks
             if (TankDirection == Game.Move.Down)
             {
                 TankBullet.Image = Properties.Resources.BulletDown;
+                TankBullet.Size = new Size(6, 11);
             }
             else if (TankDirection == Game.Move.Up)
             {
                 TankBullet.Image = Properties.Resources.BulletUp;
+                TankBullet.Size = new Size(6, 11);
             }
             else if (TankDirection == Game.Move.Left)
             {
                 TankBullet.Image = Properties.Resources.BulletLeft;
+                TankBullet.Size = new Size(11, 6);
             }
             else if (TankDirection == Game.Move.Right)
             {
                 TankBullet.Image = Properties.Resources.BulletRight;
+                TankBullet.Size = new Size(11, 6);
             }
 
             TankBullet.Location = new System.Drawing.Point(BulletOwner.Left + (BulletOwner.ClientSize.Width / 2) - 3, BulletOwner.Top + (BulletOwner.ClientSize.Height / 2) - 3);
@@ -82,6 +87,7 @@ namespace WFTanks
 
         public bool WhereToGo()
         {
+            Game game = new Game(FormAccess);
             if (TankDirection == Game.Move.Down && TankBullet.Top > 680)
                 return false;
 
@@ -93,6 +99,10 @@ namespace WFTanks
 
             if (TankDirection == Game.Move.Right && TankBullet.Left > 740)
                 return false;
+
+            if (game.CollisionsForBullets(TankDirection, true, TankBullet))
+                return false;
+
             return true;
         }
     }
