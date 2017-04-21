@@ -14,11 +14,13 @@ namespace WFTanks
             Medium,
             Big
         }
+
         protected enum Sides
         {
             AI,
             Buddy
         }
+
         protected Sides Side;
 
         private uint _currentPositionX;
@@ -56,7 +58,7 @@ namespace WFTanks
 
         protected Levels CurrentLevel;
         // TODO Skin!!!!!
-        public virtual void Shot()
+        public virtual void Shot(Game.Move TankDirection)
         {
             // TODO Tanks : Shot()
         }

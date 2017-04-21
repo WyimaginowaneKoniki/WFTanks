@@ -86,6 +86,7 @@
             this.BrickWall56 = new System.Windows.Forms.PictureBox();
             this.EnemyTanksDesign = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.AllieTanksDesign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EagleImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall1)).BeginInit();
@@ -154,7 +155,7 @@
             this.AllieTanksDesign.Location = new System.Drawing.Point(720, 660);
             this.AllieTanksDesign.Name = "AllieTanksDesign";
             this.AllieTanksDesign.Size = new System.Drawing.Size(30, 30);
-            this.AllieTanksDesign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AllieTanksDesign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AllieTanksDesign.TabIndex = 0;
             this.AllieTanksDesign.TabStop = false;
             // 
@@ -739,6 +740,10 @@
             this.EnemyTanksDesign.TabIndex = 58;
             this.EnemyTanksDesign.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -934,6 +939,7 @@
         public System.Windows.Forms.PictureBox EnemyTanksDesign;
         private System.Windows.Forms.Timer timer1;
         private System.ComponentModel.IContainer components;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
