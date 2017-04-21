@@ -10,13 +10,14 @@ namespace WFTanks
     class EnemyTanks : Tanks
     {
         Form1 FormAccess;
-        public override void Shot()
+        public override void Shot(Game.Move TankDirection)
         {
             // TODO  EnemyTanks : Shot()
         }
         public EnemyTanks(Form1 FormConstruct)
         {
             FormAccess = FormConstruct;
+            Side = Sides.AI;
         }
 
 

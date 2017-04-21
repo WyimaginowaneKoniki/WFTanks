@@ -130,5 +130,9 @@ namespace WFTanks
             }
             return false;
         }
+        public bool CollisionsForBullets(Move Bullet)
+        {
+            return false;
+        }
     }
 }

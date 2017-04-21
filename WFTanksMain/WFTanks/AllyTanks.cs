@@ -14,14 +14,15 @@ namespace WFTanks
         public AllyTanks(Form1 FormConstruct)
         {
             FormAccess = FormConstruct;
+            Side = Sides.Buddy;
         }
-
-        public override void Shot()
+        
+        public override void Shot(Game.Move TankDirection)
         {
-            // needed?
-            // TODO AllyTanks : Shot()
+            Bullet Bullets = new Bullet(TankDirection, FormAccess, FormAccess.AllieTanksDesign);
+            Bullets.BulletMove();
         }
-
+        
         public override void Movement(Game.Move Move, Game game)
         {
             var MoveDown = new Action(() => { if (!(FormAccess.AllieTanksDesign.Top > 660)) { FormAccess.AllieTanksDesign.Top += 3; } });
