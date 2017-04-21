@@ -16,6 +16,7 @@ namespace WFTanks
         public int x;
         public int y;
         public bool isKeyDown = false;
+        private Game.Move TankDirection = Game.Move.Down;
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace WFTanks
             timer2.Start();
         }
 
-       
+
 
         public void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -50,17 +51,36 @@ namespace WFTanks
 
             var AllyTanks = new AllyTanks(this);
 
+
+
             if (e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down))
-                AllyTanks.Movement(Game.Move.Down, game);
+            {
+                TankDirection = Game.Move.Down;
+                AllyTanks.Movement(TankDirection, game);
+            }
 
-            else if (e.KeyCode == Keys.Up && !game.Collisions(Game.Move.Up))
-                AllyTanks.Movement(Game.Move.Up, game);
+            if (e.KeyCode == Keys.Up && !game.Collisions(Game.Move.Up))
+            {
+                TankDirection = Game.Move.Up;
+                AllyTanks.Movement(TankDirection, game);
+            }
 
-            else if (e.KeyCode == Keys.Left && !game.Collisions(Game.Move.Left))
-                AllyTanks.Movement(Game.Move.Left, game);
+            if (e.KeyCode == Keys.Left && !game.Collisions(Game.Move.Left))
+            {
+                TankDirection = Game.Move.Left;
+                AllyTanks.Movement(TankDirection, game);
+            }
 
-            else if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right))
-                AllyTanks.Movement(Game.Move.Right, game);
+            if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right))
+            {
+                TankDirection = Game.Move.Right;
+                AllyTanks.Movement(TankDirection, game);
+            }
+
+            if (e.KeyCode == Keys.Space)
+            {
+                AllyTanks.Shot(TankDirection);
+            }
         }
 
         public void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -82,6 +102,7 @@ namespace WFTanks
 
             else if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right))
                 AllyTanks.Movement(Game.Move.Right, game);
+
         }
 
 

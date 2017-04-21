@@ -58,7 +58,7 @@ namespace WFTanks
 
         protected Levels CurrentLevel;
         // TODO Skin!!!!!
-        public virtual void Shot()
+        public virtual void Shot(Game.Move TankDirection)
         {
             // TODO Tanks : Shot()
         }
