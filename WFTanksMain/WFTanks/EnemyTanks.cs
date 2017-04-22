@@ -12,7 +12,8 @@ namespace WFTanks
         Form1 FormAccess;
         public override void Shot(Game.Move TankDirection)
         {
-            // TODO  EnemyTanks : Shot()
+            Bullet Bullets = new Bullet(TankDirection, FormAccess, FormAccess.EnemyTanksDesign);
+            Bullets.BulletMove(FormAccess.EnemyTanksDesign);
         }
         public EnemyTanks(Form1 FormConstruct)
         {
@@ -27,8 +28,8 @@ namespace WFTanks
             var MoveUp = new Action(() => { if (!(FormAccess.EnemyTanksDesign.Top < 0)) { FormAccess.EnemyTanksDesign.Top -= 1; } });
             var MoveLeft = new Action(() => { if (!(FormAccess.EnemyTanksDesign.Left < 0)) FormAccess.EnemyTanksDesign.Left -= 1; });
             var MoveRight = new Action(() => { if (!(FormAccess.EnemyTanksDesign.Left > 720)) FormAccess.EnemyTanksDesign.Left += 1; });
-
-            Task tDown = new Task(() =>
+        
+           Task tDown = new Task(() =>
             {
                 for (int i = 0; i < 30; i++)
                 {

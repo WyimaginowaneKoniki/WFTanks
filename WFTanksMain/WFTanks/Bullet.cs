@@ -14,6 +14,8 @@ namespace WFTanks
         private Game.Move TankDirection;
         private Form1 FormAccess;
         public PictureBox TankBullet = new PictureBox();
+       
+
         public Bullet(Game.Move TankDirectionFromGame, Form1 FormConstruct, PictureBox BulletOwner)
         {
             FormAccess = FormConstruct;
@@ -39,29 +41,29 @@ namespace WFTanks
                 TankBullet.Image = Properties.Resources.BulletRight;
                 TankBullet.Size = new Size(11, 6);
             }
-
-            TankBullet.Location = new System.Drawing.Point(BulletOwner.Left + (BulletOwner.ClientSize.Width / 2) - 3, BulletOwner.Top + (BulletOwner.ClientSize.Height / 2) - 3);
-            TankBullet.BackColor = System.Drawing.Color.Transparent;
+            
+            TankBullet.Location = new Point(BulletOwner.Left + (BulletOwner.ClientSize.Width / 2) - 3, BulletOwner.Top + (BulletOwner.ClientSize.Height / 2) - 3);
+            TankBullet.BackColor = Color.Transparent;
             FormAccess.Controls.Add(TankBullet);
         }
 
-        public void BulletMove()
+        public void BulletMove(PictureBox Tank)
         {
             var Moving = new Action(() => { });
             var Disable = new Action(() => { FormAccess.Controls.Remove(TankBullet); });
             switch (TankDirection)
             {
                 case Game.Move.Down:
-                    Moving = new Action(() => { TankBullet.Top += 1; });
+                    Moving = new Action(() => { TankBullet.Top += 2; });
                     break;
                 case Game.Move.Up:
-                    Moving = new Action(() => { TankBullet.Top -= 1; });
+                    Moving = new Action(() => { TankBullet.Top -= 2; });
                     break;
                 case Game.Move.Right:
-                    Moving = new Action(() => { TankBullet.Left += 1; });
+                    Moving = new Action(() => { TankBullet.Left += 2; });
                     break;
                 case Game.Move.Left:
-                    Moving = new Action(() => { TankBullet.Left -= 1; });
+                    Moving = new Action(() => { TankBullet.Left -= 2; });
                     break;
                 default:
                     break;
@@ -73,7 +75,7 @@ namespace WFTanks
                 {
                     TankBullet.Invoke(Moving);
                     Thread.Sleep(10);
-                } while (WhereToGo());
+                } while (WhereToGo(Tank));
 
                 TankBullet.Invoke(Disable);
             });
@@ -85,8 +87,9 @@ namespace WFTanks
 
         }
 
-        public bool WhereToGo()
+        public bool WhereToGo(PictureBox Tank)
         {
+            var Destroy = new Action(() => { FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo1; Thread.Sleep(100); FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo1; Thread.Sleep(100); FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo2; Thread.Sleep(100); FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo3; Thread.Sleep(100); FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo5; Thread.Sleep(100); FormAccess.Controls.Remove(FormAccess.EnemyTanksDesign); });
             Game game = new Game(FormAccess);
             if (TankDirection == Game.Move.Down && TankBullet.Top > 680)
                 return false;
@@ -100,8 +103,24 @@ namespace WFTanks
             if (TankDirection == Game.Move.Right && TankBullet.Left > 740)
                 return false;
 
-            if (game.CollisionsForBullets(TankDirection, true, TankBullet))
-                return false;
+            if (FormAccess.AllieTanksDesign.Equals(Tank))
+            {
+                if (game.CollisionsForBullets(TankDirection, true, TankBullet))
+                {
+                   // Destroy.Invoke();
+                   //TODO: Repair Object Destroy
+                    return false;
+                   
+                }
+            }
+
+            else
+            {
+                if (game.CollisionsForBullets(TankDirection, false, TankBullet))
+                {
+                   
+                    return false; }
+            }
 
             return true;
         }
