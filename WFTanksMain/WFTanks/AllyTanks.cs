@@ -20,7 +20,7 @@ namespace WFTanks
         public override void Shot(Game.Move TankDirection)
         {
             Bullet Bullets = new Bullet(TankDirection, FormAccess, FormAccess.AllieTanksDesign);
-            Bullets.BulletMove();
+            Bullets.BulletMove(FormAccess.AllieTanksDesign);
         }
         
         public override void Movement(Game.Move Move, Game game)

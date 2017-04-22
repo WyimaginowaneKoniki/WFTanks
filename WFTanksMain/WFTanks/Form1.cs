@@ -20,7 +20,8 @@ namespace WFTanks
         public bool isKeyDown = true;
         Random Rnd = new Random();
         public int a;
-        private Game.Move TankDirection = Game.Move.Down;
+        private Game.Move TankDirection;
+        private Game.Move TankDirection2;
         public Form1()
         {
             InitializeComponent();
@@ -30,11 +31,11 @@ namespace WFTanks
 
             DoubleBuffered = true;
 
-            timer3.Tick += Timer3_Tick;
+          
             timer1.Interval = 1100;
             timer1.Start();
             timer1.Tick += timer1_Tick;
-            timer1.Interval = 5000;
+            timer1.Interval = 1000;
             timer1.Start();
             timer2.Tick += timer2_Tick;
             timer2.Interval = 3000;
@@ -118,30 +119,30 @@ namespace WFTanks
             var game = new Game(this);
             var EnemyTanks = new EnemyTanks(this);
 
-
-            a = Rnd.Next(6, 10);
+         
+            a = Rnd.Next(0,5);
             if (a == 0)
             {
-                TankDirection = Game.Move.Down;
+                TankDirection2 = Game.Move.Down;
                 EnemyTanks.Movement(Game.Move.Down, game);
             }
             else if (a == 1)
             {
-                TankDirection = Game.Move.Up;
+                TankDirection2 = Game.Move.Up;
                 EnemyTanks.Movement(Game.Move.Up, game);
             }
             else if (a == 2)
             {
-                TankDirection = Game.Move.Left;
+                TankDirection2 = Game.Move.Left;
                 EnemyTanks.Movement(Game.Move.Left, game);
             }
             else if (a == 3)
             {
-                TankDirection = Game.Move.Right;
+                TankDirection2 = Game.Move.Right;
                 EnemyTanks.Movement(Game.Move.Right, game);
             }
             else
-                EnemyTanks.Shot(TankDirection);
+                EnemyTanks.Shot(TankDirection2);
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
@@ -151,10 +152,7 @@ namespace WFTanks
                 y = AllieTanksDesign.Top;
             }
         }
-        private void Timer3_Tick(object sender, EventArgs e)
-        {
-           
-        }
+      
 
     }
 }

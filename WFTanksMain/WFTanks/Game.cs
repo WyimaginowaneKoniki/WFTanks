@@ -133,11 +133,11 @@ namespace WFTanks
 
         public bool CollisionsForBullets(Move BulletMove, bool isAllyTank, PictureBox Bullet)
         {
-            if(isAllyTank)
-               Walls.Add((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]);
+            if (isAllyTank)
+            { Walls.Add((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]); }
 
             else
-               Walls.Add((PictureBox)FormAccess.Controls.Find("AllieTanksDesign", true)[0]);
+            { Walls.Add((PictureBox)FormAccess.Controls.Find("AllieTanksDesign", true)[0]); }
 
             int a = 1;
             System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
