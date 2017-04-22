@@ -161,6 +161,15 @@ namespace WFTanks.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Drive {
+            get {
+                return ResourceManager.GetStream("Drive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap eagle {
@@ -457,6 +466,15 @@ namespace WFTanks.Properties {
             get {
                 object obj = ResourceManager.GetObject("Right4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Shot {
+            get {
+                return ResourceManager.GetStream("Shot", resourceCulture);
             }
         }
         
