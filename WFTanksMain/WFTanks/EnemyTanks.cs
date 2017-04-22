@@ -24,8 +24,8 @@ namespace WFTanks
         public override void Movement(Game.Move Move, Game game)
         {
             var MoveDown = new Action(() => { if (!(FormAccess.EnemyTanksDesign.Top > 660)) { FormAccess.EnemyTanksDesign.Top += 1; } });
-            var MoveUp = new Action(() => { if (!(FormAccess.EnemyTanksDesign.Top < 1)) { FormAccess.EnemyTanksDesign.Top -= 1; } });
-            var MoveLeft = new Action(() => { if (!(FormAccess.EnemyTanksDesign.Left < 1)) FormAccess.EnemyTanksDesign.Left -= 1; });
+            var MoveUp = new Action(() => { if (!(FormAccess.EnemyTanksDesign.Top < 0)) { FormAccess.EnemyTanksDesign.Top -= 1; } });
+            var MoveLeft = new Action(() => { if (!(FormAccess.EnemyTanksDesign.Left < 0)) FormAccess.EnemyTanksDesign.Left -= 1; });
             var MoveRight = new Action(() => { if (!(FormAccess.EnemyTanksDesign.Left > 720)) FormAccess.EnemyTanksDesign.Left += 1; });
 
             Task tDown = new Task(() =>
