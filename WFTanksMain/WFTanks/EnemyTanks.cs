@@ -12,7 +12,8 @@ namespace WFTanks
         Form1 FormAccess;
         public override void Shot(Game.Move TankDirection)
         {
-            // TODO  EnemyTanks : Shot()
+            Bullet Bullets = new Bullet(TankDirection, FormAccess, FormAccess.EnemyTanksDesign);
+            Bullets.BulletMove();
         }
         public EnemyTanks(Form1 FormConstruct)
         {

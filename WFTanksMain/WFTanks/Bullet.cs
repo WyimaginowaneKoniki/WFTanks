@@ -48,7 +48,7 @@ namespace WFTanks
         public void BulletMove()
         {
             var Moving = new Action(() => { });
-            var Disable = new Action(() => { FormAccess.Controls.Remove(TankBullet); });
+            var Disable = new Action(() => { FormAccess.Controls.Remove(TankBullet);});
             switch (TankDirection)
             {
                 case Game.Move.Down:
@@ -99,7 +99,6 @@ namespace WFTanks
 
             if (TankDirection == Game.Move.Right && TankBullet.Left > 740)
                 return false;
-
             if (game.CollisionsForBullets(TankDirection, true, TankBullet))
                 return false;
 
