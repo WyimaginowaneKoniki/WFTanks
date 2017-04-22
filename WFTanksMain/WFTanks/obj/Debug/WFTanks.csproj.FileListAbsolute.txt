@@ -34,3 +34,21 @@ E:\Creation\Programowanie\Github\WFTanks\WFTanksMain\WFTanks\obj\Debug\WFTanks.P
 E:\Creation\Programowanie\Github\WFTanks\WFTanksMain\WFTanks\obj\Debug\WFTanks.csproj.GenerateResource.Cache
 E:\Creation\Programowanie\Github\WFTanks\WFTanksMain\WFTanks\bin\Debug\WFTanks.exe
 E:\Creation\Programowanie\Github\WFTanks\WFTanksMain\WFTanks\bin\Debug\WFTanks.pdb
+C:\Users\D4nte\Downloads\WFTanks-1 (1)\WFTanks-1\WFTanksMain\WFTanks\bin\Debug\WFTanks.exe.config
+C:\Users\D4nte\Downloads\WFTanks-1 (1)\WFTanks-1\WFTanksMain\WFTanks\bin\Debug\WFTanks.exe
+C:\Users\D4nte\Downloads\WFTanks-1 (1)\WFTanks-1\WFTanksMain\WFTanks\bin\Debug\WFTanks.pdb
+C:\Users\D4nte\Downloads\WFTanks-1 (1)\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.csprojResolveAssemblyReference.cache
+C:\Users\D4nte\Downloads\WFTanks-1 (1)\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.Form1.resources
+C:\Users\D4nte\Downloads\WFTanks-1 (1)\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.Properties.Resources.resources
+C:\Users\D4nte\Downloads\WFTanks-1 (1)\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.csproj.GenerateResource.Cache
+C:\Users\D4nte\Downloads\WFTanks-1 (1)\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.exe
+C:\Users\D4nte\Downloads\WFTanks-1 (1)\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.pdb
+C:\Users\Pieter\Desktop\WFTanks-1\WFTanksMain\WFTanks\bin\Debug\WFTanks.exe.config
+C:\Users\Pieter\Desktop\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.exe
+C:\Users\Pieter\Desktop\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.pdb
+C:\Users\Pieter\Desktop\WFTanks-1\WFTanksMain\WFTanks\bin\Debug\WFTanks.exe
+C:\Users\Pieter\Desktop\WFTanks-1\WFTanksMain\WFTanks\bin\Debug\WFTanks.pdb
+C:\Users\Pieter\Desktop\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.csprojResolveAssemblyReference.cache
+C:\Users\Pieter\Desktop\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.Form1.resources
+C:\Users\Pieter\Desktop\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.Properties.Resources.resources
+C:\Users\Pieter\Desktop\WFTanks-1\WFTanksMain\WFTanks\obj\Debug\WFTanks.csproj.GenerateResource.Cache
