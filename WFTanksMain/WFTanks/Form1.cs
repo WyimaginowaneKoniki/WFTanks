@@ -116,7 +116,7 @@ namespace WFTanks
             var EnemyTanks = new EnemyTanks(this);
 
             Random Rnd = new Random();
-            var a = Rnd.Next(0, 3);
+            var a = Rnd.Next(0, 5);
             if (a == 0)
                 EnemyTanks.Movement(Game.Move.Down, game);
             else if (a == 1)
