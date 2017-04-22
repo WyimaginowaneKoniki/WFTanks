@@ -134,6 +134,11 @@
     <Content Include="Resources\BulletDesign\BulletLeft.png" />
     <Content Include="Resources\BulletDesign\BulletRight.png" />
     <Content Include="Resources\BulletDesign\BulletUp.png" />
+    <Content Include="Resources\Destroy\explo1.png" />
+    <Content Include="Resources\Destroy\explo2.png" />
+    <Content Include="Resources\Destroy\explo3.png" />
+    <Content Include="Resources\Destroy\explo4.png" />
+    <Content Include="Resources\Destroy\explo5.png" />
     <Content Include="Resources\EnemyTanksDesign\EnemyDown1.png" />
     <Content Include="Resources\EnemyTanksDesign\EnemyDown2.png" />
     <Content Include="Resources\EnemyTanksDesign\EnemyDown3.png" />

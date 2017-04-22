@@ -30,8 +30,7 @@ namespace WFTanks
 
 
             DoubleBuffered = true;
-
-          
+           
             timer1.Interval = 1100;
             timer1.Start();
             timer1.Tick += timer1_Tick;
