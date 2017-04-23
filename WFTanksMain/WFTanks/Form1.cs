@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -15,6 +16,9 @@ namespace WFTanks
     public partial class Form1 : Form
     {
         Stopwatch BulletTime = new Stopwatch();
+        Stopwatch BulletSoundTimer = new Stopwatch();
+        SoundPlayer BulletSound = new SoundPlayer(Properties.Resources.Shot);
+         
         public int x;
         public int y;
         public bool isKeyDown = true;
@@ -85,6 +89,8 @@ namespace WFTanks
 
             if (e.KeyCode == Keys.Space && BulletTime.ElapsedMilliseconds>=2000)
             {
+                BulletSound.Play();
+                BulletSoundTimer.Start();
                     AllyTanks.Shot(TankDirection);
                 BulletTime.Restart();
             }
@@ -92,7 +98,12 @@ namespace WFTanks
 
         public void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-           
+
+            if (BulletSoundTimer.ElapsedMilliseconds >= 1000)
+            {
+                BulletSoundTimer.Reset();
+                BulletSound.Stop();
+            }
             timer2.Start();
             var game = new Game(this);
 
