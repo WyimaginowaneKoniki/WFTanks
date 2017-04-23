@@ -14,8 +14,9 @@ namespace WFTanks
         private Game.Move TankDirection;
         private Form1 FormAccess;
         public PictureBox TankBullet = new PictureBox();
-       
-
+        public bool isDead;
+   
+     
         public Bullet(Game.Move TankDirectionFromGame, Form1 FormConstruct, PictureBox BulletOwner)
         {
             FormAccess = FormConstruct;
@@ -89,7 +90,8 @@ namespace WFTanks
 
         public bool WhereToGo(PictureBox Tank)
         {
-            var Destroy = new Action(() => { FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo1; Thread.Sleep(100); FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo1; Thread.Sleep(100); FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo2; Thread.Sleep(100); FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo3; Thread.Sleep(100); FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo5; Thread.Sleep(100); FormAccess.Controls.Remove(FormAccess.EnemyTanksDesign); });
+            var Destroy = new Action(() => { FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo1; Thread.Sleep(100); FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo1; Thread.Sleep(100); FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo2; Thread.Sleep(100); FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo3; Thread.Sleep(100); FormAccess.EnemyTanksDesign.Image = Properties.Resources.explo5; Thread.Sleep(100);});
+            var Disable = new Action(() => { });
             Game game = new Game(FormAccess);
             if (TankDirection == Game.Move.Down && TankBullet.Top > 680)
                 return false;
@@ -107,8 +109,10 @@ namespace WFTanks
             {
                 if (game.CollisionsForBullets(TankDirection, true, TankBullet))
                 {
-                   // Destroy.Invoke();
-                   //TODO: Repair Object Destroy
+                    isDead = true;
+                   Destroy.Invoke();
+                  
+                    //TODO: Repair Object Destroy
                     return false;
                    
                 }
