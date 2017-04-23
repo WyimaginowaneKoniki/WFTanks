@@ -21,7 +21,8 @@ namespace WFTanks
 
         AllyTanks AllyTank = new AllyTanks();
         EnemyTanks EnemyTank = new EnemyTanks();
-        
+
+
         public int x;
         public int y;
         public bool isKeyDown = true;

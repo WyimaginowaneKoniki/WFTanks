@@ -18,6 +18,7 @@ namespace WFTanks
         }
 
         public List<PictureBox> Walls = new List<PictureBox>();
+        Board board = new Board();
 
         public Form1 FormAccess;
         public enum GameStates
@@ -42,9 +43,16 @@ namespace WFTanks
         public Game(Form1 FormConstructor)
         {
             FormAccess = FormConstructor;
+            board.SetFrom1(FormAccess);
 
             for (int i = 1; i <= 56; i++)
-                Walls.Add((PictureBox)FormAccess.Controls.Find("BrickWall" + i, true)[0]);
+            {
+                if((FormAccess.Controls.Find("BrickWall" + i, true)[0]).Equals(board.Wallss[i]))
+                    Console.WriteLine("kkL: ");
+                else
+                    Console.WriteLine(i);
+            }
+                //Walls.Add((PictureBox)FormAccess.Controls.Find("BrickWall" + i, true)[0]);
         }
 
         public bool Collisions(Move Tank, PictureBox AllyTank)
