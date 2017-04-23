@@ -28,7 +28,7 @@ namespace WFTanks
             InGame
         }
 
-        public GameStates CurrentGameState;
+        //public GameStates CurrentGameState;
         public uint _score;
 
         public uint Score
@@ -47,7 +47,7 @@ namespace WFTanks
                 Walls.Add((PictureBox)FormAccess.Controls.Find("BrickWall" + i, true)[0]);
         }
 
-        public bool Collisions(Move Tank)
+        public bool Collisions(Move Tank, PictureBox AllyTank)
         {
             Walls.Add((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]);
 
@@ -61,37 +61,37 @@ namespace WFTanks
                 if (Tank == Move.Left)
                 {
                     thing.X += a;
-                    if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
+                    if (AllyTank.Bounds.IntersectsWith(thing))
                         return true;
                 }
 
                 else if (Tank == Move.Up)
                 {
                     thing.Y += a;
-                    if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
+                    if (AllyTank.Bounds.IntersectsWith(thing))
                         return true;
                 }
 
                 else if (Tank == Move.Down)
                 {
                     thing.Y -= a;
-                    if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
+                    if (AllyTank.Bounds.IntersectsWith(thing))
                         return true;
                 }
 
                 else if (Tank == Move.Right)
                 {
                     thing.X -= a;
-                    if (FormAccess.AllieTanksDesign.Bounds.IntersectsWith(thing))
+                    if (AllyTank.Bounds.IntersectsWith(thing))
                         return true;
                 }
             }
             return false;
         }
 
-        public bool CollisionsForEnemies(Move Tank)
+        public bool CollisionsForEnemies(Move Tank, PictureBox EnemyTank)
         {
-            Walls.Add((PictureBox)FormAccess.Controls.Find("AllieTanksDesign", true)[0]);
+            Walls.Add((PictureBox)FormAccess.Controls.Find("AllyTanksDesign", true)[0]);
 
             int a = 1;
             System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -103,41 +103,41 @@ namespace WFTanks
                 if (Tank == Move.Left)
                 {
                     thing.X += a;
-                    if (FormAccess.EnemyTanksDesign.Bounds.IntersectsWith(thing))
+                    if (EnemyTank.Bounds.IntersectsWith(thing))
                         return true;
                 }
 
                 else if (Tank == Move.Up)
                 {
                     thing.Y += a;
-                    if (FormAccess.EnemyTanksDesign.Bounds.IntersectsWith(thing))
+                    if (EnemyTank.Bounds.IntersectsWith(thing))
                         return true;
                 }
 
                 else if (Tank == Move.Down)
                 {
                     thing.Y -= a;
-                    if (FormAccess.EnemyTanksDesign.Bounds.IntersectsWith(thing))
+                    if (EnemyTank.Bounds.IntersectsWith(thing))
                         return true;
                 }
 
                 else if (Tank == Move.Right)
                 {
                     thing.X -= a;
-                    if (FormAccess.EnemyTanksDesign.Bounds.IntersectsWith(thing))
+                    if (EnemyTank.Bounds.IntersectsWith(thing))
                         return true;
                 }
             }
             return false;
         }
 
-        public bool CollisionsForBullets(Move BulletMove, bool isAllyTank, PictureBox Bullet)
+        public PictureBox CollisionsForBullets(Move BulletMove, bool isAllyTank, PictureBox Bullet)
         {
             if (isAllyTank)
             { Walls.Add((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]); }
 
             else
-            { Walls.Add((PictureBox)FormAccess.Controls.Find("AllieTanksDesign", true)[0]); }
+            { Walls.Add((PictureBox)FormAccess.Controls.Find("AllyTanksDesign", true)[0]); }
 
             int a = 1;
             System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -150,31 +150,31 @@ namespace WFTanks
                 {
                     thing.X += a;
                     if (Bullet.Bounds.IntersectsWith(thing))
-                        return true;
+                        return Walls[i];
                 }
 
                 else if (BulletMove == Move.Up)
                 {
                     thing.Y += a;
                     if (Bullet.Bounds.IntersectsWith(thing))
-                        return true;
+                        return Walls[i];
                 }
 
                 else if (BulletMove == Move.Down)
                 {
                     thing.Y -= a;
                     if (Bullet.Bounds.IntersectsWith(thing))
-                        return true;
+                        return Walls[i];
                 }
 
                 else if (BulletMove == Move.Right)
                 {
                     thing.X -= a;
                     if (Bullet.Bounds.IntersectsWith(thing))
-                        return true;
+                        return Walls[i];
                 }
             }
-            return false;
+            return null;
         }
     }
 }

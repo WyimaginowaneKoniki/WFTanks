@@ -18,7 +18,10 @@ namespace WFTanks
         Stopwatch BulletTime = new Stopwatch();
         Stopwatch BulletSoundTimer = new Stopwatch();
         SoundPlayer BulletSound = new SoundPlayer(Properties.Resources.Shot);
-         
+
+        AllyTanks AllyTank = new AllyTanks();
+        EnemyTanks EnemyTank = new EnemyTanks();
+        
         public int x;
         public int y;
         public bool isKeyDown = true;
@@ -28,9 +31,11 @@ namespace WFTanks
         private Game.Move TankDirection2;
         public Form1()
         {
+            AllyTank.SetFrom1(this);
+            EnemyTank.SetForm1(this);
             InitializeComponent();
-            x = AllieTanksDesign.Left;
-            y = AllieTanksDesign.Top;
+            x = AllyTank.AllyTankDesign.Left;
+            y = AllyTank.AllyTankDesign.Top;
 
 
             DoubleBuffered = true;
@@ -48,50 +53,46 @@ namespace WFTanks
 
        
         public void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-           
-
+        {         
             timer2.Stop();
-            if ((Math.Abs(y - AllieTanksDesign.Top)) > 41 || (Math.Abs(x - AllieTanksDesign.Left)) > 41)
+            if ((Math.Abs(y - AllyTank.AllyTankDesign.Top)) > 41 || (Math.Abs(x - AllyTank.AllyTankDesign.Left)) > 41)
             {
-                x = AllieTanksDesign.Left;
-                y = AllieTanksDesign.Top;
+                x = AllyTank.AllyTankDesign.Left;
+                y = AllyTank.AllyTankDesign.Top;
             }
 
             var game = new Game(this);
 
-            var AllyTanks = new AllyTanks(this);
-
            
-            if (e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down))
+            if (e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down, AllyTank.AllyTankDesign))
             {
                 TankDirection = Game.Move.Down;
-                AllyTanks.Movement(TankDirection, game);
+                AllyTank.Movement(TankDirection, game);
             }
 
-            if (e.KeyCode == Keys.Up && !game.Collisions(Game.Move.Up))
+            if (e.KeyCode == Keys.Up && !game.Collisions(Game.Move.Up, AllyTank.AllyTankDesign))
             {
                 TankDirection = Game.Move.Up;
-                AllyTanks.Movement(TankDirection, game);
+                AllyTank.Movement(TankDirection, game);
             }
 
-            if (e.KeyCode == Keys.Left && !game.Collisions(Game.Move.Left))
+            if (e.KeyCode == Keys.Left && !game.Collisions(Game.Move.Left, AllyTank.AllyTankDesign))
             {
                 TankDirection = Game.Move.Left;
-                AllyTanks.Movement(TankDirection, game);
+                AllyTank.Movement(TankDirection, game);
             }
 
-            if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right))
+            if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right, AllyTank.AllyTankDesign))
             {
                 TankDirection = Game.Move.Right;
-                AllyTanks.Movement(TankDirection, game);
+                AllyTank.Movement(TankDirection, game);
             }
 
             if (e.KeyCode == Keys.Space && BulletTime.ElapsedMilliseconds>=2000)
             {
                 BulletSound.Play();
                 BulletSoundTimer.Start();
-                    AllyTanks.Shot(TankDirection);
+                AllyTank.Shot(TankDirection);
                 BulletTime.Restart();
             }
         }
@@ -107,19 +108,17 @@ namespace WFTanks
             timer2.Start();
             var game = new Game(this);
 
-            var AllyTanks = new AllyTanks(this);
+            if (e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down, AllyTank.AllyTankDesign))
+                AllyTank.Movement(Game.Move.Down, game);
 
-            if (e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down))
-                AllyTanks.Movement(Game.Move.Down, game);
+            else if (e.KeyCode == Keys.Up && !game.Collisions(Game.Move.Up, AllyTank.AllyTankDesign))
+                AllyTank.Movement(Game.Move.Up, game);
 
-            else if (e.KeyCode == Keys.Up && !game.Collisions(Game.Move.Up))
-                AllyTanks.Movement(Game.Move.Up, game);
+            else if (e.KeyCode == Keys.Left && !game.Collisions(Game.Move.Left, AllyTank.AllyTankDesign))
+                AllyTank.Movement(Game.Move.Left, game);
 
-            else if (e.KeyCode == Keys.Left && !game.Collisions(Game.Move.Left))
-                AllyTanks.Movement(Game.Move.Left, game);
-
-            else if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right))
-                AllyTanks.Movement(Game.Move.Right, game);
+            else if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right, AllyTank.AllyTankDesign))
+                AllyTank.Movement(Game.Move.Right, game);
 
         }
 
@@ -127,42 +126,43 @@ namespace WFTanks
         private void timer1_Tick(object sender, EventArgs e)
         {
             var game = new Game(this);
-            var EnemyTanks = new EnemyTanks(this);
-
          
             a = Rnd.Next(0,5);
             if (a == 0)
             {
                 TankDirection2 = Game.Move.Down;
-                EnemyTanks.Movement(Game.Move.Down, game);
+                EnemyTank.Movement(Game.Move.Down, game);
             }
             else if (a == 1)
             {
                 TankDirection2 = Game.Move.Up;
-                EnemyTanks.Movement(Game.Move.Up, game);
+                EnemyTank.Movement(Game.Move.Up, game);
             }
             else if (a == 2)
             {
                 TankDirection2 = Game.Move.Left;
-                EnemyTanks.Movement(Game.Move.Left, game);
+                EnemyTank.Movement(Game.Move.Left, game);
             }
             else if (a == 3)
             {
                 TankDirection2 = Game.Move.Right;
-                EnemyTanks.Movement(Game.Move.Right, game);
+                EnemyTank.Movement(Game.Move.Right, game);
             }
             else
-                EnemyTanks.Shot(TankDirection2);
+                EnemyTank.Shot(TankDirection2);
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (!isKeyDown && timer2.Interval >= 500)
             {
-                x = AllieTanksDesign.Left;
-                y = AllieTanksDesign.Top;
+                x = AllyTank.AllyTankDesign.Left;
+                y = AllyTank.AllyTankDesign.Top;
             }
-        }
-      
+        }   
 
+        public PictureBox GetAllyTankDesign()
+        {
+            return AllyTank.AllyTankDesign;
+        }
     }
 }

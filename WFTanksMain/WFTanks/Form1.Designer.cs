@@ -26,7 +26,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.AllieTanksDesign = new System.Windows.Forms.PictureBox();
             this.EagleImage = new System.Windows.Forms.PictureBox();
             this.BrickWall1 = new System.Windows.Forms.PictureBox();
             this.BrickWall2 = new System.Windows.Forms.PictureBox();
@@ -84,11 +83,9 @@
             this.BrickWall54 = new System.Windows.Forms.PictureBox();
             this.BrickWall55 = new System.Windows.Forms.PictureBox();
             this.BrickWall56 = new System.Windows.Forms.PictureBox();
-            this.EnemyTanksDesign = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.AllieTanksDesign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EagleImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall2)).BeginInit();
@@ -146,19 +143,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall54)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall55)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall56)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EnemyTanksDesign)).BeginInit();
             this.SuspendLayout();
-            // 
-            // AllieTanksDesign
-            // 
-            this.AllieTanksDesign.BackColor = System.Drawing.Color.Transparent;
-            this.AllieTanksDesign.Image = ((System.Drawing.Image)(resources.GetObject("AllieTanksDesign.Image")));
-            this.AllieTanksDesign.Location = new System.Drawing.Point(720, 660);
-            this.AllieTanksDesign.Name = "AllieTanksDesign";
-            this.AllieTanksDesign.Size = new System.Drawing.Size(30, 30);
-            this.AllieTanksDesign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.AllieTanksDesign.TabIndex = 0;
-            this.AllieTanksDesign.TabStop = false;
+
             // 
             // EagleImage
             // 
@@ -731,16 +717,6 @@
             this.BrickWall56.TabIndex = 57;
             this.BrickWall56.TabStop = false;
             // 
-            // EnemyTanksDesign
-            // 
-            this.EnemyTanksDesign.BackColor = System.Drawing.Color.Transparent;
-            this.EnemyTanksDesign.Image = global::WFTanks.Properties.Resources.EnemyDown1;
-            this.EnemyTanksDesign.Location = new System.Drawing.Point(371, 275);
-            this.EnemyTanksDesign.Name = "EnemyTanksDesign";
-            this.EnemyTanksDesign.Size = new System.Drawing.Size(30, 30);
-            this.EnemyTanksDesign.TabIndex = 58;
-            this.EnemyTanksDesign.TabStop = false;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -751,7 +727,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WFTanks.Properties.Resources.bitmap;
             this.ClientSize = new System.Drawing.Size(750, 690);
-            this.Controls.Add(this.EnemyTanksDesign);
             this.Controls.Add(this.BrickWall56);
             this.Controls.Add(this.BrickWall47);
             this.Controls.Add(this.BrickWall48);
@@ -809,12 +784,10 @@
             this.Controls.Add(this.BrickWall2);
             this.Controls.Add(this.BrickWall1);
             this.Controls.Add(this.EagleImage);
-            this.Controls.Add(this.AllieTanksDesign);
             this.Name = "Form1";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.AllieTanksDesign)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EagleImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall2)).EndInit();
@@ -872,14 +845,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall54)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall55)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall56)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EnemyTanksDesign)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public System.Windows.Forms.PictureBox AllieTanksDesign;
         public System.Windows.Forms.PictureBox EagleImage;
         public System.Windows.Forms.PictureBox BrickWall1;
         public System.Windows.Forms.PictureBox BrickWall2;
