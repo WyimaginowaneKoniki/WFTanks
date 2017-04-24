@@ -21,7 +21,7 @@ namespace WFTanks
         public List<PictureBox> Walls = new List<PictureBox>();
         AllyTanks AllyTank = new AllyTanks();
         EnemyTanks EnemyTank = new EnemyTanks();
-        
+        public bool Isenemydead;
         public int x;
         public int y;
         public bool isKeyDown = true;
@@ -129,30 +129,33 @@ namespace WFTanks
         private void timer1_Tick(object sender, EventArgs e)
         {
             var game = new Game(this);
-         
-            a = Rnd.Next(0,5);
-            if (a == 0)
+
+            a = Rnd.Next(0, 5);
+             if (!Isenemydead)
             {
-                TankDirection2 = Game.Move.Down;
-                EnemyTank.Movement(Game.Move.Down, game);
+                if (a == 0)
+                {
+                    TankDirection2 = Game.Move.Down;
+                    EnemyTank.Movement(Game.Move.Down, game);
+                }
+                else if (a == 1)
+                {
+                    TankDirection2 = Game.Move.Up;
+                    EnemyTank.Movement(Game.Move.Up, game);
+                }
+                else if (a == 2)
+                {
+                    TankDirection2 = Game.Move.Left;
+                    EnemyTank.Movement(Game.Move.Left, game);
+                }
+                else if (a == 3)
+                {
+                    TankDirection2 = Game.Move.Right;
+                    EnemyTank.Movement(Game.Move.Right, game);
+                }
+                else
+                    EnemyTank.Shot(TankDirection2);
             }
-            else if (a == 1)
-            {
-                TankDirection2 = Game.Move.Up;
-                EnemyTank.Movement(Game.Move.Up, game);
-            }
-            else if (a == 2)
-            {
-                TankDirection2 = Game.Move.Left;
-                EnemyTank.Movement(Game.Move.Left, game);
-            }
-            else if (a == 3)
-            {
-                TankDirection2 = Game.Move.Right;
-                EnemyTank.Movement(Game.Move.Right, game);
-            }
-            else
-                EnemyTank.Shot(TankDirection2);
         }
         private void timer2_Tick(object sender, EventArgs e)
         {

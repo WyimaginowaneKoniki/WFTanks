@@ -55,7 +55,14 @@ namespace WFTanks
         }
         public bool Collisions(Move Tank, PictureBox AllyTank)
         {
-         Walls.Add((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]);
+            if (FormAccess.Contains(FormAccess.EnemyTanksDesign))
+            {
+                Walls.Add((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]);
+            }
+            if (!(FormAccess.Contains(FormAccess.EnemyTanksDesign)) && Walls.Contains(FormAccess.EnemyTanksDesign))
+            {
+                Walls.Remove((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]);
+            }
 
             int a = 1;
             System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -92,13 +99,20 @@ namespace WFTanks
                         return true;
                 }
             }
-          Walls.Remove((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]);
+          
             return false;
         }
 
         public bool CollisionsForEnemies(Move Tank, PictureBox EnemyTank)
         {
-            Walls.Add((PictureBox)FormAccess.Controls.Find("AllyTanksDesign", true)[0]);
+            if (FormAccess.Contains(FormAccess.GetAllyTankDesign()))
+            {
+                Walls.Add((PictureBox)FormAccess.Controls.Find("AllyTanksDesign", true)[0]);
+            }
+            if (!(FormAccess.Contains(FormAccess.EnemyTanksDesign)) && Walls.Contains(FormAccess.EnemyTanksDesign))
+            {
+                Walls.Remove((PictureBox)FormAccess.Controls.Find("AllyTanksDesign", true)[0]);
+            }
 
             int a = 1;
             System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
@@ -135,12 +149,12 @@ namespace WFTanks
                         return true;
                 }
             }
-            Walls.Remove((PictureBox)FormAccess.Controls.Find("AllyTanksDesign", true)[0]);
             return false;
         }
 
         public PictureBox CollisionsForBullets(Move BulletMove, bool isAllyTank, PictureBox Bullet)
         {
+            //TODO: POPRAWA TYCH IFOW!!!
             if (isAllyTank)
             { Walls.Add((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]); }
 
@@ -182,6 +196,7 @@ namespace WFTanks
                         return Walls[i];
                 }
             }
+            //TODO: I TYCH TEZ
             if (isAllyTank)
             {Walls.Remove((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]); }
 
