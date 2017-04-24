@@ -18,7 +18,7 @@ namespace WFTanks
         Stopwatch BulletTime = new Stopwatch();
         Stopwatch BulletSoundTimer = new Stopwatch();
         SoundPlayer BulletSound = new SoundPlayer(Properties.Resources.Shot);
-
+        public List<PictureBox> Walls = new List<PictureBox>();
         AllyTanks AllyTank = new AllyTanks();
         EnemyTanks EnemyTank = new EnemyTanks();
         
@@ -31,9 +31,12 @@ namespace WFTanks
         private Game.Move TankDirection2;
         public Form1()
         {
+
             AllyTank.SetFrom1(this);
             EnemyTank.SetForm1(this);
             InitializeComponent();
+            
+            
             x = AllyTank.AllyTankDesign.Left;
             y = AllyTank.AllyTankDesign.Top;
 
