@@ -9,6 +9,7 @@ namespace WFTanks
 {
     class Game
     {
+        public List<PictureBox> Walls = new List<PictureBox>();
         public enum Move
         {
             Down,
@@ -17,7 +18,7 @@ namespace WFTanks
             Up
         }
 
-        public List<PictureBox> Walls = new List<PictureBox>();
+
 
         public Form1 FormAccess;
         public enum GameStates
@@ -37,24 +38,29 @@ namespace WFTanks
             set { _score = value; }
         }
 
-        public Game(){}
+        public Game() { }
 
         public Game(Form1 FormConstructor)
         {
             FormAccess = FormConstructor;
+            foreach (Control c in FormAccess.Controls)
+            {
+                if (c is PictureBox && (c.Tag=="Wall"))
+                {
 
-            for (int i = 1; i <= 56; i++)
-                Walls.Add((PictureBox)FormAccess.Controls.Find("BrickWall" + i, true)[0]);
+                    Walls.Add((PictureBox)c);
+                }
+            }
+           
         }
-
         public bool Collisions(Move Tank, PictureBox AllyTank)
         {
-            Walls.Add((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]);
+         Walls.Add((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]);
 
             int a = 1;
             System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
 
-            for (int i = 0; i < Walls.LongCount(); i++)
+            for (int i = 0; i <Walls.LongCount(); i++)
             {
                 thing = Walls[i].Bounds;
 
@@ -86,6 +92,7 @@ namespace WFTanks
                         return true;
                 }
             }
+          Walls.Remove((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]);
             return false;
         }
 
@@ -96,7 +103,7 @@ namespace WFTanks
             int a = 1;
             System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
 
-            for (int i = 0; i < Walls.LongCount(); i++)
+            for (int i = 0; i < Walls.Count(); i++)
             {
                 thing = Walls[i].Bounds;
 
@@ -128,6 +135,7 @@ namespace WFTanks
                         return true;
                 }
             }
+            Walls.Remove((PictureBox)FormAccess.Controls.Find("AllyTanksDesign", true)[0]);
             return false;
         }
 
@@ -142,7 +150,7 @@ namespace WFTanks
             int a = 1;
             System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
 
-            for (int i = 0; i < Walls.LongCount(); i++)
+            for (int i = 0; i < Walls.Count(); i++)
             {
                 thing = Walls[i].Bounds;
 
@@ -174,6 +182,11 @@ namespace WFTanks
                         return Walls[i];
                 }
             }
+            if (isAllyTank)
+            {Walls.Remove((PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]); }
+
+            else
+            { Walls.Remove((PictureBox)FormAccess.Controls.Find("AllyTanksDesign", true)[0]); }
             return null;
         }
     }

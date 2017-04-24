@@ -83,7 +83,7 @@ namespace WFTanks
                     Thread.Sleep(10);
                 } while (WhereToGo());
 
-                TankBullet.Invoke(Disable);
+               TankBullet.Invoke(Disable);
             });
 
             PufPuf.Start();
@@ -96,9 +96,9 @@ namespace WFTanks
         public bool WhereToGo()
         {
             Game game = new Game(FormAccess);
-
+           
             PictureBox GoingToPufBam = new PictureBox();
-
+            var Disable2 = new Action(() => { FormAccess.Controls.Remove(GoingToPufBam); });
             var Destroy = new Action(() => {
                 GoingToPufBam.Image = Properties.Resources.explo1;
                 Thread.Sleep(100);
@@ -123,14 +123,14 @@ namespace WFTanks
 
             if (TankDirection == Game.Move.Right && TankBullet.Left > 740)
                 return false;
-
+              
             if (FormAccess.GetAllyTankDesign().Equals(OwnerDesign))
             {
                 GoingToPufBam = game.CollisionsForBullets(TankDirection, true, TankBullet);
                 if (GoingToPufBam != null )
                 {
                     Destroy.Invoke();
-                  
+                    GoingToPufBam.Invoke(Disable2);
                     //TODO: Repair Object Destroy
                     return false;                   
                 }
@@ -142,6 +142,8 @@ namespace WFTanks
                 if (GoingToPufBam != null)
                 {
                     Destroy.Invoke();
+                    GoingToPufBam.Invoke(Disable2);
+                  
                     return false;
                 }
             }
