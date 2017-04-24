@@ -29,14 +29,21 @@ namespace WFTanks
         public int a;
         private Game.Move TankDirection;
         private Game.Move TankDirection2;
+        public List<PictureBox> almostDestroyed = new List<PictureBox>();
         public Form1()
         {
-
+          
             AllyTank.SetFrom1(this);
             EnemyTank.SetForm1(this);
             InitializeComponent();
-            
-            
+
+            foreach (Control c in Controls)
+            {
+                if (c is PictureBox && (c.Tag == "Wall"))
+                {
+                    almostDestroyed.Add((PictureBox)c);
+                }
+            }
             x = AllyTank.AllyTankDesign.Left;
             y = AllyTank.AllyTankDesign.Top;
 
