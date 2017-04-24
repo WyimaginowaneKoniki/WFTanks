@@ -17,7 +17,7 @@ namespace WFTanks
     {
         Stopwatch BulletTime = new Stopwatch();
         Stopwatch BulletSoundTimer = new Stopwatch();
-        SoundPlayer BulletSound = new SoundPlayer(Properties.Resources.Shot);
+        SoundPlayer BulletSound = new SoundPlayer(Properties.Resources.newshot);
         public List<PictureBox> Walls = new List<PictureBox>();
         AllyTanks AllyTank = new AllyTanks();
         EnemyTanks EnemyTank = new EnemyTanks();
@@ -29,14 +29,21 @@ namespace WFTanks
         public int a;
         private Game.Move TankDirection;
         private Game.Move TankDirection2;
+        public List<PictureBox> almostDestroyed = new List<PictureBox>();
         public Form1()
         {
-
+          
             AllyTank.SetFrom1(this);
             EnemyTank.SetForm1(this);
             InitializeComponent();
-            
-            
+
+            foreach (Control c in Controls)
+            {
+                if (c is PictureBox && (c.Tag == "Wall"))
+                {
+                    almostDestroyed.Add((PictureBox)c);
+                }
+            }
             x = AllyTank.AllyTankDesign.Left;
             y = AllyTank.AllyTankDesign.Top;
 

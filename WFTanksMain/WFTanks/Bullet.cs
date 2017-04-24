@@ -14,7 +14,7 @@ namespace WFTanks
 
         private Game.Move TankDirection;
         private Form1 FormAccess;
-
+       
         private PictureBox TankBullet = new PictureBox();
         private PictureBox OwnerDesign = new PictureBox();
 
@@ -22,10 +22,11 @@ namespace WFTanks
      
         public Bullet(Game.Move TankDirectionFromGame, Form1 FormConstruct, PictureBox BulletOwner)
         {
+           
             OwnerDesign = BulletOwner;
             FormAccess = FormConstruct;
             TankDirection = TankDirectionFromGame;
-
+          
             if (TankDirection == Game.Move.Down)
             {
                 TankBullet.Image = Properties.Resources.BulletDown;
@@ -111,8 +112,8 @@ namespace WFTanks
                 GoingToPufBam.Image = Properties.Resources.explo5;
                 Thread.Sleep(100);
             });
-
-            if (TankDirection == Game.Move.Down && TankBullet.Top > 680)
+            var halfDestroy = new Action(() => { GoingToPufBam.Image = Properties.Resources.halfdestroyed; });
+                if (TankDirection == Game.Move.Down && TankBullet.Top > 680)
                 return false;
 
             if (TankDirection == Game.Move.Up && TankBullet.Top < 1)
@@ -127,10 +128,21 @@ namespace WFTanks
             if (FormAccess.GetAllyTankDesign().Equals(OwnerDesign))
             {
                 GoingToPufBam = game.CollisionsForBullets(TankDirection, true, TankBullet);
-                if (GoingToPufBam != null )
+                 if (GoingToPufBam != null )
                 {
-                    Destroy.Invoke();
-                    GoingToPufBam.Invoke(Disable2);
+                    
+                    if (FormAccess.almostDestroyed.Contains(GoingToPufBam))
+                    {
+                         GoingToPufBam.Invoke(halfDestroy);
+                        FormAccess.almostDestroyed.Remove(GoingToPufBam);
+                        
+                    }
+                    else
+                    {
+                        Destroy.Invoke();
+                        GoingToPufBam.Invoke(Disable2);
+
+                    }
                     //TODO: Repair Object Destroy
                     return false;                   
                 }
@@ -141,9 +153,19 @@ namespace WFTanks
                 GoingToPufBam = game.CollisionsForBullets(TankDirection, false, TankBullet);
                 if (GoingToPufBam != null)
                 {
-                    Destroy.Invoke();
-                    GoingToPufBam.Invoke(Disable2);
-                  
+                    if (FormAccess.almostDestroyed.Contains(GoingToPufBam))
+                    {
+                        GoingToPufBam.Invoke(halfDestroy);
+                        FormAccess.almostDestroyed.Remove(GoingToPufBam);
+
+                    }
+                    else
+                    {
+                        Destroy.Invoke();
+                        GoingToPufBam.Invoke(Disable2);
+
+                    }
+
                     return false;
                 }
             }
