@@ -115,6 +115,7 @@
   <ItemGroup>
     <Content Include="Resources\Map\halfdestroyed.png" />
     <Content Include="Resources\Sounds\Drive.wav" />
+    <Content Include="Resources\Sounds\newshot.wav" />
     <Content Include="Resources\Sounds\Shot.wav" />
     <None Include="Resources\brickimage.jpg" />
     <Content Include="Resources\AllieTanksDesign\down1.png" />

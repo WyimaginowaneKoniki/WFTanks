@@ -17,7 +17,7 @@ namespace WFTanks
     {
         Stopwatch BulletTime = new Stopwatch();
         Stopwatch BulletSoundTimer = new Stopwatch();
-        SoundPlayer BulletSound = new SoundPlayer(Properties.Resources.Shot);
+        SoundPlayer BulletSound = new SoundPlayer(Properties.Resources.newshot);
         public List<PictureBox> Walls = new List<PictureBox>();
         AllyTanks AllyTank = new AllyTanks();
         EnemyTanks EnemyTank = new EnemyTanks();
