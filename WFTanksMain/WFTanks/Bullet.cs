@@ -98,7 +98,7 @@ namespace WFTanks
             Game game = new Game(FormAccess);
            
             PictureBox GoingToPufBam = new PictureBox();
-            var Disable2 = new Action(() => { FormAccess.Controls.Remove(GoingToPufBam); });
+            var Disable2 = new Action(() => { FormAccess.Controls.Remove(GoingToPufBam); if(GoingToPufBam.Name=="EnemyTanksDesign") FormAccess.Isenemydead = true; });
             var Destroy = new Action(() => {
                 GoingToPufBam.Image = Properties.Resources.explo1;
                 Thread.Sleep(100);
