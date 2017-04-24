@@ -250,6 +250,7 @@
             this.BrickWall8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall8.TabIndex = 9;
             this.BrickWall8.TabStop = false;
+            this.BrickWall7.Tag = "Wall";
             // 
             // BrickWall9
             // 
