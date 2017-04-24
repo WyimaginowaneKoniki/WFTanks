@@ -166,6 +166,7 @@
             this.BrickWall1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall1.TabIndex = 2;
             this.BrickWall1.TabStop = false;
+            this.BrickWall1.Tag = "Wall";
             // 
             // BrickWall2
             // 
@@ -177,6 +178,7 @@
             this.BrickWall2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall2.TabIndex = 3;
             this.BrickWall2.TabStop = false;
+            this.BrickWall2.Tag = "Wall";
             // 
             // BrickWall3
             // 
@@ -188,6 +190,7 @@
             this.BrickWall3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall3.TabIndex = 4;
             this.BrickWall3.TabStop = false;
+            this.BrickWall3.Tag = "Wall";
             // 
             // BrickWall4
             // 
@@ -199,6 +202,7 @@
             this.BrickWall4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall4.TabIndex = 5;
             this.BrickWall4.TabStop = false;
+            this.BrickWall4.Tag = "Wall";
             // 
             // BrickWall5
             // 
@@ -210,6 +214,7 @@
             this.BrickWall5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall5.TabIndex = 6;
             this.BrickWall5.TabStop = false;
+            this.BrickWall5.Tag = "Wall";
             // 
             // BrickWall6
             // 
@@ -221,6 +226,7 @@
             this.BrickWall6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall6.TabIndex = 7;
             this.BrickWall6.TabStop = false;
+            this.BrickWall6.Tag = "Wall";
             // 
             // BrickWall7
             // 
@@ -232,6 +238,7 @@
             this.BrickWall7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall7.TabIndex = 8;
             this.BrickWall7.TabStop = false;
+            this.BrickWall7.Tag = "Wall";
             // 
             // BrickWall8
             // 
@@ -254,6 +261,7 @@
             this.BrickWall9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall9.TabIndex = 10;
             this.BrickWall9.TabStop = false;
+            this.BrickWall9.Tag = "Wall";
             // 
             // BrickWall10
             // 
@@ -265,6 +273,7 @@
             this.BrickWall10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall10.TabIndex = 14;
             this.BrickWall10.TabStop = false;
+            this.BrickWall10.Tag = "Wall";
             // 
             // BrickWall11
             // 
@@ -276,6 +285,7 @@
             this.BrickWall11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall11.TabIndex = 13;
             this.BrickWall11.TabStop = false;
+            this.BrickWall11.Tag = "Wall";
             // 
             // BrickWall12
             // 
@@ -287,6 +297,7 @@
             this.BrickWall12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall12.TabIndex = 12;
             this.BrickWall12.TabStop = false;
+            this.BrickWall12.Tag = "Wall";
             // 
             // BrickWall13
             // 
@@ -298,6 +309,7 @@
             this.BrickWall13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall13.TabIndex = 11;
             this.BrickWall13.TabStop = false;
+            this.BrickWall13.Tag = "Wall";
             // 
             // BrickWall14
             // 
@@ -309,6 +321,7 @@
             this.BrickWall14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall14.TabIndex = 15;
             this.BrickWall14.TabStop = false;
+            this.BrickWall14.Tag = "Wall";
             // 
             // BrickWall15
             // 
@@ -320,6 +333,7 @@
             this.BrickWall15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall15.TabIndex = 16;
             this.BrickWall15.TabStop = false;
+            this.BrickWall15.Tag = "Wall";
             // 
             // BrickWall16
             // 
@@ -331,6 +345,7 @@
             this.BrickWall16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall16.TabIndex = 24;
             this.BrickWall16.TabStop = false;
+            this.BrickWall16.Tag = "Wall";
             // 
             // BrickWall17
             // 
@@ -342,6 +357,7 @@
             this.BrickWall17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall17.TabIndex = 23;
             this.BrickWall17.TabStop = false;
+            this.BrickWall17.Tag = "Wall";
             // 
             // BrickWall18
             // 
@@ -353,6 +369,7 @@
             this.BrickWall18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall18.TabIndex = 22;
             this.BrickWall18.TabStop = false;
+            this.BrickWall18.Tag = "Wall";
             // 
             // BrickWall19
             // 
@@ -364,6 +381,7 @@
             this.BrickWall19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall19.TabIndex = 21;
             this.BrickWall19.TabStop = false;
+            this.BrickWall19.Tag = "Wall";
             // 
             // BrickWall20
             // 
@@ -375,6 +393,7 @@
             this.BrickWall20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall20.TabIndex = 20;
             this.BrickWall20.TabStop = false;
+            this.BrickWall20.Tag = "Wall";
             // 
             // BrickWall21
             // 
@@ -386,6 +405,7 @@
             this.BrickWall21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall21.TabIndex = 19;
             this.BrickWall21.TabStop = false;
+            this.BrickWall21.Tag = "Wall";
             // 
             // BrickWall22
             // 
@@ -397,6 +417,7 @@
             this.BrickWall22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall22.TabIndex = 18;
             this.BrickWall22.TabStop = false;
+            this.BrickWall22.Tag = "Wall";
             // 
             // BrickWall23
             // 
@@ -408,6 +429,7 @@
             this.BrickWall23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall23.TabIndex = 17;
             this.BrickWall23.TabStop = false;
+            this.BrickWall23.Tag = "Wall";
             // 
             // BrickWall24
             // 
@@ -419,6 +441,7 @@
             this.BrickWall24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall24.TabIndex = 25;
             this.BrickWall24.TabStop = false;
+            this.BrickWall24.Tag = "Wall";
             // 
             // BrickWall25
             // 
@@ -430,6 +453,7 @@
             this.BrickWall25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall25.TabIndex = 33;
             this.BrickWall25.TabStop = false;
+            this.BrickWall25.Tag = "Wall";
             // 
             // BrickWall26
             // 
@@ -441,6 +465,7 @@
             this.BrickWall26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall26.TabIndex = 32;
             this.BrickWall26.TabStop = false;
+            this.BrickWall26.Tag = "Wall";
             // 
             // BrickWall27
             // 
@@ -452,6 +477,7 @@
             this.BrickWall27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall27.TabIndex = 31;
             this.BrickWall27.TabStop = false;
+            this.BrickWall27.Tag = "Wall";
             // 
             // BrickWall28
             // 
@@ -463,6 +489,7 @@
             this.BrickWall28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall28.TabIndex = 30;
             this.BrickWall28.TabStop = false;
+            this.BrickWall28.Tag = "Wall";
             // 
             // BrickWall29
             // 
@@ -474,6 +501,7 @@
             this.BrickWall29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall29.TabIndex = 29;
             this.BrickWall29.TabStop = false;
+            this.BrickWall29.Tag = "Wall";
             // 
             // BrickWall30
             // 
@@ -485,6 +513,7 @@
             this.BrickWall30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall30.TabIndex = 28;
             this.BrickWall30.TabStop = false;
+            this.BrickWall30.Tag = "Wall";
             // 
             // BrickWall31
             // 
@@ -496,6 +525,7 @@
             this.BrickWall31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall31.TabIndex = 27;
             this.BrickWall31.TabStop = false;
+            this.BrickWall31.Tag = "Wall";
             // 
             // BrickWall32
             // 
@@ -507,6 +537,7 @@
             this.BrickWall32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall32.TabIndex = 26;
             this.BrickWall32.TabStop = false;
+            this.BrickWall32.Tag = "Wall";
             // 
             // BrickWall33
             // 
@@ -518,6 +549,7 @@
             this.BrickWall33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall33.TabIndex = 35;
             this.BrickWall33.TabStop = false;
+            this.BrickWall33.Tag = "Wall";
             // 
             // BrickWall34
             // 
@@ -529,6 +561,7 @@
             this.BrickWall34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall34.TabIndex = 34;
             this.BrickWall34.TabStop = false;
+            this.BrickWall34.Tag = "Wall";
             // 
             // BrickWall35
             // 
@@ -540,6 +573,7 @@
             this.BrickWall35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall35.TabIndex = 36;
             this.BrickWall35.TabStop = false;
+            this.BrickWall35.Tag = "Wall";
             // 
             // BrickWall36
             // 
@@ -551,6 +585,7 @@
             this.BrickWall36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall36.TabIndex = 37;
             this.BrickWall36.TabStop = false;
+            this.BrickWall36.Tag = "Wall";
             // 
             // BrickWall37
             // 
@@ -562,6 +597,7 @@
             this.BrickWall37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall37.TabIndex = 45;
             this.BrickWall37.TabStop = false;
+            this.BrickWall37.Tag = "Wall";
             // 
             // BrickWall38
             // 
@@ -573,6 +609,7 @@
             this.BrickWall38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall38.TabIndex = 44;
             this.BrickWall38.TabStop = false;
+            this.BrickWall38.Tag = "Wall";
             // 
             // BrickWall39
             // 
@@ -584,6 +621,7 @@
             this.BrickWall39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall39.TabIndex = 43;
             this.BrickWall39.TabStop = false;
+            this.BrickWall39.Tag = "Wall";
             // 
             // BrickWall40
             // 
@@ -595,6 +633,7 @@
             this.BrickWall40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall40.TabIndex = 42;
             this.BrickWall40.TabStop = false;
+            this.BrickWall40.Tag = "Wall";
             // 
             // BrickWall41
             // 
@@ -606,6 +645,7 @@
             this.BrickWall41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall41.TabIndex = 41;
             this.BrickWall41.TabStop = false;
+            this.BrickWall41.Tag = "Wall";
             // 
             // BrickWall42
             // 
@@ -617,6 +657,7 @@
             this.BrickWall42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall42.TabIndex = 40;
             this.BrickWall42.TabStop = false;
+            this.BrickWall42.Tag = "Wall";
             // 
             // BrickWall43
             // 
@@ -628,6 +669,7 @@
             this.BrickWall43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall43.TabIndex = 39;
             this.BrickWall43.TabStop = false;
+            this.BrickWall43.Tag = "Wall";
             // 
             // BrickWall44
             // 
@@ -639,6 +681,7 @@
             this.BrickWall44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall44.TabIndex = 38;
             this.BrickWall44.TabStop = false;
+            this.BrickWall44.Tag = "Wall";
             // 
             // BrickWall45
             // 
@@ -650,6 +693,7 @@
             this.BrickWall45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall45.TabIndex = 46;
             this.BrickWall45.TabStop = false;
+            this.BrickWall45.Tag = "Wall";
             // 
             // BrickWall46
             // 
@@ -661,6 +705,7 @@
             this.BrickWall46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall46.TabIndex = 47;
             this.BrickWall46.TabStop = false;
+            this.BrickWall46.Tag = "Wall";
             // 
             // BrickWall47
             // 
@@ -672,6 +717,7 @@
             this.BrickWall47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall47.TabIndex = 56;
             this.BrickWall47.TabStop = false;
+            this.BrickWall47.Tag = "Wall";
             // 
             // BrickWall48
             // 
@@ -683,6 +729,7 @@
             this.BrickWall48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall48.TabIndex = 55;
             this.BrickWall48.TabStop = false;
+            this.BrickWall48.Tag = "Wall";
             // 
             // BrickWall49
             // 
@@ -694,6 +741,7 @@
             this.BrickWall49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall49.TabIndex = 54;
             this.BrickWall49.TabStop = false;
+            this.BrickWall49.Tag = "Wall";
             // 
             // BrickWall50
             // 
@@ -705,6 +753,7 @@
             this.BrickWall50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall50.TabIndex = 53;
             this.BrickWall50.TabStop = false;
+            this.BrickWall50.Tag = "Wall";
             // 
             // BrickWall51
             // 
@@ -716,6 +765,7 @@
             this.BrickWall51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall51.TabIndex = 52;
             this.BrickWall51.TabStop = false;
+            this.BrickWall51.Tag = "Wall";
             // 
             // BrickWall52
             // 
@@ -727,6 +777,7 @@
             this.BrickWall52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall52.TabIndex = 51;
             this.BrickWall52.TabStop = false;
+            this.BrickWall52.Tag = "Wall";
             // 
             // BrickWall53
             // 
@@ -738,6 +789,7 @@
             this.BrickWall53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall53.TabIndex = 50;
             this.BrickWall53.TabStop = false;
+            this.BrickWall53.Tag = "Wall";
             // 
             // BrickWall54
             // 
@@ -749,6 +801,7 @@
             this.BrickWall54.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall54.TabIndex = 49;
             this.BrickWall54.TabStop = false;
+            this.BrickWall54.Tag = "Wall";
             // 
             // BrickWall55
             // 
@@ -760,6 +813,7 @@
             this.BrickWall55.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall55.TabIndex = 48;
             this.BrickWall55.TabStop = false;
+            this.BrickWall55.Tag = "Wall";
             // 
             // BrickWall56
             // 
@@ -771,6 +825,7 @@
             this.BrickWall56.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BrickWall56.TabIndex = 57;
             this.BrickWall56.TabStop = false;
+            this.BrickWall56.Tag = "Wall";
             // 
             // timer1
             // 
@@ -840,6 +895,7 @@
             this.Controls.Add(this.BrickWall1);
             this.Controls.Add(this.EagleImage);
             this.Name = "Form1";
+            this.Tag = "Wall";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
