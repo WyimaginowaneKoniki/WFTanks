@@ -144,7 +144,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall55)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BrickWall56)).BeginInit();
             this.SuspendLayout();
-
             // 
             // EagleImage
             // 
@@ -159,6 +158,7 @@
             // 
             // BrickWall1
             // 
+            this.BrickWall1.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall1.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall1.Location = new System.Drawing.Point(360, 660);
             this.BrickWall1.Name = "BrickWall1";
@@ -169,6 +169,7 @@
             // 
             // BrickWall2
             // 
+            this.BrickWall2.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall2.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall2.Location = new System.Drawing.Point(360, 630);
             this.BrickWall2.Name = "BrickWall2";
@@ -179,6 +180,7 @@
             // 
             // BrickWall3
             // 
+            this.BrickWall3.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall3.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall3.Location = new System.Drawing.Point(330, 630);
             this.BrickWall3.Name = "BrickWall3";
@@ -189,6 +191,7 @@
             // 
             // BrickWall4
             // 
+            this.BrickWall4.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall4.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall4.Location = new System.Drawing.Point(300, 630);
             this.BrickWall4.Name = "BrickWall4";
@@ -199,6 +202,7 @@
             // 
             // BrickWall5
             // 
+            this.BrickWall5.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall5.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall5.Location = new System.Drawing.Point(300, 660);
             this.BrickWall5.Name = "BrickWall5";
@@ -209,6 +213,7 @@
             // 
             // BrickWall6
             // 
+            this.BrickWall6.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall6.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall6.Location = new System.Drawing.Point(240, 600);
             this.BrickWall6.Name = "BrickWall6";
@@ -219,6 +224,7 @@
             // 
             // BrickWall7
             // 
+            this.BrickWall7.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall7.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall7.Location = new System.Drawing.Point(240, 570);
             this.BrickWall7.Name = "BrickWall7";
@@ -229,6 +235,7 @@
             // 
             // BrickWall8
             // 
+            this.BrickWall8.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall8.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall8.Location = new System.Drawing.Point(240, 540);
             this.BrickWall8.Name = "BrickWall8";
@@ -239,6 +246,7 @@
             // 
             // BrickWall9
             // 
+            this.BrickWall9.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall9.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall9.Location = new System.Drawing.Point(240, 510);
             this.BrickWall9.Name = "BrickWall9";
@@ -249,6 +257,7 @@
             // 
             // BrickWall10
             // 
+            this.BrickWall10.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall10.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall10.Location = new System.Drawing.Point(150, 510);
             this.BrickWall10.Name = "BrickWall10";
@@ -259,6 +268,7 @@
             // 
             // BrickWall11
             // 
+            this.BrickWall11.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall11.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall11.Location = new System.Drawing.Point(150, 540);
             this.BrickWall11.Name = "BrickWall11";
@@ -269,6 +279,7 @@
             // 
             // BrickWall12
             // 
+            this.BrickWall12.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall12.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall12.Location = new System.Drawing.Point(150, 570);
             this.BrickWall12.Name = "BrickWall12";
@@ -279,6 +290,7 @@
             // 
             // BrickWall13
             // 
+            this.BrickWall13.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall13.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall13.Location = new System.Drawing.Point(150, 600);
             this.BrickWall13.Name = "BrickWall13";
@@ -289,6 +301,7 @@
             // 
             // BrickWall14
             // 
+            this.BrickWall14.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall14.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall14.Location = new System.Drawing.Point(210, 420);
             this.BrickWall14.Name = "BrickWall14";
@@ -299,6 +312,7 @@
             // 
             // BrickWall15
             // 
+            this.BrickWall15.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall15.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall15.Location = new System.Drawing.Point(180, 420);
             this.BrickWall15.Name = "BrickWall15";
@@ -309,6 +323,7 @@
             // 
             // BrickWall16
             // 
+            this.BrickWall16.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall16.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall16.Location = new System.Drawing.Point(300, 420);
             this.BrickWall16.Name = "BrickWall16";
@@ -319,6 +334,7 @@
             // 
             // BrickWall17
             // 
+            this.BrickWall17.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall17.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall17.Location = new System.Drawing.Point(300, 450);
             this.BrickWall17.Name = "BrickWall17";
@@ -329,6 +345,7 @@
             // 
             // BrickWall18
             // 
+            this.BrickWall18.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall18.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall18.Location = new System.Drawing.Point(300, 480);
             this.BrickWall18.Name = "BrickWall18";
@@ -339,6 +356,7 @@
             // 
             // BrickWall19
             // 
+            this.BrickWall19.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall19.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall19.Location = new System.Drawing.Point(300, 510);
             this.BrickWall19.Name = "BrickWall19";
@@ -349,6 +367,7 @@
             // 
             // BrickWall20
             // 
+            this.BrickWall20.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall20.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall20.Location = new System.Drawing.Point(360, 420);
             this.BrickWall20.Name = "BrickWall20";
@@ -359,6 +378,7 @@
             // 
             // BrickWall21
             // 
+            this.BrickWall21.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall21.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall21.Location = new System.Drawing.Point(360, 450);
             this.BrickWall21.Name = "BrickWall21";
@@ -369,6 +389,7 @@
             // 
             // BrickWall22
             // 
+            this.BrickWall22.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall22.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall22.Location = new System.Drawing.Point(360, 480);
             this.BrickWall22.Name = "BrickWall22";
@@ -379,6 +400,7 @@
             // 
             // BrickWall23
             // 
+            this.BrickWall23.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall23.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall23.Location = new System.Drawing.Point(360, 510);
             this.BrickWall23.Name = "BrickWall23";
@@ -389,6 +411,7 @@
             // 
             // BrickWall24
             // 
+            this.BrickWall24.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall24.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall24.Location = new System.Drawing.Point(330, 450);
             this.BrickWall24.Name = "BrickWall24";
@@ -399,6 +422,7 @@
             // 
             // BrickWall25
             // 
+            this.BrickWall25.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall25.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall25.Location = new System.Drawing.Point(450, 510);
             this.BrickWall25.Name = "BrickWall25";
@@ -409,6 +433,7 @@
             // 
             // BrickWall26
             // 
+            this.BrickWall26.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall26.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall26.Location = new System.Drawing.Point(450, 540);
             this.BrickWall26.Name = "BrickWall26";
@@ -419,6 +444,7 @@
             // 
             // BrickWall27
             // 
+            this.BrickWall27.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall27.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall27.Location = new System.Drawing.Point(450, 570);
             this.BrickWall27.Name = "BrickWall27";
@@ -429,6 +455,7 @@
             // 
             // BrickWall28
             // 
+            this.BrickWall28.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall28.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall28.Location = new System.Drawing.Point(450, 600);
             this.BrickWall28.Name = "BrickWall28";
@@ -439,6 +466,7 @@
             // 
             // BrickWall29
             // 
+            this.BrickWall29.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall29.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall29.Location = new System.Drawing.Point(540, 510);
             this.BrickWall29.Name = "BrickWall29";
@@ -449,6 +477,7 @@
             // 
             // BrickWall30
             // 
+            this.BrickWall30.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall30.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall30.Location = new System.Drawing.Point(540, 540);
             this.BrickWall30.Name = "BrickWall30";
@@ -459,6 +488,7 @@
             // 
             // BrickWall31
             // 
+            this.BrickWall31.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall31.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall31.Location = new System.Drawing.Point(540, 570);
             this.BrickWall31.Name = "BrickWall31";
@@ -469,6 +499,7 @@
             // 
             // BrickWall32
             // 
+            this.BrickWall32.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall32.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall32.Location = new System.Drawing.Point(540, 600);
             this.BrickWall32.Name = "BrickWall32";
@@ -479,6 +510,7 @@
             // 
             // BrickWall33
             // 
+            this.BrickWall33.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall33.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall33.Location = new System.Drawing.Point(480, 420);
             this.BrickWall33.Name = "BrickWall33";
@@ -489,6 +521,7 @@
             // 
             // BrickWall34
             // 
+            this.BrickWall34.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall34.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall34.Location = new System.Drawing.Point(510, 420);
             this.BrickWall34.Name = "BrickWall34";
@@ -499,6 +532,7 @@
             // 
             // BrickWall35
             // 
+            this.BrickWall35.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall35.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall35.Location = new System.Drawing.Point(360, 360);
             this.BrickWall35.Name = "BrickWall35";
@@ -509,6 +543,7 @@
             // 
             // BrickWall36
             // 
+            this.BrickWall36.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall36.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall36.Location = new System.Drawing.Point(300, 360);
             this.BrickWall36.Name = "BrickWall36";
@@ -519,6 +554,7 @@
             // 
             // BrickWall37
             // 
+            this.BrickWall37.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall37.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall37.Location = new System.Drawing.Point(150, 150);
             this.BrickWall37.Name = "BrickWall37";
@@ -529,6 +565,7 @@
             // 
             // BrickWall38
             // 
+            this.BrickWall38.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall38.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall38.Location = new System.Drawing.Point(150, 180);
             this.BrickWall38.Name = "BrickWall38";
@@ -539,6 +576,7 @@
             // 
             // BrickWall39
             // 
+            this.BrickWall39.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall39.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall39.Location = new System.Drawing.Point(150, 210);
             this.BrickWall39.Name = "BrickWall39";
@@ -549,6 +587,7 @@
             // 
             // BrickWall40
             // 
+            this.BrickWall40.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall40.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall40.Location = new System.Drawing.Point(150, 240);
             this.BrickWall40.Name = "BrickWall40";
@@ -559,6 +598,7 @@
             // 
             // BrickWall41
             // 
+            this.BrickWall41.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall41.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall41.Location = new System.Drawing.Point(240, 150);
             this.BrickWall41.Name = "BrickWall41";
@@ -569,6 +609,7 @@
             // 
             // BrickWall42
             // 
+            this.BrickWall42.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall42.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall42.Location = new System.Drawing.Point(240, 180);
             this.BrickWall42.Name = "BrickWall42";
@@ -579,6 +620,7 @@
             // 
             // BrickWall43
             // 
+            this.BrickWall43.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall43.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall43.Location = new System.Drawing.Point(240, 210);
             this.BrickWall43.Name = "BrickWall43";
@@ -589,6 +631,7 @@
             // 
             // BrickWall44
             // 
+            this.BrickWall44.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall44.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall44.Location = new System.Drawing.Point(240, 240);
             this.BrickWall44.Name = "BrickWall44";
@@ -599,6 +642,7 @@
             // 
             // BrickWall45
             // 
+            this.BrickWall45.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall45.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall45.Location = new System.Drawing.Point(0, 300);
             this.BrickWall45.Name = "BrickWall45";
@@ -609,6 +653,7 @@
             // 
             // BrickWall46
             // 
+            this.BrickWall46.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall46.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall46.Location = new System.Drawing.Point(720, 300);
             this.BrickWall46.Name = "BrickWall46";
@@ -619,6 +664,7 @@
             // 
             // BrickWall47
             // 
+            this.BrickWall47.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall47.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall47.Location = new System.Drawing.Point(510, 180);
             this.BrickWall47.Name = "BrickWall47";
@@ -629,6 +675,7 @@
             // 
             // BrickWall48
             // 
+            this.BrickWall48.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall48.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall48.Location = new System.Drawing.Point(450, 120);
             this.BrickWall48.Name = "BrickWall48";
@@ -639,6 +686,7 @@
             // 
             // BrickWall49
             // 
+            this.BrickWall49.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall49.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall49.Location = new System.Drawing.Point(450, 150);
             this.BrickWall49.Name = "BrickWall49";
@@ -649,6 +697,7 @@
             // 
             // BrickWall50
             // 
+            this.BrickWall50.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall50.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall50.Location = new System.Drawing.Point(450, 180);
             this.BrickWall50.Name = "BrickWall50";
@@ -659,6 +708,7 @@
             // 
             // BrickWall51
             // 
+            this.BrickWall51.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall51.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall51.Location = new System.Drawing.Point(450, 210);
             this.BrickWall51.Name = "BrickWall51";
@@ -669,6 +719,7 @@
             // 
             // BrickWall52
             // 
+            this.BrickWall52.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall52.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall52.Location = new System.Drawing.Point(540, 120);
             this.BrickWall52.Name = "BrickWall52";
@@ -679,6 +730,7 @@
             // 
             // BrickWall53
             // 
+            this.BrickWall53.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall53.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall53.Location = new System.Drawing.Point(540, 150);
             this.BrickWall53.Name = "BrickWall53";
@@ -689,6 +741,7 @@
             // 
             // BrickWall54
             // 
+            this.BrickWall54.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall54.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall54.Location = new System.Drawing.Point(540, 180);
             this.BrickWall54.Name = "BrickWall54";
@@ -699,6 +752,7 @@
             // 
             // BrickWall55
             // 
+            this.BrickWall55.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall55.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall55.Location = new System.Drawing.Point(540, 210);
             this.BrickWall55.Name = "BrickWall55";
@@ -709,6 +763,7 @@
             // 
             // BrickWall56
             // 
+            this.BrickWall56.BackColor = System.Drawing.Color.Transparent;
             this.BrickWall56.Image = global::WFTanks.Properties.Resources.brickimage;
             this.BrickWall56.Location = new System.Drawing.Point(480, 150);
             this.BrickWall56.Name = "BrickWall56";
