@@ -61,7 +61,6 @@ namespace WFTanks
             BulletTime.Start();
         }
 
-       
         public void Form1_KeyDown(object sender, KeyEventArgs e)
         {         
             timer2.Stop();

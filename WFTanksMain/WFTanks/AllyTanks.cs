@@ -40,9 +40,9 @@ namespace WFTanks
 
         public override void Movement(Game.Move Move, Game game)
         {
-            var MoveDown = new Action(() => { if (!(AllyTankDesign.Top > 660)) { AllyTankDesign.Top += 3; } });
-            var MoveUp = new Action(() => { { if (!(AllyTankDesign.Top < 0)) { AllyTankDesign.Top -= 3; } } });
-            var MoveLeft = new Action(() => { if (!(AllyTankDesign.Left < 0)) AllyTankDesign.Left -= 3; });
+            var MoveDown = new Action(() =>  { if (!(AllyTankDesign.Top > 660)) { AllyTankDesign.Top += 3; } });
+            var MoveUp = new Action(() =>    { if (!(AllyTankDesign.Top < 0)) { AllyTankDesign.Top -= 3; } } );
+            var MoveLeft = new Action(() => { if (!(AllyTankDesign.Left < 0)) { AllyTankDesign.Left -= 3; } });
             var MoveRight = new Action(() => { if (!(AllyTankDesign.Left > 720)) { AllyTankDesign.Left += 3; } });
 
             Task MovementTask = new Task(() =>
