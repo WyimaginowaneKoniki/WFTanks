@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace WFTanks
 {
     class Game
     {
+        public Form1 FormAccess;
         public List<PictureBox> Walls = new List<PictureBox>();
+        public static GameStates CurrentGameState = GameStates.InGame;
+
+        PictureBox EnemyTank = new PictureBox();
+        PictureBox AllyTank = new PictureBox();
+
         public enum Move
         {
             Down,
@@ -18,9 +23,6 @@ namespace WFTanks
             Up
         }
 
-
-
-        public Form1 FormAccess;
         public enum GameStates
         {
             Win,
@@ -29,7 +31,6 @@ namespace WFTanks
             InGame
         }
 
-        public static GameStates CurrentGameState = GameStates.InGame;
         public uint _score;
 
         public uint Score
@@ -39,37 +40,38 @@ namespace WFTanks
         }
 
         public Game() { }
-        PictureBox EnemyTank = new PictureBox();
-        PictureBox AllyTank = new PictureBox();
+
         public Game(Form1 FormConstructor)
         {
             FormAccess = FormConstructor;
+
+            try
+            {
+                Walls.Add((PictureBox)FormAccess.Controls.Find("EagleImage", true)[0]);
+            }
+            catch (IndexOutOfRangeException)
+            {
+
+            }
+
             foreach (Control c in FormAccess.Controls)
             {
-                if (c is PictureBox && (c.Tag == "Wall"))
-                {
-
-                    Walls.Add((PictureBox)c);
-                }
+                if (c is PictureBox && ((string)c.Tag == "Wall"))
+                { Walls.Add((PictureBox)c); }
             }
 
             try
-            {
-                EnemyTank = (PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0];
-            }
-            catch (System.IndexOutOfRangeException)
-            {
-                EnemyTank = null;
-            }
+            { EnemyTank = (PictureBox)FormAccess.Controls.Find("EnemyTanksDesign", true)[0]; }
+
+            catch (IndexOutOfRangeException)
+            { EnemyTank = null; }
+
 
             try
-            {
-                AllyTank = (PictureBox)FormAccess.Controls.Find("AllyTanksDesign", true)[0];
-            }
-            catch (System.IndexOutOfRangeException)
-            {
-                AllyTank = null;
-            }
+            { AllyTank = (PictureBox)FormAccess.Controls.Find("AllyTanksDesign", true)[0]; }
+
+            catch (IndexOutOfRangeException)
+            { AllyTank = null; }
 
 
         }
@@ -93,6 +95,7 @@ namespace WFTanks
                     thing.X += a;
                     if (AllyTank.Bounds.IntersectsWith(thing))
                         return true;
+
                 }
 
                 else if (Tank == Move.Up)
@@ -116,13 +119,11 @@ namespace WFTanks
                         return true;
                 }
             }
-
             return false;
         }
 
         public bool CollisionsForEnemies(Move Tank, PictureBox EnemyTank)
         {
-
             if (!Walls.Contains(AllyTank))
             { Walls.Add(AllyTank); }
 
@@ -169,7 +170,6 @@ namespace WFTanks
 
         public PictureBox CollisionsForBullets(Move BulletMove, bool isAllyTank, PictureBox Bullet)
         {
-
             if (isAllyTank && !Walls.Contains(EnemyTank))
             { Walls.Add(EnemyTank); }
 
@@ -178,6 +178,9 @@ namespace WFTanks
 
             int a = 1;
             System.Drawing.Rectangle thing = new System.Drawing.Rectangle(0, 0, 0, 0);
+
+            var DisEagle = new Action(() => { FormAccess.Controls.Remove(FormAccess.EagleImage); });
+            var DisTanks = new Action(() => { FormAccess.Controls.Remove(FormAccess.EnemyTanksDesign); });
 
             for (int i = 0; i < Walls.Count(); i++)
             {
@@ -190,41 +193,102 @@ namespace WFTanks
                 {
                     thing.X += a;
                     if (Bullet.Bounds.IntersectsWith(thing))
+                    {
+                        if (Walls[i].Name == "EagleImage" || Walls[i].Name == "AllyTanksDesign")
+                        {
+                            FormAccess.EagleImage.Invoke(DisEagle);
+                            FormAccess.ControlRemoved += FormAccess_ControlRemoved;
+                        }
+                        if (Walls[i].Name == "EnemyTanksDesign")
+                        {
+                            FormAccess.ControlRemoved += FormAccess_ControlRemoved1;
+                        }
+
                         return Walls[i];
+                    }
+
                 }
 
                 else if (BulletMove == Move.Up)
                 {
                     thing.Y += a;
                     if (Bullet.Bounds.IntersectsWith(thing))
+                    {
+                        if (Walls[i].Name == "EagleImage" || Walls[i].Name == "AllyTanksDesign")
+                        {
+                            FormAccess.EagleImage.Invoke(DisEagle);
+                            FormAccess.ControlRemoved += FormAccess_ControlRemoved;
+                        }
+                        if (Walls[i].Name == "EnemyTanksDesign")
+                        {
+                            FormAccess.ControlRemoved += FormAccess_ControlRemoved1;
+                        }
+
                         return Walls[i];
+                    }
                 }
 
                 else if (BulletMove == Move.Down)
                 {
                     thing.Y -= a;
                     if (Bullet.Bounds.IntersectsWith(thing))
+                    {
+                        if (Walls[i].Name == "EagleImage" || Walls[i].Name == "AllyTanksDesign")
+                        {
+                            FormAccess.EagleImage.Invoke(DisEagle);
+                            FormAccess.ControlRemoved += FormAccess_ControlRemoved;
+                        }
+                        if (Walls[i].Name == "EnemyTanksDesign")
+                        {
+                            FormAccess.ControlRemoved += FormAccess_ControlRemoved1;
+                        }
+
                         return Walls[i];
+                    }
                 }
 
                 else if (BulletMove == Move.Right)
                 {
                     thing.X -= a;
                     if (Bullet.Bounds.IntersectsWith(thing))
+                    {
+                        if (Walls[i].Name == "EagleImage" || Walls[i].Name == "AllyTanksDesign")
+                        {
+                            FormAccess.EagleImage.Invoke(DisEagle);
+                            FormAccess.ControlRemoved += FormAccess_ControlRemoved;
+                        }
+
+                        if(Walls[i].Name == "EnemyTanksDesign")
+                        {
+                            FormAccess.ControlRemoved += FormAccess_ControlRemoved1;
+                        }
+
                         return Walls[i];
+                    }
                 }
             }
 
             if (isAllyTank && Walls.Contains(EnemyTank))
-            {
-                Walls.Remove(EnemyTank);
-            }
+            { Walls.Remove(EnemyTank); }
 
             else if (!isAllyTank && Walls.Contains(AllyTank))
-            {
-                Walls.Remove(AllyTank);
-            }
+            { Walls.Remove(AllyTank); }
+
             return null;
+        }
+
+        private void FormAccess_ControlRemoved1(object sender, ControlEventArgs e)
+        {
+            FormAccess.Isenemydead = true;
+            var isOK = MessageBox.Show("Winner :3");
+            Application.Exit();
+        }
+
+        private void FormAccess_ControlRemoved(object sender, ControlEventArgs e)
+        {
+            FormAccess.Isenemydead = true;
+            var isOK = MessageBox.Show("Loser :3");
+            Application.Exit();
         }
     }
 }
