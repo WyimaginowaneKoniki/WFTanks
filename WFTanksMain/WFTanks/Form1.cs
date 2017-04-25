@@ -79,19 +79,19 @@ namespace WFTanks
                 AllyTank.Movement(TankDirection, game);
             }
 
-            if (e.KeyCode == Keys.Up && !game.Collisions(Game.Move.Up, AllyTank.AllyTankDesign))
+            else if (e.KeyCode == Keys.Up && !game.Collisions(Game.Move.Up, AllyTank.AllyTankDesign))
             {
                 TankDirection = Game.Move.Up;
                 AllyTank.Movement(TankDirection, game);
             }
 
-            if (e.KeyCode == Keys.Left && !game.Collisions(Game.Move.Left, AllyTank.AllyTankDesign))
+            else if (e.KeyCode == Keys.Left && !game.Collisions(Game.Move.Left, AllyTank.AllyTankDesign))
             {
                 TankDirection = Game.Move.Left;
                 AllyTank.Movement(TankDirection, game);
             }
 
-            if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right, AllyTank.AllyTankDesign))
+            else if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right, AllyTank.AllyTankDesign))
             {
                 TankDirection = Game.Move.Right;
                 AllyTank.Movement(TankDirection, game);

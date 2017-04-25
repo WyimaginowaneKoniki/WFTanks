@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -40,8 +38,8 @@ namespace WFTanks
 
         public override void Movement(Game.Move Move, Game game)
         {
-            var MoveDown = new Action(() =>  { if (!(AllyTankDesign.Top > 660)) { AllyTankDesign.Top += 3; } });
-            var MoveUp = new Action(() =>    { if (!(AllyTankDesign.Top < 0)) { AllyTankDesign.Top -= 3; } } );
+            var MoveDown = new Action(() => { if (!(AllyTankDesign.Top > 660)) { AllyTankDesign.Top += 3; } });
+            var MoveUp = new Action(() => { if (!(AllyTankDesign.Top < 0)) { AllyTankDesign.Top -= 3; } });
             var MoveLeft = new Action(() => { if (!(AllyTankDesign.Left < 0)) { AllyTankDesign.Left -= 3; } });
             var MoveRight = new Action(() => { if (!(AllyTankDesign.Left > 720)) { AllyTankDesign.Left += 3; } });
 
@@ -64,7 +62,8 @@ namespace WFTanks
                     else if (Enumerable.Range(31, 40).Contains(Math.Abs(FormAccess.y - AllyTankDesign.Top)))
                         AllyTankDesign.Image = Properties.Resources.down1;
                 }
-                if (Game.Move.Up == Move)
+
+                else if (Game.Move.Up == Move)
                 {
                     AllyTankDesign.Invoke(MoveUp);
                     Thread.Sleep(10);
@@ -82,7 +81,8 @@ namespace WFTanks
                         AllyTankDesign.Image = Properties.Resources.Up1;
 
                 }
-                if (Game.Move.Left == Move)
+
+                else if (Game.Move.Left == Move)
                 {
                     AllyTankDesign.Invoke(MoveLeft);
                     Thread.Sleep(10);
@@ -99,7 +99,8 @@ namespace WFTanks
                     else if (Enumerable.Range(31, 40).Contains(Math.Abs(FormAccess.x - AllyTankDesign.Left)))
                         AllyTankDesign.Image = Properties.Resources.Left1;
                 }
-                if (Game.Move.Right == Move)
+
+                else if (Game.Move.Right == Move)
                 {
                     AllyTankDesign.Invoke(MoveRight);
                     Thread.Sleep(10);
@@ -121,7 +122,6 @@ namespace WFTanks
             MovementTask.Start();
             if (MovementTask.IsCompleted)
                 MovementTask.Dispose();
-
         }
     }
 }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -70,7 +67,8 @@ namespace WFTanks
                          }
                      }
                  }
-                 if (Game.Move.Up == Move)
+
+                 else if (Game.Move.Up == Move)
                  {
                      for (int i = 0; i < 30; i++)
                      {
@@ -93,7 +91,8 @@ namespace WFTanks
                          }
                      }
                  }
-                 if (Game.Move.Left == Move)
+
+                 else if (Game.Move.Left == Move)
                  {
                      for (int i = 0; i < 30; i++)
                      {
@@ -116,7 +115,8 @@ namespace WFTanks
                          }
                      }
                  }
-                 if (Game.Move.Right == Move)
+
+                 else if (Game.Move.Right == Move)
                  {
                      for (int i = 0; i < 30; i++)
                      {
