@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,6 +12,13 @@ namespace WFTanks
 
         private Game.Move TankDirection;
         private Form1 FormAccess;
+        private Control.ControlCollection FormAccessControl;
+
+        private delegate PictureBox DelegateToGetAllyTanks();
+        private DelegateToGetAllyTanks GetAllyTankDesign;
+
+        private delegate List<PictureBox> DelegateListAlmostDestroyed();
+        private DelegateListAlmostDestroyed AlmostDestroyed;
 
         private PictureBox TankBullet = new PictureBox();
         private PictureBox OwnerDesign = new PictureBox();
@@ -19,10 +27,13 @@ namespace WFTanks
 
         public Bullet(Game.Move TankDirectionFromGame, Form1 FormConstruct, PictureBox BulletOwner)
         {
-
             OwnerDesign = BulletOwner;
             FormAccess = FormConstruct;
             TankDirection = TankDirectionFromGame;
+            FormAccessControl = FormConstruct.Controls;
+
+            GetAllyTankDesign = new DelegateToGetAllyTanks(FormConstruct.GetAllyTankDesign);
+            AlmostDestroyed = new DelegateListAlmostDestroyed(FormConstruct.GetAlmostDestroyed);
 
             if (TankDirection == Game.Move.Down)
             {
@@ -47,14 +58,14 @@ namespace WFTanks
 
             TankBullet.Location = new Point(OwnerDesign.Left + (OwnerDesign.ClientSize.Width / 2) - 3, OwnerDesign.Top + (OwnerDesign.ClientSize.Height / 2) - 3);
             TankBullet.BackColor = Color.Transparent;
-            FormAccess.Controls.Add(TankBullet);
+            FormAccessControl.Add(TankBullet);
             BulletMove();
         }
 
         public void BulletMove()
         {
             var Moving = new Action(() => { });
-            var Disable = new Action(() => { FormAccess.Controls.Remove(TankBullet); });
+            var Disable = new Action(() => { FormAccessControl.Remove(TankBullet); });
 
             switch (TankDirection)
             {
@@ -97,7 +108,7 @@ namespace WFTanks
             Game game = new Game(FormAccess);
 
             PictureBox GoingToPufBam = new PictureBox();
-            var Disable2 = new Action(() => { FormAccess.Controls.Remove(GoingToPufBam); if (GoingToPufBam.Name == "EnemyTanksDesign") FormAccess.Isenemydead = true; });
+            var Disable2 = new Action(() => { FormAccessControl.Remove(GoingToPufBam); if (GoingToPufBam.Name == "EnemyTanksDesign") FormAccess.Isenemydead = true; });
             var Destroy = new Action(() =>
             {
                 GoingToPufBam.Image = Properties.Resources.explo1;
@@ -126,17 +137,17 @@ namespace WFTanks
             if (TankDirection == Game.Move.Right && TankBullet.Left > 740)
                 return false;
 
-            if (FormAccess.GetAllyTankDesign().Equals(OwnerDesign))
+            if (GetAllyTankDesign().Equals(OwnerDesign))
             {
                 GoingToPufBam = game.CollisionsForBullets(TankDirection, true, TankBullet);
 
                 if (GoingToPufBam != null)
                 {
 
-                    if (FormAccess.almostDestroyed.Contains(GoingToPufBam))
+                    if (AlmostDestroyed().Contains(GoingToPufBam))
                     {
                         GoingToPufBam.Invoke(halfDestroy);
-                        FormAccess.almostDestroyed.Remove(GoingToPufBam);
+                        AlmostDestroyed().Remove(GoingToPufBam);
                     }
 
                     else
@@ -155,10 +166,10 @@ namespace WFTanks
 
                 if (GoingToPufBam != null)
                 {
-                    if (FormAccess.almostDestroyed.Contains(GoingToPufBam))
+                    if (AlmostDestroyed().Contains(GoingToPufBam))
                     {
                         GoingToPufBam.Invoke(halfDestroy);
-                        FormAccess.almostDestroyed.Remove(GoingToPufBam);
+                        AlmostDestroyed().Remove(GoingToPufBam);
                     }
 
                     else

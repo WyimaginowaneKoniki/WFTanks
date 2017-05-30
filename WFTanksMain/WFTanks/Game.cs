@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace WFTanks
 {
     class Game
     {
-        public Form1 FormAccess;
-        public List<PictureBox> Walls = new List<PictureBox>();
+        private Form1 FormAccess;
+        private List<PictureBox> Walls = new List<PictureBox>();
         public static GameStates CurrentGameState = GameStates.InGame;
 
         PictureBox EnemyTank = new PictureBox();

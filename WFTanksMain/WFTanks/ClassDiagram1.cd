@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WFTanks.AllyTanks">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAQBAAAAAAQAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AllyTanks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WFTanks.Bullet">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAABUAAAAAAAAAAAAAAAIAAAAAAAAEAA=</HashCode>
+      <FileName>Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WFTanks.EnemyTanks">
+    <Position X="3" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAQBAAAAAAACAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EnemyTanks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WFTanks.Form1">
+    <Position X="4.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QxYEAACWATAAAUACAACAABAC8P8XMABg//5ngACBBP4=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WFTanks.Game">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="WFTanks.Game.Move">
+        <TypeIdentifier>
+          <NewMemberFileName>Game.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="WFTanks.Game.GameStates">
+        <TypeIdentifier>
+          <NewMemberFileName>Game.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAI4gQAAQQAAACAAAAAAAAAAAAgACAAAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WFTanks.Program">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WFTanks.Tanks">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="WFTanks.Tanks.Levels" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Tanks.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="WFTanks.Tanks.Sides" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Tanks.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>CAEAAIAAQAAAgAAABAAAEAAAAAAMAAAAAAAAAADAAAA=</HashCode>
+      <FileName>Tanks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WFTanks.Properties.Resources">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIQAAAAACAIgAAAACARMIAIBRAYkADgQwjEKCQA0oI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WFTanks.Properties.Settings">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

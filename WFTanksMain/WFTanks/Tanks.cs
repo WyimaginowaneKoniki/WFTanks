@@ -52,12 +52,12 @@
 
         protected Levels CurrentLevel;
         // TODO Skin!!!!!
-        public virtual void Shot(Game.Move TankDirection)
+        public virtual void Shot(Game.Move TankDirection, Form1 FormAccess)
         {
             // TODO Tanks : Shot()
         }
 
-        public virtual void Movement(Game.Move Move, Game game)
+        public void Movement()
         {
             // TODO Tanks : Movement()
         }

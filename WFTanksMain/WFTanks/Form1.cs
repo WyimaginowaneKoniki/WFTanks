@@ -1,47 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
 using System.Media;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WFTanks
 {
     public partial class Form1 : Form
     {
-        Stopwatch BulletTime = new Stopwatch();
-        Stopwatch BulletSoundTimer = new Stopwatch();
-        SoundPlayer BulletSound = new SoundPlayer(Properties.Resources.newshot);
-        public List<PictureBox> Walls = new List<PictureBox>();
-        AllyTanks AllyTank = new AllyTanks();
-        EnemyTanks EnemyTank = new EnemyTanks();
-        public bool Isenemydead;
-        public int x;
-        public int y;
-        public bool isKeyDown = true;
-        Random Rnd = new Random();
-        public int a;
+        private Stopwatch BulletTime = new Stopwatch();
+        private Stopwatch BulletSoundTimer = new Stopwatch();
+        private SoundPlayer BulletSound = new SoundPlayer(Properties.Resources.newshot);
+
+        private AllyTanks AllyTank = new AllyTanks();
+        private EnemyTanks EnemyTank = new EnemyTanks();
+
+        private Random Rnd = new Random();
+
+        private int x;
+        private int y;
+        private int a;
+
         private Game.Move TankDirection;
         private Game.Move TankDirection2;
-        public List<PictureBox> almostDestroyed = new List<PictureBox>();
+
+        public List<PictureBox> AlmostDestroyed = new List<PictureBox>();
+        public List<PictureBox> Walls = new List<PictureBox>();
+
+        public bool Isenemydead;
+        public bool isKeyDown = true;
+
+
+
         public Form1()
         {
-          
             AllyTank.SetFrom1(this);
             EnemyTank.SetForm1(this);
             InitializeComponent();
 
             foreach (Control c in Controls)
             {
-                if (c is PictureBox && (c.Tag == "Wall"))
+                if (c is PictureBox && ((string)c.Tag == "Wall"))
                 {
-                    almostDestroyed.Add((PictureBox)c);
+                    AlmostDestroyed.Add((PictureBox)c);
                 }
             }
             x = AllyTank.AllyTankDesign.Left;
@@ -49,7 +50,7 @@ namespace WFTanks
 
 
             DoubleBuffered = true;
-           
+
             timer1.Interval = 1100;
             timer1.Start();
             timer1.Tick += timer1_Tick;
@@ -62,7 +63,7 @@ namespace WFTanks
         }
 
         public void Form1_KeyDown(object sender, KeyEventArgs e)
-        {         
+        {
             timer2.Stop();
             if ((Math.Abs(y - AllyTank.AllyTankDesign.Top)) > 41 || (Math.Abs(x - AllyTank.AllyTankDesign.Left)) > 41)
             {
@@ -72,36 +73,36 @@ namespace WFTanks
 
             var game = new Game(this);
 
-           
+
             if (e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down, AllyTank.AllyTankDesign))
             {
                 TankDirection = Game.Move.Down;
-                AllyTank.Movement(TankDirection, game);
+                AllyTank.Movement(TankDirection);
             }
 
             else if (e.KeyCode == Keys.Up && !game.Collisions(Game.Move.Up, AllyTank.AllyTankDesign))
             {
                 TankDirection = Game.Move.Up;
-                AllyTank.Movement(TankDirection, game);
+                AllyTank.Movement(TankDirection);
             }
 
             else if (e.KeyCode == Keys.Left && !game.Collisions(Game.Move.Left, AllyTank.AllyTankDesign))
             {
                 TankDirection = Game.Move.Left;
-                AllyTank.Movement(TankDirection, game);
+                AllyTank.Movement(TankDirection);
             }
 
             else if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right, AllyTank.AllyTankDesign))
             {
                 TankDirection = Game.Move.Right;
-                AllyTank.Movement(TankDirection, game);
+                AllyTank.Movement(TankDirection);
             }
 
-            if (e.KeyCode == Keys.Space && BulletTime.ElapsedMilliseconds>=2000)
+            if (e.KeyCode == Keys.Space && BulletTime.ElapsedMilliseconds >= 2000)
             {
                 BulletSound.Play();
                 BulletSoundTimer.Start();
-                AllyTank.Shot(TankDirection);
+                AllyTank.Shot(TankDirection, this);
                 BulletTime.Restart();
             }
         }
@@ -118,16 +119,16 @@ namespace WFTanks
             var game = new Game(this);
 
             if (e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down, AllyTank.AllyTankDesign))
-                AllyTank.Movement(Game.Move.Down, game);
+                AllyTank.Movement(Game.Move.Down);
 
             else if (e.KeyCode == Keys.Up && !game.Collisions(Game.Move.Up, AllyTank.AllyTankDesign))
-                AllyTank.Movement(Game.Move.Up, game);
+                AllyTank.Movement(Game.Move.Up);
 
             else if (e.KeyCode == Keys.Left && !game.Collisions(Game.Move.Left, AllyTank.AllyTankDesign))
-                AllyTank.Movement(Game.Move.Left, game);
+                AllyTank.Movement(Game.Move.Left);
 
             else if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right, AllyTank.AllyTankDesign))
-                AllyTank.Movement(Game.Move.Right, game);
+                AllyTank.Movement(Game.Move.Right);
 
         }
 
@@ -137,7 +138,7 @@ namespace WFTanks
             var game = new Game(this);
 
             a = Rnd.Next(0, 5);
-             if (!Isenemydead)
+            if (!Isenemydead)
             {
                 if (a == 0)
                 {
@@ -160,9 +161,10 @@ namespace WFTanks
                     EnemyTank.Movement(Game.Move.Right, game);
                 }
                 else
-                    EnemyTank.Shot(TankDirection2);
+                    EnemyTank.Shot(TankDirection2, this);
             }
         }
+
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (!isKeyDown && timer2.Interval >= 500)
@@ -170,11 +172,31 @@ namespace WFTanks
                 x = AllyTank.AllyTankDesign.Left;
                 y = AllyTank.AllyTankDesign.Top;
             }
-        }   
+        }
 
         public PictureBox GetAllyTankDesign()
         {
             return AllyTank.AllyTankDesign;
+        }
+
+        public List<PictureBox> GetAlmostDestroyed()
+        {
+            return AlmostDestroyed;
+        }
+
+        public int GetX()
+        {
+            return x;
+        }
+
+        public int GetY()
+        {
+            return y;
+        }
+
+        public dynamic GetForm()
+        {
+            return this;
         }
     }
 }
