@@ -14,28 +14,28 @@ namespace WFTanks
 
         private AllyTanks AllyTank = new AllyTanks();
         private EnemyTanks EnemyTank = new EnemyTanks();
+        private Game MainGame = new Game();
 
         private Random Rnd = new Random();
 
         private int x;
         private int y;
-        private int a;
+        private int RndDirection;
+        private bool isKeyDown = true;
 
-        private Game.Move TankDirection;
-        private Game.Move TankDirection2;
+        private Game.Move AllyTankDirection;
+        private Game.Move EnemyTankDirection;
 
-        public List<PictureBox> AlmostDestroyed = new List<PictureBox>();
-        public List<PictureBox> Walls = new List<PictureBox>();
+        private List<PictureBox> AlmostDestroyed = new List<PictureBox>();
+        private List<PictureBox> Walls = new List<PictureBox>();
 
-        public bool Isenemydead;
-        public bool isKeyDown = true;
-
-
+        private bool IsEnemyDead;
 
         public Form1()
         {
             AllyTank.SetFrom1(this);
             EnemyTank.SetForm1(this);
+            MainGame.SetForm(this);
             InitializeComponent();
 
             foreach (Control c in Controls)
@@ -71,38 +71,38 @@ namespace WFTanks
                 y = AllyTank.AllyTankDesign.Top;
             }
 
-            var game = new Game(this);
+            var game = new Game();
 
 
             if (e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down, AllyTank.AllyTankDesign))
             {
-                TankDirection = Game.Move.Down;
-                AllyTank.Movement(TankDirection);
+                AllyTankDirection = Game.Move.Down;
+                AllyTank.Movement(AllyTankDirection);
             }
 
             else if (e.KeyCode == Keys.Up && !game.Collisions(Game.Move.Up, AllyTank.AllyTankDesign))
             {
-                TankDirection = Game.Move.Up;
-                AllyTank.Movement(TankDirection);
+                AllyTankDirection = Game.Move.Up;
+                AllyTank.Movement(AllyTankDirection);
             }
 
             else if (e.KeyCode == Keys.Left && !game.Collisions(Game.Move.Left, AllyTank.AllyTankDesign))
             {
-                TankDirection = Game.Move.Left;
-                AllyTank.Movement(TankDirection);
+                AllyTankDirection = Game.Move.Left;
+                AllyTank.Movement(AllyTankDirection);
             }
 
             else if (e.KeyCode == Keys.Right && !game.Collisions(Game.Move.Right, AllyTank.AllyTankDesign))
             {
-                TankDirection = Game.Move.Right;
-                AllyTank.Movement(TankDirection);
+                AllyTankDirection = Game.Move.Right;
+                AllyTank.Movement(AllyTankDirection);
             }
 
             if (e.KeyCode == Keys.Space && BulletTime.ElapsedMilliseconds >= 2000)
             {
                 BulletSound.Play();
                 BulletSoundTimer.Start();
-                AllyTank.Shot(TankDirection, this);
+                AllyTank.Shot(AllyTankDirection, this);
                 BulletTime.Restart();
             }
         }
@@ -116,7 +116,7 @@ namespace WFTanks
                 BulletSound.Stop();
             }
             timer2.Start();
-            var game = new Game(this);
+            var game = new Game();
 
             if (e.KeyCode == Keys.Down && !game.Collisions(Game.Move.Down, AllyTank.AllyTankDesign))
                 AllyTank.Movement(Game.Move.Down);
@@ -135,33 +135,33 @@ namespace WFTanks
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            var game = new Game(this);
+            var game = new Game();
 
-            a = Rnd.Next(0, 5);
-            if (!Isenemydead)
+            RndDirection = Rnd.Next(0, 5);
+            if (!IsEnemyDead)
             {
-                if (a == 0)
+                if (RndDirection == 0)
                 {
-                    TankDirection2 = Game.Move.Down;
+                    EnemyTankDirection = Game.Move.Down;
                     EnemyTank.Movement(Game.Move.Down, game);
                 }
-                else if (a == 1)
+                else if (RndDirection == 1)
                 {
-                    TankDirection2 = Game.Move.Up;
+                    EnemyTankDirection = Game.Move.Up;
                     EnemyTank.Movement(Game.Move.Up, game);
                 }
-                else if (a == 2)
+                else if (RndDirection == 2)
                 {
-                    TankDirection2 = Game.Move.Left;
+                    EnemyTankDirection = Game.Move.Left;
                     EnemyTank.Movement(Game.Move.Left, game);
                 }
-                else if (a == 3)
+                else if (RndDirection == 3)
                 {
-                    TankDirection2 = Game.Move.Right;
+                    EnemyTankDirection = Game.Move.Right;
                     EnemyTank.Movement(Game.Move.Right, game);
                 }
                 else
-                    EnemyTank.Shot(TankDirection2, this);
+                    EnemyTank.Shot(EnemyTankDirection, this);
             }
         }
 
@@ -194,9 +194,9 @@ namespace WFTanks
             return y;
         }
 
-        public dynamic GetForm()
+        public void SetIsEnemyDead(bool a)
         {
-            return this;
+            IsEnemyDead = a;
         }
     }
 }

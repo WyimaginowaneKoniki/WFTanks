@@ -7,7 +7,7 @@ namespace WFTanks
 {
     class Game
     {
-        private Form1 FormAccess;
+        private static Form1 FormAccess;
         private List<PictureBox> Walls = new List<PictureBox>();
         public static GameStates CurrentGameState = GameStates.InGame;
 
@@ -38,20 +38,19 @@ namespace WFTanks
             set { _score = value; }
         }
 
-        public Game() { }
-
-        public Game(Form1 FormConstructor)
+        public void SetForm(Form1 FormConstructor)
         {
             FormAccess = FormConstructor;
+        }
 
+        public Game()
+        {
             try
             {
                 Walls.Add((PictureBox)FormAccess.Controls.Find("EagleImage", true)[0]);
             }
-            catch (IndexOutOfRangeException)
-            {
-
-            }
+            catch (IndexOutOfRangeException) { }
+            catch (NullReferenceException) { goto First; }
 
             foreach (Control c in FormAccess.Controls)
             {
@@ -71,9 +70,10 @@ namespace WFTanks
 
             catch (IndexOutOfRangeException)
             { AllyTank = null; }
-
-
+            First:
+            ;
         }
+
         public bool Collisions(Move Tank, PictureBox AllyTank)
         {
             if (!Walls.Contains(EnemyTank))
@@ -257,7 +257,7 @@ namespace WFTanks
                             FormAccess.ControlRemoved += FormAccess_ControlRemoved;
                         }
 
-                        if(Walls[i].Name == "EnemyTanksDesign")
+                        if (Walls[i].Name == "EnemyTanksDesign")
                         {
                             FormAccess.ControlRemoved += FormAccess_ControlRemoved1;
                         }
@@ -278,14 +278,14 @@ namespace WFTanks
 
         private void FormAccess_ControlRemoved1(object sender, ControlEventArgs e)
         {
-            FormAccess.Isenemydead = true;
+            FormAccess.SetIsEnemyDead(true);
             var isOK = MessageBox.Show("Winner :3");
             Application.Exit();
         }
 
         private void FormAccess_ControlRemoved(object sender, ControlEventArgs e)
         {
-            FormAccess.Isenemydead = true;
+            FormAccess.SetIsEnemyDead(true);
             var isOK = MessageBox.Show("Loser :3");
             Application.Exit();
         }
