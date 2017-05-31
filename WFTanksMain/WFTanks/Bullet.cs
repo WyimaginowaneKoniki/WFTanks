@@ -11,7 +11,6 @@ namespace WFTanks
     {
 
         private Game.Move TankDirection;
-        private Form1 FormAccess;
         private Control.ControlCollection FormAccessControl;
 
         private delegate PictureBox DelegateToGetAllyTanks();
@@ -19,6 +18,9 @@ namespace WFTanks
 
         private delegate List<PictureBox> DelegateListAlmostDestroyed();
         private DelegateListAlmostDestroyed AlmostDestroyed;
+
+        private delegate void DelegateSetIsEnemyDead(bool a);
+        private DelegateSetIsEnemyDead SetIsEnemyDead;
 
         private PictureBox TankBullet = new PictureBox();
         private PictureBox OwnerDesign = new PictureBox();
@@ -28,12 +30,12 @@ namespace WFTanks
         public Bullet(Game.Move TankDirectionFromGame, Form1 FormConstruct, PictureBox BulletOwner)
         {
             OwnerDesign = BulletOwner;
-            FormAccess = FormConstruct;
             TankDirection = TankDirectionFromGame;
             FormAccessControl = FormConstruct.Controls;
 
             GetAllyTankDesign = new DelegateToGetAllyTanks(FormConstruct.GetAllyTankDesign);
             AlmostDestroyed = new DelegateListAlmostDestroyed(FormConstruct.GetAlmostDestroyed);
+            SetIsEnemyDead = new DelegateSetIsEnemyDead(FormConstruct.SetIsEnemyDead);
 
             if (TankDirection == Game.Move.Down)
             {
@@ -105,10 +107,10 @@ namespace WFTanks
 
         public bool WhereToGo()
         {
-            Game game = new Game(FormAccess);
+            Game game = new Game();
 
             PictureBox GoingToPufBam = new PictureBox();
-            var Disable2 = new Action(() => { FormAccessControl.Remove(GoingToPufBam); if (GoingToPufBam.Name == "EnemyTanksDesign") FormAccess.Isenemydead = true; });
+            var Disable2 = new Action(() => { FormAccessControl.Remove(GoingToPufBam); if (GoingToPufBam.Name == "EnemyTanksDesign") SetIsEnemyDead(true); });
             var Destroy = new Action(() =>
             {
                 GoingToPufBam.Image = Properties.Resources.explo1;
