@@ -7,10 +7,9 @@ namespace WFTanks
 {
     class EnemyTanks : Tanks
     {
-        private Form1 FormAccess;
         public PictureBox EnemyTankDesign = new PictureBox();
 
-        public override void Shot(Game.Move TankDirection)
+        public override void Shot(Game.Move TankDirection, Form1 FormAccess)
         {
             Bullet Bullets = new Bullet(TankDirection, FormAccess, EnemyTankDesign);
         }
@@ -30,12 +29,11 @@ namespace WFTanks
 
         public void SetForm1(Form1 FormConstruct)
         {
-            FormAccess = FormConstruct;
-            FormAccess.Controls.Add(EnemyTankDesign);
+            FormConstruct.Controls.Add(EnemyTankDesign);
         }
 
 
-        public override void Movement(Game.Move Move, Game game)
+        public void Movement(Game.Move Move, Game game)
         {
             var MoveDown = new Action(() => { if (!(EnemyTankDesign.Top > 660)) { EnemyTankDesign.Top += 1; } });
             var MoveUp = new Action(() => { if (!(EnemyTankDesign.Top < 0)) { EnemyTankDesign.Top -= 1; } });

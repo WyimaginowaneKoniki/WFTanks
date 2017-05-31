@@ -8,7 +8,11 @@ namespace WFTanks
 {
     class AllyTanks : Tanks
     {
-        public Form1 FormAccess;
+        private delegate int DelegateGetFormX();
+        private DelegateGetFormX GetFormX;
+        private delegate int DelegateGetFormY();
+        private DelegateGetFormY GetFormY;
+
         public PictureBox AllyTankDesign = new PictureBox();
 
         public AllyTanks()
@@ -27,16 +31,17 @@ namespace WFTanks
 
         public void SetFrom1(Form1 FormConstruct)
         {
-            FormAccess = FormConstruct;
-            FormAccess.Controls.Add(AllyTankDesign);
+            GetFormX = new DelegateGetFormX(FormConstruct.GetX);
+            GetFormY = new DelegateGetFormY(FormConstruct.GetY);
+            FormConstruct.Controls.Add(AllyTankDesign);
         }
 
-        public override void Shot(Game.Move TankDirection)
+        public override void Shot(Game.Move TankDirection, Form1 FormAccess)
         {
             Bullet Bullets = new Bullet(TankDirection, FormAccess, AllyTankDesign);
         }
 
-        public override void Movement(Game.Move Move, Game game)
+        public void Movement(Game.Move Move)
         {
             var MoveDown = new Action(() => { if (!(AllyTankDesign.Top > 660)) { AllyTankDesign.Top += 3; } });
             var MoveUp = new Action(() => { if (!(AllyTankDesign.Top < 0)) { AllyTankDesign.Top -= 3; } });
@@ -50,16 +55,16 @@ namespace WFTanks
                     AllyTankDesign.Invoke(MoveDown);
                     Thread.Sleep(10);
 
-                    if (Enumerable.Range(0, 10).Contains(Math.Abs(FormAccess.y - AllyTankDesign.Top)))
+                    if (Enumerable.Range(0, 10).Contains(Math.Abs(GetFormY() - AllyTankDesign.Top)))
                         AllyTankDesign.Image = Properties.Resources.Down4;
 
-                    else if (Enumerable.Range(11, 20).Contains(Math.Abs(FormAccess.y - AllyTankDesign.Top)))
+                    else if (Enumerable.Range(11, 20).Contains(Math.Abs(GetFormY() - AllyTankDesign.Top)))
                         AllyTankDesign.Image = Properties.Resources.Down3;
 
-                    else if (Enumerable.Range(21, 30).Contains(Math.Abs(FormAccess.y - AllyTankDesign.Top)))
+                    else if (Enumerable.Range(21, 30).Contains(Math.Abs(GetFormY() - AllyTankDesign.Top)))
                         AllyTankDesign.Image = Properties.Resources.Down2;
 
-                    else if (Enumerable.Range(31, 40).Contains(Math.Abs(FormAccess.y - AllyTankDesign.Top)))
+                    else if (Enumerable.Range(31, 40).Contains(Math.Abs(GetFormY() - AllyTankDesign.Top)))
                         AllyTankDesign.Image = Properties.Resources.down1;
                 }
 
@@ -68,16 +73,16 @@ namespace WFTanks
                     AllyTankDesign.Invoke(MoveUp);
                     Thread.Sleep(10);
 
-                    if (Enumerable.Range(0, 10).Contains(Math.Abs(FormAccess.y - AllyTankDesign.Top)))
+                    if (Enumerable.Range(0, 10).Contains(Math.Abs(GetFormY() - AllyTankDesign.Top)))
                         AllyTankDesign.Image = Properties.Resources.Up4;
 
-                    else if (Enumerable.Range(11, 20).Contains(Math.Abs(FormAccess.y - AllyTankDesign.Top)))
+                    else if (Enumerable.Range(11, 20).Contains(Math.Abs(GetFormY() - AllyTankDesign.Top)))
                         AllyTankDesign.Image = Properties.Resources.Up3;
 
-                    else if (Enumerable.Range(21, 30).Contains(Math.Abs(FormAccess.y - AllyTankDesign.Top)))
+                    else if (Enumerable.Range(21, 30).Contains(Math.Abs(GetFormY() - AllyTankDesign.Top)))
                         AllyTankDesign.Image = Properties.Resources.Up2;
 
-                    else if (Enumerable.Range(31, 40).Contains(Math.Abs(FormAccess.y - AllyTankDesign.Top)))
+                    else if (Enumerable.Range(31, 40).Contains(Math.Abs(GetFormY() - AllyTankDesign.Top)))
                         AllyTankDesign.Image = Properties.Resources.Up1;
 
                 }
@@ -87,16 +92,16 @@ namespace WFTanks
                     AllyTankDesign.Invoke(MoveLeft);
                     Thread.Sleep(10);
 
-                    if (Enumerable.Range(0, 10).Contains(Math.Abs(FormAccess.x - AllyTankDesign.Left)))
+                    if (Enumerable.Range(0, 10).Contains(Math.Abs(GetFormX() - AllyTankDesign.Left)))
                         AllyTankDesign.Image = Properties.Resources.Left4;
 
-                    else if (Enumerable.Range(11, 20).Contains(Math.Abs(FormAccess.x - AllyTankDesign.Left)))
+                    else if (Enumerable.Range(11, 20).Contains(Math.Abs(GetFormX() - AllyTankDesign.Left)))
                         AllyTankDesign.Image = Properties.Resources.Left3;
 
-                    else if (Enumerable.Range(21, 30).Contains(Math.Abs(FormAccess.x - AllyTankDesign.Left)))
+                    else if (Enumerable.Range(21, 30).Contains(Math.Abs(GetFormX() - AllyTankDesign.Left)))
                         AllyTankDesign.Image = Properties.Resources.Left2;
 
-                    else if (Enumerable.Range(31, 40).Contains(Math.Abs(FormAccess.x - AllyTankDesign.Left)))
+                    else if (Enumerable.Range(31, 40).Contains(Math.Abs(GetFormX() - AllyTankDesign.Left)))
                         AllyTankDesign.Image = Properties.Resources.Left1;
                 }
 
@@ -105,16 +110,16 @@ namespace WFTanks
                     AllyTankDesign.Invoke(MoveRight);
                     Thread.Sleep(10);
 
-                    if (Enumerable.Range(0, 10).Contains(Math.Abs(FormAccess.x - AllyTankDesign.Left)))
+                    if (Enumerable.Range(0, 10).Contains(Math.Abs(GetFormX() - AllyTankDesign.Left)))
                         AllyTankDesign.Image = Properties.Resources.Right4;
 
-                    else if (Enumerable.Range(11, 20).Contains(Math.Abs(FormAccess.x - AllyTankDesign.Left)))
+                    else if (Enumerable.Range(11, 20).Contains(Math.Abs(GetFormX() - AllyTankDesign.Left)))
                         AllyTankDesign.Image = Properties.Resources.Right3;
 
-                    else if (Enumerable.Range(21, 30).Contains(Math.Abs(FormAccess.x - AllyTankDesign.Left)))
+                    else if (Enumerable.Range(21, 30).Contains(Math.Abs(GetFormX() - AllyTankDesign.Left)))
                         AllyTankDesign.Image = Properties.Resources.Right2;
 
-                    else if (Enumerable.Range(31, 40).Contains(Math.Abs(FormAccess.x - AllyTankDesign.Left)))
+                    else if (Enumerable.Range(31, 40).Contains(Math.Abs(GetFormX() - AllyTankDesign.Left)))
                         AllyTankDesign.Image = Properties.Resources.Right1;
                 }
             });
